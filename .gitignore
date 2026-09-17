@@ -1,0 +1,69 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual envs & tool caches
+.venv/
+venv/
+env/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Test temp dirs (project-specific)
+.pytest-tmp-*/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+*.whl
+*.tar.gz
+
+# Large runtime data, models, caches (re-downloadable)
+data/
+cst_mil/data/
+cst_mil/dist/
+cst_mil/artifacts/run_001/model.joblib
+cst_mil/artifacts/run_001/analysis/figures/
+cst_mil/benchmark/runs/
+cst_mil/benchmark/quarantine/
+cst_mil/benchmark/tmp/
+cst_mil/benchmark/tools/
+cst_mil/benchmark/data/
+cst_mil/benchmark/legacy_runtime/
+
+# BERTopic weights + embedding cache + pytest test_tmp (at repo root)
+benchmark/cache/
+benchmark/models/
+benchmark/test_tmp/
+
+# BERTopic baseline embedded model snapshot
+baseline/BERTopic/build/
+baseline/BERTopic/tests/
+
+# Shanghai University of Technology related docs (internship)
+上海理工大学*/
+*上海理工*
+
+# Original task / patent template docs (school-specific)
+任务要求.docx
+任务要求 - 副本.docx
+专利交底书模板.docx
+
+# Logs (very large driver outputs)
+*.log
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
