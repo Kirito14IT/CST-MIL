@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "audit_kind": "independent_user_command_and_resume_documentation_review",
+  "audited_at_utc": "2026-09-12T19:29:21.3153276Z",
+  "passed": true,
+  "validation_level": "Read-only source/schema, existing manifests, and filesystem state; no full677 command was executed.",
+  "working_directory": "D:/github/intern/cst_mil",
+  "guide": "benchmark/操作指南.md",
+  "commands": [
+    {
+      "method": "lda",
+      "command": "uv run --frozen --group benchmark cst-bench run --suite full677 --method lda --limit all --resume",
+      "matches_cli_schema": true
+    },
+    {
+      "method": "btm",
+      "command": "uv run --frozen --group benchmark cst-bench run --suite full677 --method btm --limit all --resume",
+      "matches_cli_schema": true
+    },
+    {
+      "method": "gsdmm",
+      "command": "uv run --frozen --group benchmark cst-bench run --suite full677 --method gsdmm --limit all --resume",
+      "matches_cli_schema": true
+    },
+    {
+      "method": "nmf",
+      "command": "uv run --frozen --group benchmark cst-bench run --suite full677 --method nmf --limit all --resume",
+      "matches_cli_schema": true
+    },
+    {
+      "method": "bertopic",
+      "command": "uv run --frozen --group benchmark cst-bench run --suite full677 --method bertopic --limit all --resume",
+      "matches_cli_schema": true
+    },
+    {
+      "method": "cst_mil",
+      "command": "uv run --frozen --group benchmark cst-bench run --suite full677 --method cst_mil --limit all --resume",
+      "matches_cli_schema": true
+    }
+  ],
+  "checks": [
+    {
+      "name": "console_entry_and_dependency_group",
+      "passed": true,
+      "evidence": "pyproject.toml declares cst-bench -> cst_mil.bench.cli:main and benchmark dependency group; --frozen preserves locked resolution."
+    },
+    {
+      "name": "six_methods_match_cli",
+      "passed": true,
+      "evidence": "runner.py:33 METHODS lists exactly lda, btm, gsdmm, nmf, bertopic, cst_mil; cli.py:26-33 accepts full677, --limit, --resume."
+    },
+    {
+      "name": "selection_resolution",
+      "passed": true,
+      "evidence": "runner.py:244-246 resolves cst_mil without explicit revision from frozen selection.json; current selected revision is r0."
+    },
+    {
+      "name": "full_cohort_size",
+      "passed": true,
+      "observed": {
+        "sessions": 677,
+        "comments": 38872,
+        "train": 406,
+        "dev": 135,
+        "test": 136,
+        "fresh_test": 76,
+        "previous_test": 60
+      }
+    },
+    {
+      "name": "reject_limit_3000",
+      "passed": true,
+      "evidence": "runner.py:297-299 restricts integer limit to [0,len(sessions)] or all; full677 maximum is 677."
+    },
+    {
+      "name": "limit_is_cumulative_inference",
+      "passed": true,
+      "evidence": "runner.py:450-452 visits sessions[:target] and skips previously completed IDs; target is not used to select fitting rows."
+    },
+    {
+      "name": "limit_300_then_all",
+      "passed": true,
+      "observed": {
+        "initial_target": 300,
+        "final_target": 677,
+        "remaining_after_300": 377,
+        "first_300_partition": "train",
+        "first_300_training_sessions": 300
+      }
+    },
+    {
+      "name": "full_training_before_limited_inference",
+      "passed": true,
+      "evidence": "runner constructs fitting rows from train/dev before the inference loop; model.py:356-357 splits these into fit=train and threshold-selection=dev. Therefore --limit 300 still uses all 406 training and 135 validation conversations."
+    },
+    {
+      "name": "trained_model_reused",
+      "passed": true,
+      "evidence": "runner.py:366-373 validates model SHA256, loads model.joblib and optionally validates external assets; training is only in the else branch."
+    },
+    {
+      "name": "partial_training_preserved",
+      "passed": true,
+      "evidence": "runner.py:374 and 392 increment formal_fit_attempts and use distinct assets/attempt_N directories when no complete TRAINED.json exists."
+    },
+    {
+      "name": "per_session_resume_integrity",
+      "passed": true,
+      "evidence": "runner.py:441-443 verifies binding/model/prediction hashes, checks unique valid session IDs, then skips already completed sessions."
+    },
+    {
+      "name": "all_complete_resume_no_retrain",
+      "passed": true,
+      "evidence": "Existing model is loaded; every completed session is skipped. Summary evaluation/status can run again, as documented."
+    },
+    {
+      "name": "error_and_new_version_guidance",
+      "passed": true,
+      "evidence": "Guide does not invent --new-run. Current CLI has no generic namespace option; revision values are the preregistered CST r0-r3. Frozen run mismatch is rejected instead of mixing results. Ordinary interruption resumes with unchanged binding."
+    },
+    {
+      "name": "status_and_compare_commands",
+      "passed": true,
+      "evidence": "cli.py status accepts full677 and reports per-method status; compare accepts full677 and calls reporting only, not training."
+    },
+    {
+      "name": "full_training_not_started_in_canonical_namespace",
+      "passed": true,
+      "observed": {
+        "path": "D:/github/intern/cst_mil/benchmark/runs/full677",
+        "directory_exists": false
+      },
+      "scope": "Canonical experiment artifacts at audit time; no full677 run directory, manifest, or trained model exists there."
+    },
+    {
+      "name": "cpu_documentation_matches_enforcement",
+      "passed": true,
+      "evidence": "cli.py configures CPU affinity before numerical imports; runner also configures affinity and rejects observed training/inference affinity width beyond the configured cap."
+    },
+    {
+      "name": "model_and_cache_locations",
+      "passed": true,
+      "evidence": "Guide correctly distinguishes cst_mil/benchmark/tools from repository-root benchmark/models and benchmark/cache for BERTopic."
+    }
+  ],
+  "evidence_sha256": {
+    "benchmark/操作指南.md": "8647dc06099296295640f3968e54d4242724c246f8bc24b78026b1ccee0c030d",
+    "src/cst_mil/bench/cli.py": "fdac70f23c0e050ce13adaf461cb2339848c2177748b439ad952919045e385cd",
+    "src/cst_mil/bench/runner.py": "81d5774c9525b4aa9af12d713537f0686154c7a1bdd74cbeef95ad780e8fcba3",
+    "src/cst_mil/bench/model.py": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67",
+    "src/cst_mil/bench/dataset.py": "b24b8e7c964750800efaa9309c7ef3a889955ed9965dd7f53bc191b5f1b58e63",
+    "src/cst_mil/bench/resources.py": "fa9854bed3bc7c69b5a4a3fa98120e4cdd2e2db1f607250ea05a3b37224c1783",
+    "pyproject.toml": "4687906b7cdc7cde046af3248ab49e23f27918d3bc877d6784eeeafbff4d2b20",
+    "benchmark/data/full677/manifest.json": "f8fc0b21f6f1370f0e814a2b98786d019c3b9f43b4228dc8fc4f2809f0329ad8",
+    "benchmark/selection.json": "1a8756108adc8c9ff85a82e10230adc24c0bc243c4f4f75a2ec0b517c11ab103"
+  },
+  "limitations": [
+    "This is command/schema and implementation-flow review, not a full677 execution test. The six-method smoke validation is documented separately.",
+    "Guide intentionally does not claim final pilot results before the corresponding report/verification artifacts are generated."
+  ]
+}

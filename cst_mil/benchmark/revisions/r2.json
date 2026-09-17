@@ -1,0 +1,43 @@
+{
+  "base_revision": "r0",
+  "change": "risk_weighted_topics",
+  "config": {
+    "btm": {
+      "alpha": 1.5625,
+      "beta": 0.005,
+      "iterations": 100
+    },
+    "char_n_features": 65536,
+    "evidence_top_k": 3,
+    "gsdmm": {
+      "alpha": 0.1,
+      "beta": 0.1,
+      "iterations": 100
+    },
+    "instance_c": 4.0,
+    "lda": {
+      "em_max_iter": 100,
+      "var_max_iter": 20
+    },
+    "membership_threshold": 0.25,
+    "mil_rounds": 3,
+    "multiscale": false,
+    "n_topics": 32,
+    "nmf": {
+      "max_iter": 300,
+      "tol": 0.0001
+    },
+    "positive_top_fraction": 0.2,
+    "relative_threshold": 0.5,
+    "risk_weighted_topics": true,
+    "seed": 42,
+    "session_c": 1.0,
+    "stride": 2,
+    "strong_threshold": 0.6,
+    "threads": 4,
+    "window_size": 5,
+    "word_features": false
+  },
+  "revision": "r2",
+  "selection_data": "dev only"
+}

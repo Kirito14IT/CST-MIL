@@ -1,0 +1,66 @@
+[project]
+name = "cst-mil"
+version = "0.1.0"
+description = "CPU-only conversation structure and topic-aware multiple-instance risk detection for SCCD"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+  "jieba>=0.42.1,<0.43",
+  "joblib>=1.4,<2",
+  "matplotlib>=3.8,<4",
+  "numpy>=2.0,<3",
+  "pandas>=2.2,<4",
+  "psutil>=5.9,<8",
+  "pyyaml>=6,<7",
+  "scikit-learn>=1.5,<2",
+  "scipy>=1.12,<2",
+]
+
+[project.scripts]
+cst-mil = "cst_mil.cli:main"
+cst-bench = "cst_mil.bench.cli:main"
+
+[dependency-groups]
+dev = [
+  "pytest>=8,<10",
+  "ruff>=0.9,<1",
+]
+benchmark = [
+  "bertopic==0.17.4",
+  "sentence-transformers>=5.1,<6",
+  "transformers>=4.41,<5",
+  "torch==2.8.0",
+  "huggingface-hub>=0.30,<1",
+  "hdbscan>=0.8.41,<0.9",
+  "umap-learn>=0.5.9,<0.6",
+]
+
+[tool.uv.sources]
+bertopic = { path = "../baseline/BERTopic" }
+torch = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cst_mil"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/cst_mil", "tests", "pyproject.toml", "README.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

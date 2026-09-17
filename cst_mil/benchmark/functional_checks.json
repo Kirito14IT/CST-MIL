@@ -1,0 +1,25 @@
+{
+  "command": [
+    "D:\\github\\intern\\cst_mil\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "tests",
+    "--basetemp",
+    ".pytest-tmp-functional-1789241743877630000",
+    "--junitxml",
+    "D:\\github\\intern\\cst_mil\\benchmark\\verification\\tests_1789241743877630000.xml",
+    "-q"
+  ],
+  "completed_at_unix": 1789241818.8885524,
+  "counts": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 102
+  },
+  "junit": "D:\\github\\intern\\cst_mil\\benchmark\\verification\\tests_1789241743877630000.xml",
+  "log": "D:\\github\\intern\\cst_mil\\benchmark\\verification\\tests_1789241743877630000.log",
+  "passed": true,
+  "runtime_sha256": "d157911c2e395e6afa04513c146e36c4305678d57b7f05d41b325de0dc2ed973",
+  "scope": "functional, not performance"
+}

@@ -1,0 +1,1699 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="13" skipped="0" tests="101" time="42.121" timestamp="2026-09-13T02:56:42.425353+08:00" hostname="Kirco"><testcase classname="tests.test_analysis" name="test_binary_metrics_and_bootstrap_are_reproducible" time="0.122" /><testcase classname="tests.test_analysis" name="test_evidence_metrics_use_ranked_comment_labels" time="0.004" /><testcase classname="tests.test_analysis" name="test_metrics_reject_single_class" time="0.001" /><testcase classname="tests.test_bench_bertopic" name="test_original_token_chunks_preserve_every_token_and_suffix" time="0.000" /><testcase classname="tests.test_bench_bertopic" name="test_memberships_preserve_noise_and_order" time="0.003" /><testcase classname="tests.test_bench_bertopic" name="test_all_noise_is_zero_width_not_a_fabricated_topic" time="0.001" /><testcase classname="tests.test_bench_bertopic" name="test_cached_embedding_keys_include_full_text_and_model" time="0.010" /><testcase classname="tests.test_bench_bertopic" name="test_pickle_preserves_pipeline_without_global_sentence_encoder" time="0.002" /><testcase classname="tests.test_bench_bertopic" name="test_official_small_chinese_corpus_retains_text_and_pipeline" time="22.488" /><testcase classname="tests.test_bench_bertopic" name="test_external_assets_hash_once_per_process_and_after_stat_change" time="0.020" /><testcase classname="tests.test_bench_bertopic" name="test_restored_model_detects_same_size_external_weight_tampering" time="0.013" /><testcase classname="tests.test_bench_bertopic" name="test_manifest_must_be_self_consistent" time="0.010" /><testcase classname="tests.test_bench_bertopic" name="test_self_consistent_replacement_manifest_cannot_replace_fitted_identity" time="0.011" /><testcase classname="tests.test_bench_bertopic" name="test_untracked_external_assets_are_rejected" time="0.008" /><testcase classname="tests.test_bench_bertopic" name="test_all_noise_cannot_skip_external_asset_validation[documents0]" time="0.009" /><testcase classname="tests.test_bench_bertopic" name="test_all_noise_cannot_skip_external_asset_validation[documents1]" time="0.008" /><testcase classname="tests.test_bench_model" name="test_variable_topic_count[0]" time="0.001" /><testcase classname="tests.test_bench_model" name="test_variable_topic_count[1]" time="0.001" /><testcase classname="tests.test_bench_model" name="test_variable_topic_count[2]" time="0.001" /><testcase classname="tests.test_bench_model" name="test_variable_topic_count[3]" time="0.001" /><testcase classname="tests.test_bench_model" name="test_soft_overlap_disjoint_segments_original_metadata" time="0.002" /><testcase classname="tests.test_bench_model" name="test_diffuse_and_weak_single_message_topics_not_forced" time="0.001" /><testcase classname="tests.test_bench_model" name="test_training_is_crossfit_label_independent_and_reload_stable[nmf]" time="0.073" /><testcase classname="tests.test_bench_model" name="test_training_is_crossfit_label_independent_and_reload_stable[cst_mil]" time="0.176" /><testcase classname="tests.test_bench_model" name="test_smoke_single_class_folds_are_explicit_no_in_sample_fallback" time="0.038" /><testcase classname="tests.test_bench_model" name="test_oov_messages_unassigned_despite_known_neighbors_and_root_fallback" time="0.044" /><testcase classname="tests.test_bench_model" name="test_windows_cover_long_tail_and_risk_weights_use_oof" time="0.062" /><testcase classname="tests.test_bench_model" name="test_class_and_reference_validation" time="0.002" /><testcase classname="tests.test_bench_model" name="test_all_noise_backend_keeps_zero_topics" time="0.025" /><testcase classname="tests.test_bench_model" name="test_real_nmf_backend_integrates_with_weighted_cst" time="0.077" /><testcase classname="tests.test_bench_native" name="test_native_frozen_batch_resume_and_oov[lda]" time="0.547" /><testcase classname="tests.test_bench_native" name="test_native_frozen_batch_resume_and_oov[btm]" time="0.838" /><testcase classname="tests.test_bench_native" name="test_native_frozen_batch_resume_and_oov[gsdmm]" time="1.318" /><testcase classname="tests.test_bench_native" name="test_native_empty_training_and_no_biterm[lda]" time="0.141" /><testcase classname="tests.test_bench_native" name="test_native_empty_training_and_no_biterm[btm]" time="0.224" /><testcase classname="tests.test_bench_native" name="test_native_empty_training_and_no_biterm[gsdmm]" time="0.253" /><testcase classname="tests.test_bench_native" name="test_gsdmm_repeated_words_change_frozen_posterior" time="0.436" /><testcase classname="tests.test_bench_native" name="test_nmf_scale_correction_weighted_fit_and_padding" time="0.021" /><testcase classname="tests.test_bench_native" name="test_nmf_rejects_invalid_weights" time="0.002" /><testcase classname="tests.test_bench_native" name="test_gsdmm_java_available" time="0.065" /><testcase classname="tests.test_bench_protocol" name="test_nested_cohorts_and_smoke_boundary" time="1.186" /><testcase classname="tests.test_bench_protocol" name="test_windows_cover_tail_and_keep_duplicate_evidence" time="0.001" /><testcase classname="tests.test_bench_protocol" name="test_empty_and_invalid_topics" time="0.001" /><testcase classname="tests.test_bench_protocol" name="test_evidence_respects_returned_tie_ranking" time="0.002" /><testcase classname="tests.test_bench_protocol" name="test_predeclared_gates" time="0.001" /><testcase classname="tests.test_bench_protocol" name="test_coverage_counts_messages_not_sessions" time="0.001" /><testcase classname="tests.test_bench_protocol" name="test_manifest_metadata_tamper_is_rejected" time="0.009" /><testcase classname="tests.test_bench_protocol" name="test_lock_release_on_error_and_atomic_json" time="0.021" /><testcase classname="tests.test_bench_protocol" name="test_resume_comparison_checks_shape_not_only_probability" time="0.002" /><testcase classname="tests.test_bench_reporting" name="test_complete_comparison_writes_real_figures_and_bound_numbers" time="3.451" /><testcase classname="tests.test_bench_reporting" name="test_corrupt_or_incomplete_input_is_blocked_before_outputs[partial]" time="0.387" /><testcase classname="tests.test_bench_reporting" name="test_corrupt_or_incomplete_input_is_blocked_before_outputs[model]" time="0.377" /><testcase classname="tests.test_bench_reporting" name="test_corrupt_or_incomplete_input_is_blocked_before_outputs[prediction]" time="0.391" /><testcase classname="tests.test_bench_reporting" name="test_corrupt_or_incomplete_input_is_blocked_before_outputs[metric]" time="0.407" /><testcase classname="tests.test_bench_reporting" name="test_corrupt_or_incomplete_input_is_blocked_before_outputs[training_ids]" time="0.426" /><testcase classname="tests.test_bench_reporting" name="test_changed_common_config_or_cohort_rejected" time="0.382" /><testcase classname="tests.test_bench_reporting" name="test_changed_encoder_is_not_silently_excluded_from_footprint" time="0.543" /><testcase classname="tests.test_bench_reporting" name="test_full_comparison_separates_old_and_fresh_tests" time="1.730" /><testcase classname="tests.test_bench_resources" name="test_affinity_caps_first_four_sorted_eligible_cpus_and_sets_thread_hints" time="0.001" /><testcase classname="tests.test_bench_resources" name="test_repeated_call_and_module_reload_keep_assigned_cpu_ids" time="0.002" /><testcase classname="tests.test_bench_resources" name="test_fewer_than_four_eligible_cpus_never_expands_affinity" time="0.001" /><testcase classname="tests.test_bench_resources" name="test_affinity_query_failures_refuse_to_run[failure0]" time="0.001" /><testcase classname="tests.test_bench_resources" name="test_affinity_query_failures_refuse_to_run[failure1]" time="0.001" /><testcase classname="tests.test_bench_resources" name="test_affinity_set_failure_refuses_to_run" time="0.001" /><testcase classname="tests.test_bench_resources" name="test_affinity_readback_must_match_requested_mask" time="0.001" /><testcase classname="tests.test_bench_resources" name="test_empty_eligible_mask_is_not_interpreted_as_all_cpus" time="0.001" /><testcase classname="tests.test_bench_resources" name="test_invalid_thread_limit_is_rejected[0]" time="0.001" /><testcase classname="tests.test_bench_resources" name="test_invalid_thread_limit_is_rejected[-1]" time="0.001" /><testcase classname="tests.test_bench_resources" name="test_invalid_thread_limit_is_rejected[1.5]" time="0.001" /><testcase classname="tests.test_bench_resources" name="test_invalid_thread_limit_is_rejected[4]" time="0.001" /><testcase classname="tests.test_bench_resources" name="test_invalid_thread_limit_is_rejected[True]" time="0.001" /><testcase classname="tests.test_bench_resources" name="test_invalid_thread_limit_is_rejected[None]" time="0.001" /><testcase classname="tests.test_bench_resume_guards" name="test_limit_is_cumulative_and_resume_preserves_completed_records" time="0.084"><failure message="RuntimeError: Observed process CPU affinity exceeds frozen resource cap">isolated_runner = namespace(project=WindowsPath('D:/github/intern/cst_mil/.pytest-tmp-functional-1789239402119868700/test_limit_is_cumul...True, 'fresh_test': False}, {'post_id': 'p4', 'split': 'test', 'label': 0, 'pilot_member': True, 'fresh_test': False}])
+
+    def test_limit_is_cumulative_and_resume_preserves_completed_records(isolated_runner):
+        state = isolated_runner.state
+&gt;       first = runner.run_method("smoke5", "nmf", limit="2")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_bench_resume_guards.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suite = 'smoke5', method = 'nmf', revision = None, limit = '2', resume = False
+stage = 'all'
+
+    def run_method(
+        suite: str,
+        method: str,
+        *,
+        revision: str | None = None,
+        limit: str = "all",
+        resume: bool = False,
+        stage: str = "all",
+    ) -&gt; dict:
+        if method not in METHODS or stage not in {"all", "train"}:
+            raise ValueError("Unknown method or stage")
+        manifest, sessions, messages = load_suite(suite)
+        config, revision = resolve_config(method, revision, suite)
+        from .resources import configure_cpu
+    
+        cpu_policy = configure_cpu(int(config["threads"]))
+        target = len(sessions) if limit == "all" else int(limit)
+        if not 0 &lt;= target &lt;= len(sessions):
+            raise ValueError(f"limit must be between 0 and {len(sessions)}, or all")
+        if (
+            suite == "pilot300"
+            and stage != "train"
+            and any(s["split"] == "test" for s in sessions[:target])
+        ):
+            if not (BENCHMARK / "selection.json").exists():
+                raise ValueError(
+                    "Pilot test inference locked until dev-only revision selection is frozen"
+                )
+        if suite == "full677" and not (BENCHMARK / "selection.json").exists():
+            raise ValueError("Full experiment requires frozen pilot selection")
+        path = run_path(suite, method, revision)
+        if path.exists() and (path / "run_manifest.json").exists() and not resume:
+            raise FileExistsError(f"Run exists; pass --resume: {path}")
+        from .native_topics import prepare_native_tools
+    
+        for native_method in ("lda", "btm", "gsdmm"):
+            prepare_native_tools(native_method)
+        source = runtime_fingerprint()
+        binding = {
+            "suite": suite,
+            "cohort": manifest["content_fingerprint"],
+            "method": method,
+            "revision": revision,
+            "config": config,
+            "runtime": source,
+            "cpu_affinity": cpu_policy["assigned_cpus"],
+        }
+        by_post = defaultdict(list)
+        for message in messages:
+            by_post[message["post_id"]].append(message)
+        from .model import predict_session, train_model
+    
+        with run_lock(path), threadpool_limits(limits=int(config["threads"])):
+            try:
+                saved_path = path / "run_manifest.json"
+                if saved_path.exists():
+                    saved = read_json(saved_path)
+                    if saved["binding_sha256"] != fingerprint(binding):
+                        raise ValueError(
+                            "Run config/source/environment/data changed; "
+                            "use a new version, cannot merge predictions"
+                        )
+                else:
+                    saved = {
+                        "binding": binding,
+                        "binding_sha256": fingerprint(binding),
+                        "created_at": utc_now(),
+                        "formal_fit_attempts": 0,
+                        "cpu_policy": cpu_policy,
+                    }
+                    write_json(saved_path, saved)
+                    snapshot = path / "source_snapshot"
+                    for relative in source["source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT / relative, destination)
+                    for name in ("pyproject.toml", "uv.lock"):
+                        shutil.copy2(PROJECT / name, snapshot / name)
+                    for relative in source["native_source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT.parent / relative, destination)
+                    write_json(path / "config.json", config)
+                model_path = path / "model.joblib"
+                trained_path = path / "TRAINED.json"
+                if trained_path.exists():
+                    trained = read_json(trained_path)
+                    if file_hash(model_path) != trained["model_sha256"]:
+                        raise ValueError("Model fingerprint mismatch; refusing resume")
+                    model = joblib.load(model_path)
+                    if hasattr(model.topic_model, "validate_assets"):
+                        model.topic_model.validate_assets()
+                else:
+                    saved["formal_fit_attempts"] += 1
+                    write_json(saved_path, saved)
+                    _write_progress(path, manifest, sessions, [], "training")
+                    print(
+                        f"[{suite}/{method}/{revision or '-'}] training attempt "
+                        f"{saved['formal_fit_attempts']}",
+                        flush=True,
+                    )
+                    fitting = [s for s in sessions if s["split"] in {"train", "dev"}]
+                    fitting_ids = {s["post_id"] for s in fitting}
+                    fitting_messages = [m for m in messages if m["post_id"] in fitting_ids]
+                    start = time.perf_counter()
+                    with ResourceMonitor() as monitor:
+                        model = train_model(
+                            fitting,
+                            fitting_messages,
+                            method,
+                            config,
+                            path / "assets" / f"attempt_{saved['formal_fit_attempts']}",
+                        )
+                    seconds = time.perf_counter() - start
+                    if monitor.peak_affinity_width &gt; int(config["threads"]):
+&gt;                       raise RuntimeError("Observed process CPU affinity exceeds frozen resource cap")
+E                       RuntimeError: Observed process CPU affinity exceeds frozen resource cap
+
+src\cst_mil\bench\runner.py:396: RuntimeError</failure></testcase><testcase classname="tests.test_bench_resume_guards" name="test_cpu_cap_violation_prevents_training_commit" time="0.052" /><testcase classname="tests.test_bench_resume_guards" name="test_tampered_model_is_rejected_before_loading_or_predicting" time="0.049"><failure message="RuntimeError: Observed process CPU affinity exceeds frozen resource cap">isolated_runner = namespace(project=WindowsPath('D:/github/intern/cst_mil/.pytest-tmp-functional-1789239402119868700/test_tampered_model...True, 'fresh_test': False}, {'post_id': 'p4', 'split': 'test', 'label': 0, 'pilot_member': True, 'fresh_test': False}])
+
+    def test_tampered_model_is_rejected_before_loading_or_predicting(isolated_runner):
+&gt;       runner.run_method("smoke5", "nmf", limit="1")
+
+tests\test_bench_resume_guards.py:136: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suite = 'smoke5', method = 'nmf', revision = None, limit = '1', resume = False
+stage = 'all'
+
+    def run_method(
+        suite: str,
+        method: str,
+        *,
+        revision: str | None = None,
+        limit: str = "all",
+        resume: bool = False,
+        stage: str = "all",
+    ) -&gt; dict:
+        if method not in METHODS or stage not in {"all", "train"}:
+            raise ValueError("Unknown method or stage")
+        manifest, sessions, messages = load_suite(suite)
+        config, revision = resolve_config(method, revision, suite)
+        from .resources import configure_cpu
+    
+        cpu_policy = configure_cpu(int(config["threads"]))
+        target = len(sessions) if limit == "all" else int(limit)
+        if not 0 &lt;= target &lt;= len(sessions):
+            raise ValueError(f"limit must be between 0 and {len(sessions)}, or all")
+        if (
+            suite == "pilot300"
+            and stage != "train"
+            and any(s["split"] == "test" for s in sessions[:target])
+        ):
+            if not (BENCHMARK / "selection.json").exists():
+                raise ValueError(
+                    "Pilot test inference locked until dev-only revision selection is frozen"
+                )
+        if suite == "full677" and not (BENCHMARK / "selection.json").exists():
+            raise ValueError("Full experiment requires frozen pilot selection")
+        path = run_path(suite, method, revision)
+        if path.exists() and (path / "run_manifest.json").exists() and not resume:
+            raise FileExistsError(f"Run exists; pass --resume: {path}")
+        from .native_topics import prepare_native_tools
+    
+        for native_method in ("lda", "btm", "gsdmm"):
+            prepare_native_tools(native_method)
+        source = runtime_fingerprint()
+        binding = {
+            "suite": suite,
+            "cohort": manifest["content_fingerprint"],
+            "method": method,
+            "revision": revision,
+            "config": config,
+            "runtime": source,
+            "cpu_affinity": cpu_policy["assigned_cpus"],
+        }
+        by_post = defaultdict(list)
+        for message in messages:
+            by_post[message["post_id"]].append(message)
+        from .model import predict_session, train_model
+    
+        with run_lock(path), threadpool_limits(limits=int(config["threads"])):
+            try:
+                saved_path = path / "run_manifest.json"
+                if saved_path.exists():
+                    saved = read_json(saved_path)
+                    if saved["binding_sha256"] != fingerprint(binding):
+                        raise ValueError(
+                            "Run config/source/environment/data changed; "
+                            "use a new version, cannot merge predictions"
+                        )
+                else:
+                    saved = {
+                        "binding": binding,
+                        "binding_sha256": fingerprint(binding),
+                        "created_at": utc_now(),
+                        "formal_fit_attempts": 0,
+                        "cpu_policy": cpu_policy,
+                    }
+                    write_json(saved_path, saved)
+                    snapshot = path / "source_snapshot"
+                    for relative in source["source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT / relative, destination)
+                    for name in ("pyproject.toml", "uv.lock"):
+                        shutil.copy2(PROJECT / name, snapshot / name)
+                    for relative in source["native_source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT.parent / relative, destination)
+                    write_json(path / "config.json", config)
+                model_path = path / "model.joblib"
+                trained_path = path / "TRAINED.json"
+                if trained_path.exists():
+                    trained = read_json(trained_path)
+                    if file_hash(model_path) != trained["model_sha256"]:
+                        raise ValueError("Model fingerprint mismatch; refusing resume")
+                    model = joblib.load(model_path)
+                    if hasattr(model.topic_model, "validate_assets"):
+                        model.topic_model.validate_assets()
+                else:
+                    saved["formal_fit_attempts"] += 1
+                    write_json(saved_path, saved)
+                    _write_progress(path, manifest, sessions, [], "training")
+                    print(
+                        f"[{suite}/{method}/{revision or '-'}] training attempt "
+                        f"{saved['formal_fit_attempts']}",
+                        flush=True,
+                    )
+                    fitting = [s for s in sessions if s["split"] in {"train", "dev"}]
+                    fitting_ids = {s["post_id"] for s in fitting}
+                    fitting_messages = [m for m in messages if m["post_id"] in fitting_ids]
+                    start = time.perf_counter()
+                    with ResourceMonitor() as monitor:
+                        model = train_model(
+                            fitting,
+                            fitting_messages,
+                            method,
+                            config,
+                            path / "assets" / f"attempt_{saved['formal_fit_attempts']}",
+                        )
+                    seconds = time.perf_counter() - start
+                    if monitor.peak_affinity_width &gt; int(config["threads"]):
+&gt;                       raise RuntimeError("Observed process CPU affinity exceeds frozen resource cap")
+E                       RuntimeError: Observed process CPU affinity exceeds frozen resource cap
+
+src\cst_mil\bench\runner.py:396: RuntimeError</failure></testcase><testcase classname="tests.test_bench_resume_guards" name="test_invalid_session_artifacts_are_rejected[content]" time="0.048"><failure message="RuntimeError: Observed process CPU affinity exceeds frozen resource cap">isolated_runner = namespace(project=WindowsPath('D:/github/intern/cst_mil/.pytest-tmp-functional-1789239402119868700/test_invalid_sessio...True, 'fresh_test': False}, {'post_id': 'p4', 'split': 'test', 'label': 0, 'pilot_member': True, 'fresh_test': False}])
+change = 'content'
+
+    @pytest.mark.parametrize("change", ["content", "binding", "model", "duplicate", "unknown_id"])
+    def test_invalid_session_artifacts_are_rejected(isolated_runner, change):
+&gt;       runner.run_method("smoke5", "nmf", limit="1")
+
+tests\test_bench_resume_guards.py:150: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suite = 'smoke5', method = 'nmf', revision = None, limit = '1', resume = False
+stage = 'all'
+
+    def run_method(
+        suite: str,
+        method: str,
+        *,
+        revision: str | None = None,
+        limit: str = "all",
+        resume: bool = False,
+        stage: str = "all",
+    ) -&gt; dict:
+        if method not in METHODS or stage not in {"all", "train"}:
+            raise ValueError("Unknown method or stage")
+        manifest, sessions, messages = load_suite(suite)
+        config, revision = resolve_config(method, revision, suite)
+        from .resources import configure_cpu
+    
+        cpu_policy = configure_cpu(int(config["threads"]))
+        target = len(sessions) if limit == "all" else int(limit)
+        if not 0 &lt;= target &lt;= len(sessions):
+            raise ValueError(f"limit must be between 0 and {len(sessions)}, or all")
+        if (
+            suite == "pilot300"
+            and stage != "train"
+            and any(s["split"] == "test" for s in sessions[:target])
+        ):
+            if not (BENCHMARK / "selection.json").exists():
+                raise ValueError(
+                    "Pilot test inference locked until dev-only revision selection is frozen"
+                )
+        if suite == "full677" and not (BENCHMARK / "selection.json").exists():
+            raise ValueError("Full experiment requires frozen pilot selection")
+        path = run_path(suite, method, revision)
+        if path.exists() and (path / "run_manifest.json").exists() and not resume:
+            raise FileExistsError(f"Run exists; pass --resume: {path}")
+        from .native_topics import prepare_native_tools
+    
+        for native_method in ("lda", "btm", "gsdmm"):
+            prepare_native_tools(native_method)
+        source = runtime_fingerprint()
+        binding = {
+            "suite": suite,
+            "cohort": manifest["content_fingerprint"],
+            "method": method,
+            "revision": revision,
+            "config": config,
+            "runtime": source,
+            "cpu_affinity": cpu_policy["assigned_cpus"],
+        }
+        by_post = defaultdict(list)
+        for message in messages:
+            by_post[message["post_id"]].append(message)
+        from .model import predict_session, train_model
+    
+        with run_lock(path), threadpool_limits(limits=int(config["threads"])):
+            try:
+                saved_path = path / "run_manifest.json"
+                if saved_path.exists():
+                    saved = read_json(saved_path)
+                    if saved["binding_sha256"] != fingerprint(binding):
+                        raise ValueError(
+                            "Run config/source/environment/data changed; "
+                            "use a new version, cannot merge predictions"
+                        )
+                else:
+                    saved = {
+                        "binding": binding,
+                        "binding_sha256": fingerprint(binding),
+                        "created_at": utc_now(),
+                        "formal_fit_attempts": 0,
+                        "cpu_policy": cpu_policy,
+                    }
+                    write_json(saved_path, saved)
+                    snapshot = path / "source_snapshot"
+                    for relative in source["source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT / relative, destination)
+                    for name in ("pyproject.toml", "uv.lock"):
+                        shutil.copy2(PROJECT / name, snapshot / name)
+                    for relative in source["native_source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT.parent / relative, destination)
+                    write_json(path / "config.json", config)
+                model_path = path / "model.joblib"
+                trained_path = path / "TRAINED.json"
+                if trained_path.exists():
+                    trained = read_json(trained_path)
+                    if file_hash(model_path) != trained["model_sha256"]:
+                        raise ValueError("Model fingerprint mismatch; refusing resume")
+                    model = joblib.load(model_path)
+                    if hasattr(model.topic_model, "validate_assets"):
+                        model.topic_model.validate_assets()
+                else:
+                    saved["formal_fit_attempts"] += 1
+                    write_json(saved_path, saved)
+                    _write_progress(path, manifest, sessions, [], "training")
+                    print(
+                        f"[{suite}/{method}/{revision or '-'}] training attempt "
+                        f"{saved['formal_fit_attempts']}",
+                        flush=True,
+                    )
+                    fitting = [s for s in sessions if s["split"] in {"train", "dev"}]
+                    fitting_ids = {s["post_id"] for s in fitting}
+                    fitting_messages = [m for m in messages if m["post_id"] in fitting_ids]
+                    start = time.perf_counter()
+                    with ResourceMonitor() as monitor:
+                        model = train_model(
+                            fitting,
+                            fitting_messages,
+                            method,
+                            config,
+                            path / "assets" / f"attempt_{saved['formal_fit_attempts']}",
+                        )
+                    seconds = time.perf_counter() - start
+                    if monitor.peak_affinity_width &gt; int(config["threads"]):
+&gt;                       raise RuntimeError("Observed process CPU affinity exceeds frozen resource cap")
+E                       RuntimeError: Observed process CPU affinity exceeds frozen resource cap
+
+src\cst_mil\bench\runner.py:396: RuntimeError</failure></testcase><testcase classname="tests.test_bench_resume_guards" name="test_invalid_session_artifacts_are_rejected[binding]" time="0.053"><failure message="RuntimeError: Observed process CPU affinity exceeds frozen resource cap">isolated_runner = namespace(project=WindowsPath('D:/github/intern/cst_mil/.pytest-tmp-functional-1789239402119868700/test_invalid_sessio...True, 'fresh_test': False}, {'post_id': 'p4', 'split': 'test', 'label': 0, 'pilot_member': True, 'fresh_test': False}])
+change = 'binding'
+
+    @pytest.mark.parametrize("change", ["content", "binding", "model", "duplicate", "unknown_id"])
+    def test_invalid_session_artifacts_are_rejected(isolated_runner, change):
+&gt;       runner.run_method("smoke5", "nmf", limit="1")
+
+tests\test_bench_resume_guards.py:150: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suite = 'smoke5', method = 'nmf', revision = None, limit = '1', resume = False
+stage = 'all'
+
+    def run_method(
+        suite: str,
+        method: str,
+        *,
+        revision: str | None = None,
+        limit: str = "all",
+        resume: bool = False,
+        stage: str = "all",
+    ) -&gt; dict:
+        if method not in METHODS or stage not in {"all", "train"}:
+            raise ValueError("Unknown method or stage")
+        manifest, sessions, messages = load_suite(suite)
+        config, revision = resolve_config(method, revision, suite)
+        from .resources import configure_cpu
+    
+        cpu_policy = configure_cpu(int(config["threads"]))
+        target = len(sessions) if limit == "all" else int(limit)
+        if not 0 &lt;= target &lt;= len(sessions):
+            raise ValueError(f"limit must be between 0 and {len(sessions)}, or all")
+        if (
+            suite == "pilot300"
+            and stage != "train"
+            and any(s["split"] == "test" for s in sessions[:target])
+        ):
+            if not (BENCHMARK / "selection.json").exists():
+                raise ValueError(
+                    "Pilot test inference locked until dev-only revision selection is frozen"
+                )
+        if suite == "full677" and not (BENCHMARK / "selection.json").exists():
+            raise ValueError("Full experiment requires frozen pilot selection")
+        path = run_path(suite, method, revision)
+        if path.exists() and (path / "run_manifest.json").exists() and not resume:
+            raise FileExistsError(f"Run exists; pass --resume: {path}")
+        from .native_topics import prepare_native_tools
+    
+        for native_method in ("lda", "btm", "gsdmm"):
+            prepare_native_tools(native_method)
+        source = runtime_fingerprint()
+        binding = {
+            "suite": suite,
+            "cohort": manifest["content_fingerprint"],
+            "method": method,
+            "revision": revision,
+            "config": config,
+            "runtime": source,
+            "cpu_affinity": cpu_policy["assigned_cpus"],
+        }
+        by_post = defaultdict(list)
+        for message in messages:
+            by_post[message["post_id"]].append(message)
+        from .model import predict_session, train_model
+    
+        with run_lock(path), threadpool_limits(limits=int(config["threads"])):
+            try:
+                saved_path = path / "run_manifest.json"
+                if saved_path.exists():
+                    saved = read_json(saved_path)
+                    if saved["binding_sha256"] != fingerprint(binding):
+                        raise ValueError(
+                            "Run config/source/environment/data changed; "
+                            "use a new version, cannot merge predictions"
+                        )
+                else:
+                    saved = {
+                        "binding": binding,
+                        "binding_sha256": fingerprint(binding),
+                        "created_at": utc_now(),
+                        "formal_fit_attempts": 0,
+                        "cpu_policy": cpu_policy,
+                    }
+                    write_json(saved_path, saved)
+                    snapshot = path / "source_snapshot"
+                    for relative in source["source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT / relative, destination)
+                    for name in ("pyproject.toml", "uv.lock"):
+                        shutil.copy2(PROJECT / name, snapshot / name)
+                    for relative in source["native_source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT.parent / relative, destination)
+                    write_json(path / "config.json", config)
+                model_path = path / "model.joblib"
+                trained_path = path / "TRAINED.json"
+                if trained_path.exists():
+                    trained = read_json(trained_path)
+                    if file_hash(model_path) != trained["model_sha256"]:
+                        raise ValueError("Model fingerprint mismatch; refusing resume")
+                    model = joblib.load(model_path)
+                    if hasattr(model.topic_model, "validate_assets"):
+                        model.topic_model.validate_assets()
+                else:
+                    saved["formal_fit_attempts"] += 1
+                    write_json(saved_path, saved)
+                    _write_progress(path, manifest, sessions, [], "training")
+                    print(
+                        f"[{suite}/{method}/{revision or '-'}] training attempt "
+                        f"{saved['formal_fit_attempts']}",
+                        flush=True,
+                    )
+                    fitting = [s for s in sessions if s["split"] in {"train", "dev"}]
+                    fitting_ids = {s["post_id"] for s in fitting}
+                    fitting_messages = [m for m in messages if m["post_id"] in fitting_ids]
+                    start = time.perf_counter()
+                    with ResourceMonitor() as monitor:
+                        model = train_model(
+                            fitting,
+                            fitting_messages,
+                            method,
+                            config,
+                            path / "assets" / f"attempt_{saved['formal_fit_attempts']}",
+                        )
+                    seconds = time.perf_counter() - start
+                    if monitor.peak_affinity_width &gt; int(config["threads"]):
+&gt;                       raise RuntimeError("Observed process CPU affinity exceeds frozen resource cap")
+E                       RuntimeError: Observed process CPU affinity exceeds frozen resource cap
+
+src\cst_mil\bench\runner.py:396: RuntimeError</failure></testcase><testcase classname="tests.test_bench_resume_guards" name="test_invalid_session_artifacts_are_rejected[model]" time="0.055"><failure message="RuntimeError: Observed process CPU affinity exceeds frozen resource cap">isolated_runner = namespace(project=WindowsPath('D:/github/intern/cst_mil/.pytest-tmp-functional-1789239402119868700/test_invalid_sessio...True, 'fresh_test': False}, {'post_id': 'p4', 'split': 'test', 'label': 0, 'pilot_member': True, 'fresh_test': False}])
+change = 'model'
+
+    @pytest.mark.parametrize("change", ["content", "binding", "model", "duplicate", "unknown_id"])
+    def test_invalid_session_artifacts_are_rejected(isolated_runner, change):
+&gt;       runner.run_method("smoke5", "nmf", limit="1")
+
+tests\test_bench_resume_guards.py:150: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suite = 'smoke5', method = 'nmf', revision = None, limit = '1', resume = False
+stage = 'all'
+
+    def run_method(
+        suite: str,
+        method: str,
+        *,
+        revision: str | None = None,
+        limit: str = "all",
+        resume: bool = False,
+        stage: str = "all",
+    ) -&gt; dict:
+        if method not in METHODS or stage not in {"all", "train"}:
+            raise ValueError("Unknown method or stage")
+        manifest, sessions, messages = load_suite(suite)
+        config, revision = resolve_config(method, revision, suite)
+        from .resources import configure_cpu
+    
+        cpu_policy = configure_cpu(int(config["threads"]))
+        target = len(sessions) if limit == "all" else int(limit)
+        if not 0 &lt;= target &lt;= len(sessions):
+            raise ValueError(f"limit must be between 0 and {len(sessions)}, or all")
+        if (
+            suite == "pilot300"
+            and stage != "train"
+            and any(s["split"] == "test" for s in sessions[:target])
+        ):
+            if not (BENCHMARK / "selection.json").exists():
+                raise ValueError(
+                    "Pilot test inference locked until dev-only revision selection is frozen"
+                )
+        if suite == "full677" and not (BENCHMARK / "selection.json").exists():
+            raise ValueError("Full experiment requires frozen pilot selection")
+        path = run_path(suite, method, revision)
+        if path.exists() and (path / "run_manifest.json").exists() and not resume:
+            raise FileExistsError(f"Run exists; pass --resume: {path}")
+        from .native_topics import prepare_native_tools
+    
+        for native_method in ("lda", "btm", "gsdmm"):
+            prepare_native_tools(native_method)
+        source = runtime_fingerprint()
+        binding = {
+            "suite": suite,
+            "cohort": manifest["content_fingerprint"],
+            "method": method,
+            "revision": revision,
+            "config": config,
+            "runtime": source,
+            "cpu_affinity": cpu_policy["assigned_cpus"],
+        }
+        by_post = defaultdict(list)
+        for message in messages:
+            by_post[message["post_id"]].append(message)
+        from .model import predict_session, train_model
+    
+        with run_lock(path), threadpool_limits(limits=int(config["threads"])):
+            try:
+                saved_path = path / "run_manifest.json"
+                if saved_path.exists():
+                    saved = read_json(saved_path)
+                    if saved["binding_sha256"] != fingerprint(binding):
+                        raise ValueError(
+                            "Run config/source/environment/data changed; "
+                            "use a new version, cannot merge predictions"
+                        )
+                else:
+                    saved = {
+                        "binding": binding,
+                        "binding_sha256": fingerprint(binding),
+                        "created_at": utc_now(),
+                        "formal_fit_attempts": 0,
+                        "cpu_policy": cpu_policy,
+                    }
+                    write_json(saved_path, saved)
+                    snapshot = path / "source_snapshot"
+                    for relative in source["source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT / relative, destination)
+                    for name in ("pyproject.toml", "uv.lock"):
+                        shutil.copy2(PROJECT / name, snapshot / name)
+                    for relative in source["native_source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT.parent / relative, destination)
+                    write_json(path / "config.json", config)
+                model_path = path / "model.joblib"
+                trained_path = path / "TRAINED.json"
+                if trained_path.exists():
+                    trained = read_json(trained_path)
+                    if file_hash(model_path) != trained["model_sha256"]:
+                        raise ValueError("Model fingerprint mismatch; refusing resume")
+                    model = joblib.load(model_path)
+                    if hasattr(model.topic_model, "validate_assets"):
+                        model.topic_model.validate_assets()
+                else:
+                    saved["formal_fit_attempts"] += 1
+                    write_json(saved_path, saved)
+                    _write_progress(path, manifest, sessions, [], "training")
+                    print(
+                        f"[{suite}/{method}/{revision or '-'}] training attempt "
+                        f"{saved['formal_fit_attempts']}",
+                        flush=True,
+                    )
+                    fitting = [s for s in sessions if s["split"] in {"train", "dev"}]
+                    fitting_ids = {s["post_id"] for s in fitting}
+                    fitting_messages = [m for m in messages if m["post_id"] in fitting_ids]
+                    start = time.perf_counter()
+                    with ResourceMonitor() as monitor:
+                        model = train_model(
+                            fitting,
+                            fitting_messages,
+                            method,
+                            config,
+                            path / "assets" / f"attempt_{saved['formal_fit_attempts']}",
+                        )
+                    seconds = time.perf_counter() - start
+                    if monitor.peak_affinity_width &gt; int(config["threads"]):
+&gt;                       raise RuntimeError("Observed process CPU affinity exceeds frozen resource cap")
+E                       RuntimeError: Observed process CPU affinity exceeds frozen resource cap
+
+src\cst_mil\bench\runner.py:396: RuntimeError</failure></testcase><testcase classname="tests.test_bench_resume_guards" name="test_invalid_session_artifacts_are_rejected[duplicate]" time="0.048"><failure message="RuntimeError: Observed process CPU affinity exceeds frozen resource cap">isolated_runner = namespace(project=WindowsPath('D:/github/intern/cst_mil/.pytest-tmp-functional-1789239402119868700/test_invalid_sessio...True, 'fresh_test': False}, {'post_id': 'p4', 'split': 'test', 'label': 0, 'pilot_member': True, 'fresh_test': False}])
+change = 'duplicate'
+
+    @pytest.mark.parametrize("change", ["content", "binding", "model", "duplicate", "unknown_id"])
+    def test_invalid_session_artifacts_are_rejected(isolated_runner, change):
+&gt;       runner.run_method("smoke5", "nmf", limit="1")
+
+tests\test_bench_resume_guards.py:150: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suite = 'smoke5', method = 'nmf', revision = None, limit = '1', resume = False
+stage = 'all'
+
+    def run_method(
+        suite: str,
+        method: str,
+        *,
+        revision: str | None = None,
+        limit: str = "all",
+        resume: bool = False,
+        stage: str = "all",
+    ) -&gt; dict:
+        if method not in METHODS or stage not in {"all", "train"}:
+            raise ValueError("Unknown method or stage")
+        manifest, sessions, messages = load_suite(suite)
+        config, revision = resolve_config(method, revision, suite)
+        from .resources import configure_cpu
+    
+        cpu_policy = configure_cpu(int(config["threads"]))
+        target = len(sessions) if limit == "all" else int(limit)
+        if not 0 &lt;= target &lt;= len(sessions):
+            raise ValueError(f"limit must be between 0 and {len(sessions)}, or all")
+        if (
+            suite == "pilot300"
+            and stage != "train"
+            and any(s["split"] == "test" for s in sessions[:target])
+        ):
+            if not (BENCHMARK / "selection.json").exists():
+                raise ValueError(
+                    "Pilot test inference locked until dev-only revision selection is frozen"
+                )
+        if suite == "full677" and not (BENCHMARK / "selection.json").exists():
+            raise ValueError("Full experiment requires frozen pilot selection")
+        path = run_path(suite, method, revision)
+        if path.exists() and (path / "run_manifest.json").exists() and not resume:
+            raise FileExistsError(f"Run exists; pass --resume: {path}")
+        from .native_topics import prepare_native_tools
+    
+        for native_method in ("lda", "btm", "gsdmm"):
+            prepare_native_tools(native_method)
+        source = runtime_fingerprint()
+        binding = {
+            "suite": suite,
+            "cohort": manifest["content_fingerprint"],
+            "method": method,
+            "revision": revision,
+            "config": config,
+            "runtime": source,
+            "cpu_affinity": cpu_policy["assigned_cpus"],
+        }
+        by_post = defaultdict(list)
+        for message in messages:
+            by_post[message["post_id"]].append(message)
+        from .model import predict_session, train_model
+    
+        with run_lock(path), threadpool_limits(limits=int(config["threads"])):
+            try:
+                saved_path = path / "run_manifest.json"
+                if saved_path.exists():
+                    saved = read_json(saved_path)
+                    if saved["binding_sha256"] != fingerprint(binding):
+                        raise ValueError(
+                            "Run config/source/environment/data changed; "
+                            "use a new version, cannot merge predictions"
+                        )
+                else:
+                    saved = {
+                        "binding": binding,
+                        "binding_sha256": fingerprint(binding),
+                        "created_at": utc_now(),
+                        "formal_fit_attempts": 0,
+                        "cpu_policy": cpu_policy,
+                    }
+                    write_json(saved_path, saved)
+                    snapshot = path / "source_snapshot"
+                    for relative in source["source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT / relative, destination)
+                    for name in ("pyproject.toml", "uv.lock"):
+                        shutil.copy2(PROJECT / name, snapshot / name)
+                    for relative in source["native_source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT.parent / relative, destination)
+                    write_json(path / "config.json", config)
+                model_path = path / "model.joblib"
+                trained_path = path / "TRAINED.json"
+                if trained_path.exists():
+                    trained = read_json(trained_path)
+                    if file_hash(model_path) != trained["model_sha256"]:
+                        raise ValueError("Model fingerprint mismatch; refusing resume")
+                    model = joblib.load(model_path)
+                    if hasattr(model.topic_model, "validate_assets"):
+                        model.topic_model.validate_assets()
+                else:
+                    saved["formal_fit_attempts"] += 1
+                    write_json(saved_path, saved)
+                    _write_progress(path, manifest, sessions, [], "training")
+                    print(
+                        f"[{suite}/{method}/{revision or '-'}] training attempt "
+                        f"{saved['formal_fit_attempts']}",
+                        flush=True,
+                    )
+                    fitting = [s for s in sessions if s["split"] in {"train", "dev"}]
+                    fitting_ids = {s["post_id"] for s in fitting}
+                    fitting_messages = [m for m in messages if m["post_id"] in fitting_ids]
+                    start = time.perf_counter()
+                    with ResourceMonitor() as monitor:
+                        model = train_model(
+                            fitting,
+                            fitting_messages,
+                            method,
+                            config,
+                            path / "assets" / f"attempt_{saved['formal_fit_attempts']}",
+                        )
+                    seconds = time.perf_counter() - start
+                    if monitor.peak_affinity_width &gt; int(config["threads"]):
+&gt;                       raise RuntimeError("Observed process CPU affinity exceeds frozen resource cap")
+E                       RuntimeError: Observed process CPU affinity exceeds frozen resource cap
+
+src\cst_mil\bench\runner.py:396: RuntimeError</failure></testcase><testcase classname="tests.test_bench_resume_guards" name="test_invalid_session_artifacts_are_rejected[unknown_id]" time="0.050"><failure message="RuntimeError: Observed process CPU affinity exceeds frozen resource cap">isolated_runner = namespace(project=WindowsPath('D:/github/intern/cst_mil/.pytest-tmp-functional-1789239402119868700/test_invalid_sessio...True, 'fresh_test': False}, {'post_id': 'p4', 'split': 'test', 'label': 0, 'pilot_member': True, 'fresh_test': False}])
+change = 'unknown_id'
+
+    @pytest.mark.parametrize("change", ["content", "binding", "model", "duplicate", "unknown_id"])
+    def test_invalid_session_artifacts_are_rejected(isolated_runner, change):
+&gt;       runner.run_method("smoke5", "nmf", limit="1")
+
+tests\test_bench_resume_guards.py:150: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suite = 'smoke5', method = 'nmf', revision = None, limit = '1', resume = False
+stage = 'all'
+
+    def run_method(
+        suite: str,
+        method: str,
+        *,
+        revision: str | None = None,
+        limit: str = "all",
+        resume: bool = False,
+        stage: str = "all",
+    ) -&gt; dict:
+        if method not in METHODS or stage not in {"all", "train"}:
+            raise ValueError("Unknown method or stage")
+        manifest, sessions, messages = load_suite(suite)
+        config, revision = resolve_config(method, revision, suite)
+        from .resources import configure_cpu
+    
+        cpu_policy = configure_cpu(int(config["threads"]))
+        target = len(sessions) if limit == "all" else int(limit)
+        if not 0 &lt;= target &lt;= len(sessions):
+            raise ValueError(f"limit must be between 0 and {len(sessions)}, or all")
+        if (
+            suite == "pilot300"
+            and stage != "train"
+            and any(s["split"] == "test" for s in sessions[:target])
+        ):
+            if not (BENCHMARK / "selection.json").exists():
+                raise ValueError(
+                    "Pilot test inference locked until dev-only revision selection is frozen"
+                )
+        if suite == "full677" and not (BENCHMARK / "selection.json").exists():
+            raise ValueError("Full experiment requires frozen pilot selection")
+        path = run_path(suite, method, revision)
+        if path.exists() and (path / "run_manifest.json").exists() and not resume:
+            raise FileExistsError(f"Run exists; pass --resume: {path}")
+        from .native_topics import prepare_native_tools
+    
+        for native_method in ("lda", "btm", "gsdmm"):
+            prepare_native_tools(native_method)
+        source = runtime_fingerprint()
+        binding = {
+            "suite": suite,
+            "cohort": manifest["content_fingerprint"],
+            "method": method,
+            "revision": revision,
+            "config": config,
+            "runtime": source,
+            "cpu_affinity": cpu_policy["assigned_cpus"],
+        }
+        by_post = defaultdict(list)
+        for message in messages:
+            by_post[message["post_id"]].append(message)
+        from .model import predict_session, train_model
+    
+        with run_lock(path), threadpool_limits(limits=int(config["threads"])):
+            try:
+                saved_path = path / "run_manifest.json"
+                if saved_path.exists():
+                    saved = read_json(saved_path)
+                    if saved["binding_sha256"] != fingerprint(binding):
+                        raise ValueError(
+                            "Run config/source/environment/data changed; "
+                            "use a new version, cannot merge predictions"
+                        )
+                else:
+                    saved = {
+                        "binding": binding,
+                        "binding_sha256": fingerprint(binding),
+                        "created_at": utc_now(),
+                        "formal_fit_attempts": 0,
+                        "cpu_policy": cpu_policy,
+                    }
+                    write_json(saved_path, saved)
+                    snapshot = path / "source_snapshot"
+                    for relative in source["source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT / relative, destination)
+                    for name in ("pyproject.toml", "uv.lock"):
+                        shutil.copy2(PROJECT / name, snapshot / name)
+                    for relative in source["native_source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT.parent / relative, destination)
+                    write_json(path / "config.json", config)
+                model_path = path / "model.joblib"
+                trained_path = path / "TRAINED.json"
+                if trained_path.exists():
+                    trained = read_json(trained_path)
+                    if file_hash(model_path) != trained["model_sha256"]:
+                        raise ValueError("Model fingerprint mismatch; refusing resume")
+                    model = joblib.load(model_path)
+                    if hasattr(model.topic_model, "validate_assets"):
+                        model.topic_model.validate_assets()
+                else:
+                    saved["formal_fit_attempts"] += 1
+                    write_json(saved_path, saved)
+                    _write_progress(path, manifest, sessions, [], "training")
+                    print(
+                        f"[{suite}/{method}/{revision or '-'}] training attempt "
+                        f"{saved['formal_fit_attempts']}",
+                        flush=True,
+                    )
+                    fitting = [s for s in sessions if s["split"] in {"train", "dev"}]
+                    fitting_ids = {s["post_id"] for s in fitting}
+                    fitting_messages = [m for m in messages if m["post_id"] in fitting_ids]
+                    start = time.perf_counter()
+                    with ResourceMonitor() as monitor:
+                        model = train_model(
+                            fitting,
+                            fitting_messages,
+                            method,
+                            config,
+                            path / "assets" / f"attempt_{saved['formal_fit_attempts']}",
+                        )
+                    seconds = time.perf_counter() - start
+                    if monitor.peak_affinity_width &gt; int(config["threads"]):
+&gt;                       raise RuntimeError("Observed process CPU affinity exceeds frozen resource cap")
+E                       RuntimeError: Observed process CPU affinity exceeds frozen resource cap
+
+src\cst_mil\bench\runner.py:396: RuntimeError</failure></testcase><testcase classname="tests.test_bench_resume_guards" name="test_run_binding_rejects_changed_inputs[source]" time="0.050"><failure message="RuntimeError: Observed process CPU affinity exceeds frozen resource cap">isolated_runner = namespace(project=WindowsPath('D:/github/intern/cst_mil/.pytest-tmp-functional-1789239402119868700/test_run_binding_re...True, 'fresh_test': False}, {'post_id': 'p4', 'split': 'test', 'label': 0, 'pilot_member': True, 'fresh_test': False}])
+change = 'source'
+
+    @pytest.mark.parametrize("change", ["source", "environment", "data", "config"])
+    def test_run_binding_rejects_changed_inputs(isolated_runner, change):
+&gt;       runner.run_method("smoke5", "nmf", limit="1")
+
+tests\test_bench_resume_guards.py:176: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suite = 'smoke5', method = 'nmf', revision = None, limit = '1', resume = False
+stage = 'all'
+
+    def run_method(
+        suite: str,
+        method: str,
+        *,
+        revision: str | None = None,
+        limit: str = "all",
+        resume: bool = False,
+        stage: str = "all",
+    ) -&gt; dict:
+        if method not in METHODS or stage not in {"all", "train"}:
+            raise ValueError("Unknown method or stage")
+        manifest, sessions, messages = load_suite(suite)
+        config, revision = resolve_config(method, revision, suite)
+        from .resources import configure_cpu
+    
+        cpu_policy = configure_cpu(int(config["threads"]))
+        target = len(sessions) if limit == "all" else int(limit)
+        if not 0 &lt;= target &lt;= len(sessions):
+            raise ValueError(f"limit must be between 0 and {len(sessions)}, or all")
+        if (
+            suite == "pilot300"
+            and stage != "train"
+            and any(s["split"] == "test" for s in sessions[:target])
+        ):
+            if not (BENCHMARK / "selection.json").exists():
+                raise ValueError(
+                    "Pilot test inference locked until dev-only revision selection is frozen"
+                )
+        if suite == "full677" and not (BENCHMARK / "selection.json").exists():
+            raise ValueError("Full experiment requires frozen pilot selection")
+        path = run_path(suite, method, revision)
+        if path.exists() and (path / "run_manifest.json").exists() and not resume:
+            raise FileExistsError(f"Run exists; pass --resume: {path}")
+        from .native_topics import prepare_native_tools
+    
+        for native_method in ("lda", "btm", "gsdmm"):
+            prepare_native_tools(native_method)
+        source = runtime_fingerprint()
+        binding = {
+            "suite": suite,
+            "cohort": manifest["content_fingerprint"],
+            "method": method,
+            "revision": revision,
+            "config": config,
+            "runtime": source,
+            "cpu_affinity": cpu_policy["assigned_cpus"],
+        }
+        by_post = defaultdict(list)
+        for message in messages:
+            by_post[message["post_id"]].append(message)
+        from .model import predict_session, train_model
+    
+        with run_lock(path), threadpool_limits(limits=int(config["threads"])):
+            try:
+                saved_path = path / "run_manifest.json"
+                if saved_path.exists():
+                    saved = read_json(saved_path)
+                    if saved["binding_sha256"] != fingerprint(binding):
+                        raise ValueError(
+                            "Run config/source/environment/data changed; "
+                            "use a new version, cannot merge predictions"
+                        )
+                else:
+                    saved = {
+                        "binding": binding,
+                        "binding_sha256": fingerprint(binding),
+                        "created_at": utc_now(),
+                        "formal_fit_attempts": 0,
+                        "cpu_policy": cpu_policy,
+                    }
+                    write_json(saved_path, saved)
+                    snapshot = path / "source_snapshot"
+                    for relative in source["source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT / relative, destination)
+                    for name in ("pyproject.toml", "uv.lock"):
+                        shutil.copy2(PROJECT / name, snapshot / name)
+                    for relative in source["native_source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT.parent / relative, destination)
+                    write_json(path / "config.json", config)
+                model_path = path / "model.joblib"
+                trained_path = path / "TRAINED.json"
+                if trained_path.exists():
+                    trained = read_json(trained_path)
+                    if file_hash(model_path) != trained["model_sha256"]:
+                        raise ValueError("Model fingerprint mismatch; refusing resume")
+                    model = joblib.load(model_path)
+                    if hasattr(model.topic_model, "validate_assets"):
+                        model.topic_model.validate_assets()
+                else:
+                    saved["formal_fit_attempts"] += 1
+                    write_json(saved_path, saved)
+                    _write_progress(path, manifest, sessions, [], "training")
+                    print(
+                        f"[{suite}/{method}/{revision or '-'}] training attempt "
+                        f"{saved['formal_fit_attempts']}",
+                        flush=True,
+                    )
+                    fitting = [s for s in sessions if s["split"] in {"train", "dev"}]
+                    fitting_ids = {s["post_id"] for s in fitting}
+                    fitting_messages = [m for m in messages if m["post_id"] in fitting_ids]
+                    start = time.perf_counter()
+                    with ResourceMonitor() as monitor:
+                        model = train_model(
+                            fitting,
+                            fitting_messages,
+                            method,
+                            config,
+                            path / "assets" / f"attempt_{saved['formal_fit_attempts']}",
+                        )
+                    seconds = time.perf_counter() - start
+                    if monitor.peak_affinity_width &gt; int(config["threads"]):
+&gt;                       raise RuntimeError("Observed process CPU affinity exceeds frozen resource cap")
+E                       RuntimeError: Observed process CPU affinity exceeds frozen resource cap
+
+src\cst_mil\bench\runner.py:396: RuntimeError</failure></testcase><testcase classname="tests.test_bench_resume_guards" name="test_run_binding_rejects_changed_inputs[environment]" time="0.048"><failure message="RuntimeError: Observed process CPU affinity exceeds frozen resource cap">isolated_runner = namespace(project=WindowsPath('D:/github/intern/cst_mil/.pytest-tmp-functional-1789239402119868700/test_run_binding_re...True, 'fresh_test': False}, {'post_id': 'p4', 'split': 'test', 'label': 0, 'pilot_member': True, 'fresh_test': False}])
+change = 'environment'
+
+    @pytest.mark.parametrize("change", ["source", "environment", "data", "config"])
+    def test_run_binding_rejects_changed_inputs(isolated_runner, change):
+&gt;       runner.run_method("smoke5", "nmf", limit="1")
+
+tests\test_bench_resume_guards.py:176: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suite = 'smoke5', method = 'nmf', revision = None, limit = '1', resume = False
+stage = 'all'
+
+    def run_method(
+        suite: str,
+        method: str,
+        *,
+        revision: str | None = None,
+        limit: str = "all",
+        resume: bool = False,
+        stage: str = "all",
+    ) -&gt; dict:
+        if method not in METHODS or stage not in {"all", "train"}:
+            raise ValueError("Unknown method or stage")
+        manifest, sessions, messages = load_suite(suite)
+        config, revision = resolve_config(method, revision, suite)
+        from .resources import configure_cpu
+    
+        cpu_policy = configure_cpu(int(config["threads"]))
+        target = len(sessions) if limit == "all" else int(limit)
+        if not 0 &lt;= target &lt;= len(sessions):
+            raise ValueError(f"limit must be between 0 and {len(sessions)}, or all")
+        if (
+            suite == "pilot300"
+            and stage != "train"
+            and any(s["split"] == "test" for s in sessions[:target])
+        ):
+            if not (BENCHMARK / "selection.json").exists():
+                raise ValueError(
+                    "Pilot test inference locked until dev-only revision selection is frozen"
+                )
+        if suite == "full677" and not (BENCHMARK / "selection.json").exists():
+            raise ValueError("Full experiment requires frozen pilot selection")
+        path = run_path(suite, method, revision)
+        if path.exists() and (path / "run_manifest.json").exists() and not resume:
+            raise FileExistsError(f"Run exists; pass --resume: {path}")
+        from .native_topics import prepare_native_tools
+    
+        for native_method in ("lda", "btm", "gsdmm"):
+            prepare_native_tools(native_method)
+        source = runtime_fingerprint()
+        binding = {
+            "suite": suite,
+            "cohort": manifest["content_fingerprint"],
+            "method": method,
+            "revision": revision,
+            "config": config,
+            "runtime": source,
+            "cpu_affinity": cpu_policy["assigned_cpus"],
+        }
+        by_post = defaultdict(list)
+        for message in messages:
+            by_post[message["post_id"]].append(message)
+        from .model import predict_session, train_model
+    
+        with run_lock(path), threadpool_limits(limits=int(config["threads"])):
+            try:
+                saved_path = path / "run_manifest.json"
+                if saved_path.exists():
+                    saved = read_json(saved_path)
+                    if saved["binding_sha256"] != fingerprint(binding):
+                        raise ValueError(
+                            "Run config/source/environment/data changed; "
+                            "use a new version, cannot merge predictions"
+                        )
+                else:
+                    saved = {
+                        "binding": binding,
+                        "binding_sha256": fingerprint(binding),
+                        "created_at": utc_now(),
+                        "formal_fit_attempts": 0,
+                        "cpu_policy": cpu_policy,
+                    }
+                    write_json(saved_path, saved)
+                    snapshot = path / "source_snapshot"
+                    for relative in source["source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT / relative, destination)
+                    for name in ("pyproject.toml", "uv.lock"):
+                        shutil.copy2(PROJECT / name, snapshot / name)
+                    for relative in source["native_source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT.parent / relative, destination)
+                    write_json(path / "config.json", config)
+                model_path = path / "model.joblib"
+                trained_path = path / "TRAINED.json"
+                if trained_path.exists():
+                    trained = read_json(trained_path)
+                    if file_hash(model_path) != trained["model_sha256"]:
+                        raise ValueError("Model fingerprint mismatch; refusing resume")
+                    model = joblib.load(model_path)
+                    if hasattr(model.topic_model, "validate_assets"):
+                        model.topic_model.validate_assets()
+                else:
+                    saved["formal_fit_attempts"] += 1
+                    write_json(saved_path, saved)
+                    _write_progress(path, manifest, sessions, [], "training")
+                    print(
+                        f"[{suite}/{method}/{revision or '-'}] training attempt "
+                        f"{saved['formal_fit_attempts']}",
+                        flush=True,
+                    )
+                    fitting = [s for s in sessions if s["split"] in {"train", "dev"}]
+                    fitting_ids = {s["post_id"] for s in fitting}
+                    fitting_messages = [m for m in messages if m["post_id"] in fitting_ids]
+                    start = time.perf_counter()
+                    with ResourceMonitor() as monitor:
+                        model = train_model(
+                            fitting,
+                            fitting_messages,
+                            method,
+                            config,
+                            path / "assets" / f"attempt_{saved['formal_fit_attempts']}",
+                        )
+                    seconds = time.perf_counter() - start
+                    if monitor.peak_affinity_width &gt; int(config["threads"]):
+&gt;                       raise RuntimeError("Observed process CPU affinity exceeds frozen resource cap")
+E                       RuntimeError: Observed process CPU affinity exceeds frozen resource cap
+
+src\cst_mil\bench\runner.py:396: RuntimeError</failure></testcase><testcase classname="tests.test_bench_resume_guards" name="test_run_binding_rejects_changed_inputs[data]" time="0.051"><failure message="RuntimeError: Observed process CPU affinity exceeds frozen resource cap">isolated_runner = namespace(project=WindowsPath('D:/github/intern/cst_mil/.pytest-tmp-functional-1789239402119868700/test_run_binding_re...True, 'fresh_test': False}, {'post_id': 'p4', 'split': 'test', 'label': 0, 'pilot_member': True, 'fresh_test': False}])
+change = 'data'
+
+    @pytest.mark.parametrize("change", ["source", "environment", "data", "config"])
+    def test_run_binding_rejects_changed_inputs(isolated_runner, change):
+&gt;       runner.run_method("smoke5", "nmf", limit="1")
+
+tests\test_bench_resume_guards.py:176: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suite = 'smoke5', method = 'nmf', revision = None, limit = '1', resume = False
+stage = 'all'
+
+    def run_method(
+        suite: str,
+        method: str,
+        *,
+        revision: str | None = None,
+        limit: str = "all",
+        resume: bool = False,
+        stage: str = "all",
+    ) -&gt; dict:
+        if method not in METHODS or stage not in {"all", "train"}:
+            raise ValueError("Unknown method or stage")
+        manifest, sessions, messages = load_suite(suite)
+        config, revision = resolve_config(method, revision, suite)
+        from .resources import configure_cpu
+    
+        cpu_policy = configure_cpu(int(config["threads"]))
+        target = len(sessions) if limit == "all" else int(limit)
+        if not 0 &lt;= target &lt;= len(sessions):
+            raise ValueError(f"limit must be between 0 and {len(sessions)}, or all")
+        if (
+            suite == "pilot300"
+            and stage != "train"
+            and any(s["split"] == "test" for s in sessions[:target])
+        ):
+            if not (BENCHMARK / "selection.json").exists():
+                raise ValueError(
+                    "Pilot test inference locked until dev-only revision selection is frozen"
+                )
+        if suite == "full677" and not (BENCHMARK / "selection.json").exists():
+            raise ValueError("Full experiment requires frozen pilot selection")
+        path = run_path(suite, method, revision)
+        if path.exists() and (path / "run_manifest.json").exists() and not resume:
+            raise FileExistsError(f"Run exists; pass --resume: {path}")
+        from .native_topics import prepare_native_tools
+    
+        for native_method in ("lda", "btm", "gsdmm"):
+            prepare_native_tools(native_method)
+        source = runtime_fingerprint()
+        binding = {
+            "suite": suite,
+            "cohort": manifest["content_fingerprint"],
+            "method": method,
+            "revision": revision,
+            "config": config,
+            "runtime": source,
+            "cpu_affinity": cpu_policy["assigned_cpus"],
+        }
+        by_post = defaultdict(list)
+        for message in messages:
+            by_post[message["post_id"]].append(message)
+        from .model import predict_session, train_model
+    
+        with run_lock(path), threadpool_limits(limits=int(config["threads"])):
+            try:
+                saved_path = path / "run_manifest.json"
+                if saved_path.exists():
+                    saved = read_json(saved_path)
+                    if saved["binding_sha256"] != fingerprint(binding):
+                        raise ValueError(
+                            "Run config/source/environment/data changed; "
+                            "use a new version, cannot merge predictions"
+                        )
+                else:
+                    saved = {
+                        "binding": binding,
+                        "binding_sha256": fingerprint(binding),
+                        "created_at": utc_now(),
+                        "formal_fit_attempts": 0,
+                        "cpu_policy": cpu_policy,
+                    }
+                    write_json(saved_path, saved)
+                    snapshot = path / "source_snapshot"
+                    for relative in source["source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT / relative, destination)
+                    for name in ("pyproject.toml", "uv.lock"):
+                        shutil.copy2(PROJECT / name, snapshot / name)
+                    for relative in source["native_source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT.parent / relative, destination)
+                    write_json(path / "config.json", config)
+                model_path = path / "model.joblib"
+                trained_path = path / "TRAINED.json"
+                if trained_path.exists():
+                    trained = read_json(trained_path)
+                    if file_hash(model_path) != trained["model_sha256"]:
+                        raise ValueError("Model fingerprint mismatch; refusing resume")
+                    model = joblib.load(model_path)
+                    if hasattr(model.topic_model, "validate_assets"):
+                        model.topic_model.validate_assets()
+                else:
+                    saved["formal_fit_attempts"] += 1
+                    write_json(saved_path, saved)
+                    _write_progress(path, manifest, sessions, [], "training")
+                    print(
+                        f"[{suite}/{method}/{revision or '-'}] training attempt "
+                        f"{saved['formal_fit_attempts']}",
+                        flush=True,
+                    )
+                    fitting = [s for s in sessions if s["split"] in {"train", "dev"}]
+                    fitting_ids = {s["post_id"] for s in fitting}
+                    fitting_messages = [m for m in messages if m["post_id"] in fitting_ids]
+                    start = time.perf_counter()
+                    with ResourceMonitor() as monitor:
+                        model = train_model(
+                            fitting,
+                            fitting_messages,
+                            method,
+                            config,
+                            path / "assets" / f"attempt_{saved['formal_fit_attempts']}",
+                        )
+                    seconds = time.perf_counter() - start
+                    if monitor.peak_affinity_width &gt; int(config["threads"]):
+&gt;                       raise RuntimeError("Observed process CPU affinity exceeds frozen resource cap")
+E                       RuntimeError: Observed process CPU affinity exceeds frozen resource cap
+
+src\cst_mil\bench\runner.py:396: RuntimeError</failure></testcase><testcase classname="tests.test_bench_resume_guards" name="test_run_binding_rejects_changed_inputs[config]" time="0.057"><failure message="RuntimeError: Observed process CPU affinity exceeds frozen resource cap">isolated_runner = namespace(project=WindowsPath('D:/github/intern/cst_mil/.pytest-tmp-functional-1789239402119868700/test_run_binding_re...True, 'fresh_test': False}, {'post_id': 'p4', 'split': 'test', 'label': 0, 'pilot_member': True, 'fresh_test': False}])
+change = 'config'
+
+    @pytest.mark.parametrize("change", ["source", "environment", "data", "config"])
+    def test_run_binding_rejects_changed_inputs(isolated_runner, change):
+&gt;       runner.run_method("smoke5", "nmf", limit="1")
+
+tests\test_bench_resume_guards.py:176: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suite = 'smoke5', method = 'nmf', revision = None, limit = '1', resume = False
+stage = 'all'
+
+    def run_method(
+        suite: str,
+        method: str,
+        *,
+        revision: str | None = None,
+        limit: str = "all",
+        resume: bool = False,
+        stage: str = "all",
+    ) -&gt; dict:
+        if method not in METHODS or stage not in {"all", "train"}:
+            raise ValueError("Unknown method or stage")
+        manifest, sessions, messages = load_suite(suite)
+        config, revision = resolve_config(method, revision, suite)
+        from .resources import configure_cpu
+    
+        cpu_policy = configure_cpu(int(config["threads"]))
+        target = len(sessions) if limit == "all" else int(limit)
+        if not 0 &lt;= target &lt;= len(sessions):
+            raise ValueError(f"limit must be between 0 and {len(sessions)}, or all")
+        if (
+            suite == "pilot300"
+            and stage != "train"
+            and any(s["split"] == "test" for s in sessions[:target])
+        ):
+            if not (BENCHMARK / "selection.json").exists():
+                raise ValueError(
+                    "Pilot test inference locked until dev-only revision selection is frozen"
+                )
+        if suite == "full677" and not (BENCHMARK / "selection.json").exists():
+            raise ValueError("Full experiment requires frozen pilot selection")
+        path = run_path(suite, method, revision)
+        if path.exists() and (path / "run_manifest.json").exists() and not resume:
+            raise FileExistsError(f"Run exists; pass --resume: {path}")
+        from .native_topics import prepare_native_tools
+    
+        for native_method in ("lda", "btm", "gsdmm"):
+            prepare_native_tools(native_method)
+        source = runtime_fingerprint()
+        binding = {
+            "suite": suite,
+            "cohort": manifest["content_fingerprint"],
+            "method": method,
+            "revision": revision,
+            "config": config,
+            "runtime": source,
+            "cpu_affinity": cpu_policy["assigned_cpus"],
+        }
+        by_post = defaultdict(list)
+        for message in messages:
+            by_post[message["post_id"]].append(message)
+        from .model import predict_session, train_model
+    
+        with run_lock(path), threadpool_limits(limits=int(config["threads"])):
+            try:
+                saved_path = path / "run_manifest.json"
+                if saved_path.exists():
+                    saved = read_json(saved_path)
+                    if saved["binding_sha256"] != fingerprint(binding):
+                        raise ValueError(
+                            "Run config/source/environment/data changed; "
+                            "use a new version, cannot merge predictions"
+                        )
+                else:
+                    saved = {
+                        "binding": binding,
+                        "binding_sha256": fingerprint(binding),
+                        "created_at": utc_now(),
+                        "formal_fit_attempts": 0,
+                        "cpu_policy": cpu_policy,
+                    }
+                    write_json(saved_path, saved)
+                    snapshot = path / "source_snapshot"
+                    for relative in source["source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT / relative, destination)
+                    for name in ("pyproject.toml", "uv.lock"):
+                        shutil.copy2(PROJECT / name, snapshot / name)
+                    for relative in source["native_source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT.parent / relative, destination)
+                    write_json(path / "config.json", config)
+                model_path = path / "model.joblib"
+                trained_path = path / "TRAINED.json"
+                if trained_path.exists():
+                    trained = read_json(trained_path)
+                    if file_hash(model_path) != trained["model_sha256"]:
+                        raise ValueError("Model fingerprint mismatch; refusing resume")
+                    model = joblib.load(model_path)
+                    if hasattr(model.topic_model, "validate_assets"):
+                        model.topic_model.validate_assets()
+                else:
+                    saved["formal_fit_attempts"] += 1
+                    write_json(saved_path, saved)
+                    _write_progress(path, manifest, sessions, [], "training")
+                    print(
+                        f"[{suite}/{method}/{revision or '-'}] training attempt "
+                        f"{saved['formal_fit_attempts']}",
+                        flush=True,
+                    )
+                    fitting = [s for s in sessions if s["split"] in {"train", "dev"}]
+                    fitting_ids = {s["post_id"] for s in fitting}
+                    fitting_messages = [m for m in messages if m["post_id"] in fitting_ids]
+                    start = time.perf_counter()
+                    with ResourceMonitor() as monitor:
+                        model = train_model(
+                            fitting,
+                            fitting_messages,
+                            method,
+                            config,
+                            path / "assets" / f"attempt_{saved['formal_fit_attempts']}",
+                        )
+                    seconds = time.perf_counter() - start
+                    if monitor.peak_affinity_width &gt; int(config["threads"]):
+&gt;                       raise RuntimeError("Observed process CPU affinity exceeds frozen resource cap")
+E                       RuntimeError: Observed process CPU affinity exceeds frozen resource cap
+
+src\cst_mil\bench\runner.py:396: RuntimeError</failure></testcase><testcase classname="tests.test_bench_resume_guards" name="test_train_stage_excludes_test_and_test_unlock_is_required" time="0.050"><failure message="RuntimeError: Observed process CPU affinity exceeds frozen resource cap">isolated_runner = namespace(project=WindowsPath('D:/github/intern/cst_mil/.pytest-tmp-functional-1789239402119868700/test_train_stage_ex...True, 'fresh_test': False}, {'post_id': 'p4', 'split': 'test', 'label': 0, 'pilot_member': True, 'fresh_test': False}])
+
+    def test_train_stage_excludes_test_and_test_unlock_is_required(isolated_runner):
+&gt;       first = runner.run_method("pilot300", "nmf", stage="train")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_bench_resume_guards.py:192: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suite = 'pilot300', method = 'nmf', revision = None, limit = 'all'
+resume = False, stage = 'train'
+
+    def run_method(
+        suite: str,
+        method: str,
+        *,
+        revision: str | None = None,
+        limit: str = "all",
+        resume: bool = False,
+        stage: str = "all",
+    ) -&gt; dict:
+        if method not in METHODS or stage not in {"all", "train"}:
+            raise ValueError("Unknown method or stage")
+        manifest, sessions, messages = load_suite(suite)
+        config, revision = resolve_config(method, revision, suite)
+        from .resources import configure_cpu
+    
+        cpu_policy = configure_cpu(int(config["threads"]))
+        target = len(sessions) if limit == "all" else int(limit)
+        if not 0 &lt;= target &lt;= len(sessions):
+            raise ValueError(f"limit must be between 0 and {len(sessions)}, or all")
+        if (
+            suite == "pilot300"
+            and stage != "train"
+            and any(s["split"] == "test" for s in sessions[:target])
+        ):
+            if not (BENCHMARK / "selection.json").exists():
+                raise ValueError(
+                    "Pilot test inference locked until dev-only revision selection is frozen"
+                )
+        if suite == "full677" and not (BENCHMARK / "selection.json").exists():
+            raise ValueError("Full experiment requires frozen pilot selection")
+        path = run_path(suite, method, revision)
+        if path.exists() and (path / "run_manifest.json").exists() and not resume:
+            raise FileExistsError(f"Run exists; pass --resume: {path}")
+        from .native_topics import prepare_native_tools
+    
+        for native_method in ("lda", "btm", "gsdmm"):
+            prepare_native_tools(native_method)
+        source = runtime_fingerprint()
+        binding = {
+            "suite": suite,
+            "cohort": manifest["content_fingerprint"],
+            "method": method,
+            "revision": revision,
+            "config": config,
+            "runtime": source,
+            "cpu_affinity": cpu_policy["assigned_cpus"],
+        }
+        by_post = defaultdict(list)
+        for message in messages:
+            by_post[message["post_id"]].append(message)
+        from .model import predict_session, train_model
+    
+        with run_lock(path), threadpool_limits(limits=int(config["threads"])):
+            try:
+                saved_path = path / "run_manifest.json"
+                if saved_path.exists():
+                    saved = read_json(saved_path)
+                    if saved["binding_sha256"] != fingerprint(binding):
+                        raise ValueError(
+                            "Run config/source/environment/data changed; "
+                            "use a new version, cannot merge predictions"
+                        )
+                else:
+                    saved = {
+                        "binding": binding,
+                        "binding_sha256": fingerprint(binding),
+                        "created_at": utc_now(),
+                        "formal_fit_attempts": 0,
+                        "cpu_policy": cpu_policy,
+                    }
+                    write_json(saved_path, saved)
+                    snapshot = path / "source_snapshot"
+                    for relative in source["source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT / relative, destination)
+                    for name in ("pyproject.toml", "uv.lock"):
+                        shutil.copy2(PROJECT / name, snapshot / name)
+                    for relative in source["native_source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT.parent / relative, destination)
+                    write_json(path / "config.json", config)
+                model_path = path / "model.joblib"
+                trained_path = path / "TRAINED.json"
+                if trained_path.exists():
+                    trained = read_json(trained_path)
+                    if file_hash(model_path) != trained["model_sha256"]:
+                        raise ValueError("Model fingerprint mismatch; refusing resume")
+                    model = joblib.load(model_path)
+                    if hasattr(model.topic_model, "validate_assets"):
+                        model.topic_model.validate_assets()
+                else:
+                    saved["formal_fit_attempts"] += 1
+                    write_json(saved_path, saved)
+                    _write_progress(path, manifest, sessions, [], "training")
+                    print(
+                        f"[{suite}/{method}/{revision or '-'}] training attempt "
+                        f"{saved['formal_fit_attempts']}",
+                        flush=True,
+                    )
+                    fitting = [s for s in sessions if s["split"] in {"train", "dev"}]
+                    fitting_ids = {s["post_id"] for s in fitting}
+                    fitting_messages = [m for m in messages if m["post_id"] in fitting_ids]
+                    start = time.perf_counter()
+                    with ResourceMonitor() as monitor:
+                        model = train_model(
+                            fitting,
+                            fitting_messages,
+                            method,
+                            config,
+                            path / "assets" / f"attempt_{saved['formal_fit_attempts']}",
+                        )
+                    seconds = time.perf_counter() - start
+                    if monitor.peak_affinity_width &gt; int(config["threads"]):
+&gt;                       raise RuntimeError("Observed process CPU affinity exceeds frozen resource cap")
+E                       RuntimeError: Observed process CPU affinity exceeds frozen resource cap
+
+src\cst_mil\bench\runner.py:396: RuntimeError</failure></testcase><testcase classname="tests.test_bench_resume_guards" name="test_full_suite_requires_selection_before_any_training" time="0.005" /><testcase classname="tests.test_bench_resume_guards" name="test_existing_run_requires_explicit_resume" time="0.048"><failure message="RuntimeError: Observed process CPU affinity exceeds frozen resource cap">isolated_runner = namespace(project=WindowsPath('D:/github/intern/cst_mil/.pytest-tmp-functional-1789239402119868700/test_existing_run_r...True, 'fresh_test': False}, {'post_id': 'p4', 'split': 'test', 'label': 0, 'pilot_member': True, 'fresh_test': False}])
+
+    def test_existing_run_requires_explicit_resume(isolated_runner):
+&gt;       runner.run_method("smoke5", "nmf", limit="1")
+
+tests\test_bench_resume_guards.py:216: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suite = 'smoke5', method = 'nmf', revision = None, limit = '1', resume = False
+stage = 'all'
+
+    def run_method(
+        suite: str,
+        method: str,
+        *,
+        revision: str | None = None,
+        limit: str = "all",
+        resume: bool = False,
+        stage: str = "all",
+    ) -&gt; dict:
+        if method not in METHODS or stage not in {"all", "train"}:
+            raise ValueError("Unknown method or stage")
+        manifest, sessions, messages = load_suite(suite)
+        config, revision = resolve_config(method, revision, suite)
+        from .resources import configure_cpu
+    
+        cpu_policy = configure_cpu(int(config["threads"]))
+        target = len(sessions) if limit == "all" else int(limit)
+        if not 0 &lt;= target &lt;= len(sessions):
+            raise ValueError(f"limit must be between 0 and {len(sessions)}, or all")
+        if (
+            suite == "pilot300"
+            and stage != "train"
+            and any(s["split"] == "test" for s in sessions[:target])
+        ):
+            if not (BENCHMARK / "selection.json").exists():
+                raise ValueError(
+                    "Pilot test inference locked until dev-only revision selection is frozen"
+                )
+        if suite == "full677" and not (BENCHMARK / "selection.json").exists():
+            raise ValueError("Full experiment requires frozen pilot selection")
+        path = run_path(suite, method, revision)
+        if path.exists() and (path / "run_manifest.json").exists() and not resume:
+            raise FileExistsError(f"Run exists; pass --resume: {path}")
+        from .native_topics import prepare_native_tools
+    
+        for native_method in ("lda", "btm", "gsdmm"):
+            prepare_native_tools(native_method)
+        source = runtime_fingerprint()
+        binding = {
+            "suite": suite,
+            "cohort": manifest["content_fingerprint"],
+            "method": method,
+            "revision": revision,
+            "config": config,
+            "runtime": source,
+            "cpu_affinity": cpu_policy["assigned_cpus"],
+        }
+        by_post = defaultdict(list)
+        for message in messages:
+            by_post[message["post_id"]].append(message)
+        from .model import predict_session, train_model
+    
+        with run_lock(path), threadpool_limits(limits=int(config["threads"])):
+            try:
+                saved_path = path / "run_manifest.json"
+                if saved_path.exists():
+                    saved = read_json(saved_path)
+                    if saved["binding_sha256"] != fingerprint(binding):
+                        raise ValueError(
+                            "Run config/source/environment/data changed; "
+                            "use a new version, cannot merge predictions"
+                        )
+                else:
+                    saved = {
+                        "binding": binding,
+                        "binding_sha256": fingerprint(binding),
+                        "created_at": utc_now(),
+                        "formal_fit_attempts": 0,
+                        "cpu_policy": cpu_policy,
+                    }
+                    write_json(saved_path, saved)
+                    snapshot = path / "source_snapshot"
+                    for relative in source["source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT / relative, destination)
+                    for name in ("pyproject.toml", "uv.lock"):
+                        shutil.copy2(PROJECT / name, snapshot / name)
+                    for relative in source["native_source_sha256"]:
+                        destination = snapshot / relative
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(PROJECT.parent / relative, destination)
+                    write_json(path / "config.json", config)
+                model_path = path / "model.joblib"
+                trained_path = path / "TRAINED.json"
+                if trained_path.exists():
+                    trained = read_json(trained_path)
+                    if file_hash(model_path) != trained["model_sha256"]:
+                        raise ValueError("Model fingerprint mismatch; refusing resume")
+                    model = joblib.load(model_path)
+                    if hasattr(model.topic_model, "validate_assets"):
+                        model.topic_model.validate_assets()
+                else:
+                    saved["formal_fit_attempts"] += 1
+                    write_json(saved_path, saved)
+                    _write_progress(path, manifest, sessions, [], "training")
+                    print(
+                        f"[{suite}/{method}/{revision or '-'}] training attempt "
+                        f"{saved['formal_fit_attempts']}",
+                        flush=True,
+                    )
+                    fitting = [s for s in sessions if s["split"] in {"train", "dev"}]
+                    fitting_ids = {s["post_id"] for s in fitting}
+                    fitting_messages = [m for m in messages if m["post_id"] in fitting_ids]
+                    start = time.perf_counter()
+                    with ResourceMonitor() as monitor:
+                        model = train_model(
+                            fitting,
+                            fitting_messages,
+                            method,
+                            config,
+                            path / "assets" / f"attempt_{saved['formal_fit_attempts']}",
+                        )
+                    seconds = time.perf_counter() - start
+                    if monitor.peak_affinity_width &gt; int(config["threads"]):
+&gt;                       raise RuntimeError("Observed process CPU affinity exceeds frozen resource cap")
+E                       RuntimeError: Observed process CPU affinity exceeds frozen resource cap
+
+src\cst_mil\bench\runner.py:396: RuntimeError</failure></testcase><testcase classname="tests.test_bench_resume_guards" name="test_out_of_range_limit_writes_nothing[-1]" time="0.007" /><testcase classname="tests.test_bench_resume_guards" name="test_out_of_range_limit_writes_nothing[6]" time="0.004" /><testcase classname="tests.test_data" name="test_normalize_text_is_conservative" time="0.002" /><testcase classname="tests.test_data" name="test_schema_validation_reports_missing_column" time="0.022" /><testcase classname="tests.test_data" name="test_prepare_dataset_cleans_and_splits_without_leakage" time="0.153" /><testcase classname="tests.test_data" name="test_download_is_pinned_hashed_and_cached" time="0.017" /><testcase classname="tests.test_model" name="test_select_threshold_breaks_macro_f1_ties_toward_lower_value" time="0.004" /><testcase classname="tests.test_model" name="test_train_predict_rank_and_joblib_roundtrip" time="0.108" /><testcase classname="tests.test_model" name="test_message_labels_cannot_change_training_or_predictions" time="0.192" /><testcase classname="tests.test_model" name="test_char_estimator_is_partial_fit_compatible_but_pipeline_is_static" time="0.067" /><testcase classname="tests.test_pipeline" name="test_validate_prepared_rejects_session_leakage" time="0.014" /><testcase classname="tests.test_pipeline" name="test_validate_prepared_accepts_disjoint_sessions" time="0.015" /><testcase classname="tests.test_pipeline" name="test_formal_run_lock_is_exclusive" time="0.004" /><testcase classname="tests.test_pipeline" name="test_synthetic_train_evaluate_smoke" time="1.539" /></testsuite></testsuites>

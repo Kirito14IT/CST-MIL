@@ -1,0 +1,82 @@
+{
+  "command_audit": {
+    "checks": 17,
+    "commands": 6,
+    "passed": true,
+    "path": "D:\\github\\intern\\cst_mil\\benchmark\\verification\\command_audit.json"
+  },
+  "comparison": "D:\\github\\intern\\cst_mil\\benchmark\\comparison\\pilot300\\analysis-report.md",
+  "created_at_unix": 1789241929.0041473,
+  "full677_content_fingerprint": "8d378a0b7c1dc9485baf462dab393105b1992610e5c3d4bf173c0645730d35e0",
+  "full677_formal_training_started": false,
+  "functional_tests": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 102
+  },
+  "guide": "D:\\github\\intern\\cst_mil\\benchmark\\操作指南.md",
+  "iteration_audit": {
+    "checks": 79,
+    "evidence_files": 61,
+    "passed": true,
+    "path": "D:\\github\\intern\\cst_mil\\benchmark\\verification\\iteration_audit.json"
+  },
+  "legacy_protection": {
+    "mismatches": [],
+    "protected_files": 40
+  },
+  "methods": [
+    {
+      "formal_fit_attempts": 1,
+      "method": "lda",
+      "pilot_run": "D:\\github\\intern\\cst_mil\\benchmark\\runs\\pilot300\\lda",
+      "revision": null,
+      "smoke_passed": true,
+      "verification": "D:\\github\\intern\\cst_mil\\benchmark\\verification\\lda_baseline.json"
+    },
+    {
+      "formal_fit_attempts": 1,
+      "method": "btm",
+      "pilot_run": "D:\\github\\intern\\cst_mil\\benchmark\\runs\\pilot300\\btm",
+      "revision": null,
+      "smoke_passed": true,
+      "verification": "D:\\github\\intern\\cst_mil\\benchmark\\verification\\btm_baseline.json"
+    },
+    {
+      "formal_fit_attempts": 1,
+      "method": "gsdmm",
+      "pilot_run": "D:\\github\\intern\\cst_mil\\benchmark\\runs\\pilot300\\gsdmm",
+      "revision": null,
+      "smoke_passed": true,
+      "verification": "D:\\github\\intern\\cst_mil\\benchmark\\verification\\gsdmm_baseline.json"
+    },
+    {
+      "formal_fit_attempts": 1,
+      "method": "nmf",
+      "pilot_run": "D:\\github\\intern\\cst_mil\\benchmark\\runs\\pilot300\\nmf",
+      "revision": null,
+      "smoke_passed": true,
+      "verification": "D:\\github\\intern\\cst_mil\\benchmark\\verification\\nmf_baseline.json"
+    },
+    {
+      "formal_fit_attempts": 1,
+      "method": "bertopic",
+      "pilot_run": "D:\\github\\intern\\cst_mil\\benchmark\\runs\\pilot300\\bertopic",
+      "revision": null,
+      "smoke_passed": true,
+      "verification": "D:\\github\\intern\\cst_mil\\benchmark\\verification\\bertopic_baseline.json"
+    },
+    {
+      "formal_fit_attempts": 1,
+      "method": "cst_mil",
+      "pilot_run": "D:\\github\\intern\\cst_mil\\benchmark\\runs\\pilot300\\cst_mil_r0",
+      "revision": "r0",
+      "smoke_passed": true,
+      "verification": "D:\\github\\intern\\cst_mil\\benchmark\\verification\\cst_mil_r0.json"
+    }
+  ],
+  "ready": true,
+  "runtime_sha256": "d157911c2e395e6afa04513c146e36c4305678d57b7f05d41b325de0dc2ed973",
+  "selected_cst_revision": "r0"
+}

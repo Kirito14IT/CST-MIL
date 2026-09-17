@@ -1,0 +1,115 @@
+{
+  "checkpoints": [
+    {
+      "model_mtime": 1789239549834998900,
+      "model_sha256": "fe28d9a0660a6a6896e309dab7f799814101a44b6715443240dacb66716cdf16",
+      "status": {
+        "completed": 2,
+        "fresh_test_completed": 0,
+        "fresh_test_total": 0,
+        "status": "paused",
+        "suite": "smoke5",
+        "test_completed": 0,
+        "test_total": 1,
+        "total": 5,
+        "updated_at": "2026-09-12T18:59:10.300904+00:00"
+      }
+    },
+    {
+      "model_mtime": 1789239549834998900,
+      "model_sha256": "fe28d9a0660a6a6896e309dab7f799814101a44b6715443240dacb66716cdf16",
+      "status": {
+        "completed": 5,
+        "fresh_test_completed": 0,
+        "fresh_test_total": 0,
+        "status": "complete",
+        "suite": "smoke5",
+        "test_completed": 1,
+        "test_total": 1,
+        "total": 5,
+        "updated_at": "2026-09-12T18:59:13.738048+00:00"
+      }
+    },
+    {
+      "model_mtime": 1789239549834998900,
+      "model_sha256": "fe28d9a0660a6a6896e309dab7f799814101a44b6715443240dacb66716cdf16",
+      "status": {
+        "completed": 5,
+        "fresh_test_completed": 0,
+        "fresh_test_total": 0,
+        "status": "complete",
+        "suite": "smoke5",
+        "test_completed": 1,
+        "test_total": 1,
+        "total": 5,
+        "updated_at": "2026-09-12T18:59:16.573911+00:00"
+      }
+    }
+  ],
+  "completed_at_unix": 1789239558.0247114,
+  "engineering_only": true,
+  "independent_process_limits": [
+    2,
+    "all",
+    "all"
+  ],
+  "labels_topics_evidence_match": true,
+  "method": "gsdmm",
+  "n_comments": 256,
+  "partial_resume_checkpoints": [
+    {
+      "model_mtime": 1789239549834998900,
+      "model_sha256": "fe28d9a0660a6a6896e309dab7f799814101a44b6715443240dacb66716cdf16",
+      "status": {
+        "completed": 2,
+        "fresh_test_completed": 0,
+        "fresh_test_total": 0,
+        "status": "paused",
+        "suite": "smoke5",
+        "test_completed": 0,
+        "test_total": 1,
+        "total": 5,
+        "updated_at": "2026-09-12T18:59:10.300904+00:00"
+      }
+    },
+    {
+      "model_mtime": 1789239549834998900,
+      "model_sha256": "fe28d9a0660a6a6896e309dab7f799814101a44b6715443240dacb66716cdf16",
+      "status": {
+        "completed": 5,
+        "fresh_test_completed": 0,
+        "fresh_test_total": 0,
+        "status": "complete",
+        "suite": "smoke5",
+        "test_completed": 1,
+        "test_total": 1,
+        "total": 5,
+        "updated_at": "2026-09-12T18:59:13.738048+00:00"
+      }
+    },
+    {
+      "model_mtime": 1789239549834998900,
+      "model_sha256": "fe28d9a0660a6a6896e309dab7f799814101a44b6715443240dacb66716cdf16",
+      "status": {
+        "completed": 5,
+        "fresh_test_completed": 0,
+        "fresh_test_total": 0,
+        "status": "complete",
+        "suite": "smoke5",
+        "test_completed": 1,
+        "test_total": 1,
+        "total": 5,
+        "updated_at": "2026-09-12T18:59:16.573911+00:00"
+      }
+    }
+  ],
+  "passed": true,
+  "revision": null,
+  "source_full_partition": "train",
+  "source_sessions": 5,
+  "starting_completed": 0,
+  "tolerance": {
+    "atol": 1e-07,
+    "rtol": 1e-06
+  }
+}

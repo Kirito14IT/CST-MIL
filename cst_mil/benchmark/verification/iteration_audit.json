@@ -1,0 +1,2413 @@
+{
+  "schema_version": 1,
+  "audit_kind": "independent_training_and_dev_selection_metadata_audit",
+  "audit_boundary": "Only fixed training/configuration/development/selection metadata and cohort membership inspected; no test predictions, no inference, no training.",
+  "cohort_fingerprint": "b5336b29ac9bfdd5dddbe41305f5ce28d175fa52becf3e82cbaa054e00e14696",
+  "passed": true,
+  "checks": [
+    {
+      "name": "cohort_counts",
+      "passed": true,
+      "detail": {
+        "train": 180,
+        "dev": 60,
+        "test": 60,
+        "training_messages": 10023,
+        "training_windows": 4785
+      }
+    },
+    {
+      "name": "cohort_disjoint",
+      "passed": true,
+      "detail": "Training/development/test IDs do not overlap."
+    },
+    {
+      "name": "lda/training_boundary",
+      "passed": true,
+      "detail": {
+        "training_ids_match": true,
+        "training_session_ids_include_dev_or_test": false,
+        "message_labels_used": false
+      }
+    },
+    {
+      "name": "lda/crossfit",
+      "passed": true,
+      "detail": {
+        "folds": [
+          {
+            "fold": 0,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 3387,
+            "held_instances": 1398,
+            "expected_instances": 4785,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 1,
+            "fallbacks_used": false
+          },
+          {
+            "fold": 1,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 3145,
+            "held_instances": 1640,
+            "expected_instances": 4785,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 1,
+            "fallbacks_used": false
+          },
+          {
+            "fold": 2,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 3038,
+            "held_instances": 1747,
+            "expected_instances": 4785,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 1,
+            "fallbacks_used": false
+          }
+        ],
+        "total_classifier_fits": 4,
+        "final_full_training_fits": 1
+      }
+    },
+    {
+      "name": "lda/cpu",
+      "passed": true,
+      "detail": {
+        "assigned_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "training_peak_affinity_width": 4,
+        "affinity_enforced": true
+      }
+    },
+    {
+      "name": "lda/configuration",
+      "passed": true,
+      "detail": {
+        "matches_binding": true,
+        "cohort": "b5336b29ac9bfdd5dddbe41305f5ce28d175fa52becf3e82cbaa054e00e14696",
+        "formal_fit_attempts": 1
+      }
+    },
+    {
+      "name": "btm/training_boundary",
+      "passed": true,
+      "detail": {
+        "training_ids_match": true,
+        "training_session_ids_include_dev_or_test": false,
+        "message_labels_used": false
+      }
+    },
+    {
+      "name": "btm/crossfit",
+      "passed": true,
+      "detail": {
+        "folds": [
+          {
+            "fold": 0,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 3387,
+            "held_instances": 1398,
+            "expected_instances": 4785,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 1,
+            "fallbacks_used": false
+          },
+          {
+            "fold": 1,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 3145,
+            "held_instances": 1640,
+            "expected_instances": 4785,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 1,
+            "fallbacks_used": false
+          },
+          {
+            "fold": 2,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 3038,
+            "held_instances": 1747,
+            "expected_instances": 4785,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 1,
+            "fallbacks_used": false
+          }
+        ],
+        "total_classifier_fits": 4,
+        "final_full_training_fits": 1
+      }
+    },
+    {
+      "name": "btm/cpu",
+      "passed": true,
+      "detail": {
+        "assigned_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "training_peak_affinity_width": 4,
+        "affinity_enforced": true
+      }
+    },
+    {
+      "name": "btm/configuration",
+      "passed": true,
+      "detail": {
+        "matches_binding": true,
+        "cohort": "b5336b29ac9bfdd5dddbe41305f5ce28d175fa52becf3e82cbaa054e00e14696",
+        "formal_fit_attempts": 1
+      }
+    },
+    {
+      "name": "gsdmm/training_boundary",
+      "passed": true,
+      "detail": {
+        "training_ids_match": true,
+        "training_session_ids_include_dev_or_test": false,
+        "message_labels_used": false
+      }
+    },
+    {
+      "name": "gsdmm/crossfit",
+      "passed": true,
+      "detail": {
+        "folds": [
+          {
+            "fold": 0,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 3387,
+            "held_instances": 1398,
+            "expected_instances": 4785,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 1,
+            "fallbacks_used": false
+          },
+          {
+            "fold": 1,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 3145,
+            "held_instances": 1640,
+            "expected_instances": 4785,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 1,
+            "fallbacks_used": false
+          },
+          {
+            "fold": 2,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 3038,
+            "held_instances": 1747,
+            "expected_instances": 4785,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 1,
+            "fallbacks_used": false
+          }
+        ],
+        "total_classifier_fits": 4,
+        "final_full_training_fits": 1
+      }
+    },
+    {
+      "name": "gsdmm/cpu",
+      "passed": true,
+      "detail": {
+        "assigned_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "training_peak_affinity_width": 4,
+        "affinity_enforced": true
+      }
+    },
+    {
+      "name": "gsdmm/configuration",
+      "passed": true,
+      "detail": {
+        "matches_binding": true,
+        "cohort": "b5336b29ac9bfdd5dddbe41305f5ce28d175fa52becf3e82cbaa054e00e14696",
+        "formal_fit_attempts": 1
+      }
+    },
+    {
+      "name": "nmf/training_boundary",
+      "passed": true,
+      "detail": {
+        "training_ids_match": true,
+        "training_session_ids_include_dev_or_test": false,
+        "message_labels_used": false
+      }
+    },
+    {
+      "name": "nmf/crossfit",
+      "passed": true,
+      "detail": {
+        "folds": [
+          {
+            "fold": 0,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 3387,
+            "held_instances": 1398,
+            "expected_instances": 4785,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 1,
+            "fallbacks_used": false
+          },
+          {
+            "fold": 1,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 3145,
+            "held_instances": 1640,
+            "expected_instances": 4785,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 1,
+            "fallbacks_used": false
+          },
+          {
+            "fold": 2,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 3038,
+            "held_instances": 1747,
+            "expected_instances": 4785,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 1,
+            "fallbacks_used": false
+          }
+        ],
+        "total_classifier_fits": 4,
+        "final_full_training_fits": 1
+      }
+    },
+    {
+      "name": "nmf/cpu",
+      "passed": true,
+      "detail": {
+        "assigned_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "training_peak_affinity_width": 4,
+        "affinity_enforced": true
+      }
+    },
+    {
+      "name": "nmf/configuration",
+      "passed": true,
+      "detail": {
+        "matches_binding": true,
+        "cohort": "b5336b29ac9bfdd5dddbe41305f5ce28d175fa52becf3e82cbaa054e00e14696",
+        "formal_fit_attempts": 1
+      }
+    },
+    {
+      "name": "bertopic/training_boundary",
+      "passed": true,
+      "detail": {
+        "training_ids_match": true,
+        "training_session_ids_include_dev_or_test": false,
+        "message_labels_used": false
+      }
+    },
+    {
+      "name": "bertopic/crossfit",
+      "passed": true,
+      "detail": {
+        "folds": [
+          {
+            "fold": 0,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 3387,
+            "held_instances": 1398,
+            "expected_instances": 4785,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 1,
+            "fallbacks_used": false
+          },
+          {
+            "fold": 1,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 3145,
+            "held_instances": 1640,
+            "expected_instances": 4785,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 1,
+            "fallbacks_used": false
+          },
+          {
+            "fold": 2,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 3038,
+            "held_instances": 1747,
+            "expected_instances": 4785,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 1,
+            "fallbacks_used": false
+          }
+        ],
+        "total_classifier_fits": 4,
+        "final_full_training_fits": 1
+      }
+    },
+    {
+      "name": "bertopic/cpu",
+      "passed": true,
+      "detail": {
+        "assigned_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "training_peak_affinity_width": 4,
+        "affinity_enforced": true
+      }
+    },
+    {
+      "name": "bertopic/configuration",
+      "passed": true,
+      "detail": {
+        "matches_binding": true,
+        "cohort": "b5336b29ac9bfdd5dddbe41305f5ce28d175fa52becf3e82cbaa054e00e14696",
+        "formal_fit_attempts": 1
+      }
+    },
+    {
+      "name": "cst_mil_r0/training_boundary",
+      "passed": true,
+      "detail": {
+        "training_ids_match": true,
+        "training_session_ids_include_dev_or_test": false,
+        "message_labels_used": false
+      }
+    },
+    {
+      "name": "cst_mil_r0/crossfit",
+      "passed": true,
+      "detail": {
+        "folds": [
+          {
+            "fold": 0,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 7071,
+            "held_instances": 2952,
+            "expected_instances": 10023,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 4,
+            "fallbacks_used": false
+          },
+          {
+            "fold": 1,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 6592,
+            "held_instances": 3431,
+            "expected_instances": 10023,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 4,
+            "fallbacks_used": false
+          },
+          {
+            "fold": 2,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 6383,
+            "held_instances": 3640,
+            "expected_instances": 10023,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 4,
+            "fallbacks_used": false
+          }
+        ],
+        "total_classifier_fits": 16,
+        "final_full_training_fits": 4
+      }
+    },
+    {
+      "name": "cst_mil_r0/cpu",
+      "passed": true,
+      "detail": {
+        "assigned_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "training_peak_affinity_width": 4,
+        "affinity_enforced": true
+      }
+    },
+    {
+      "name": "cst_mil_r0/configuration",
+      "passed": true,
+      "detail": {
+        "matches_binding": true,
+        "cohort": "b5336b29ac9bfdd5dddbe41305f5ce28d175fa52becf3e82cbaa054e00e14696",
+        "formal_fit_attempts": 1
+      }
+    },
+    {
+      "name": "cst_mil_r1/training_boundary",
+      "passed": true,
+      "detail": {
+        "training_ids_match": true,
+        "training_session_ids_include_dev_or_test": false,
+        "message_labels_used": false
+      }
+    },
+    {
+      "name": "cst_mil_r1/crossfit",
+      "passed": true,
+      "detail": {
+        "folds": [
+          {
+            "fold": 0,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 7071,
+            "held_instances": 2952,
+            "expected_instances": 10023,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 4,
+            "fallbacks_used": false
+          },
+          {
+            "fold": 1,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 6592,
+            "held_instances": 3431,
+            "expected_instances": 10023,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 4,
+            "fallbacks_used": false
+          },
+          {
+            "fold": 2,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 6383,
+            "held_instances": 3640,
+            "expected_instances": 10023,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 4,
+            "fallbacks_used": false
+          }
+        ],
+        "total_classifier_fits": 16,
+        "final_full_training_fits": 4
+      }
+    },
+    {
+      "name": "cst_mil_r1/cpu",
+      "passed": true,
+      "detail": {
+        "assigned_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "training_peak_affinity_width": 4,
+        "affinity_enforced": true
+      }
+    },
+    {
+      "name": "cst_mil_r1/configuration",
+      "passed": true,
+      "detail": {
+        "matches_binding": true,
+        "cohort": "b5336b29ac9bfdd5dddbe41305f5ce28d175fa52becf3e82cbaa054e00e14696",
+        "formal_fit_attempts": 1
+      }
+    },
+    {
+      "name": "cst_mil_r2/training_boundary",
+      "passed": true,
+      "detail": {
+        "training_ids_match": true,
+        "training_session_ids_include_dev_or_test": false,
+        "message_labels_used": false
+      }
+    },
+    {
+      "name": "cst_mil_r2/crossfit",
+      "passed": true,
+      "detail": {
+        "folds": [
+          {
+            "fold": 0,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 7071,
+            "held_instances": 2952,
+            "expected_instances": 10023,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 4,
+            "fallbacks_used": false
+          },
+          {
+            "fold": 1,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 6592,
+            "held_instances": 3431,
+            "expected_instances": 10023,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 4,
+            "fallbacks_used": false
+          },
+          {
+            "fold": 2,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 6383,
+            "held_instances": 3640,
+            "expected_instances": 10023,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 4,
+            "fallbacks_used": false
+          }
+        ],
+        "total_classifier_fits": 16,
+        "final_full_training_fits": 4
+      }
+    },
+    {
+      "name": "cst_mil_r2/cpu",
+      "passed": true,
+      "detail": {
+        "assigned_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "training_peak_affinity_width": 4,
+        "affinity_enforced": true
+      }
+    },
+    {
+      "name": "cst_mil_r2/configuration",
+      "passed": true,
+      "detail": {
+        "matches_binding": true,
+        "cohort": "b5336b29ac9bfdd5dddbe41305f5ce28d175fa52becf3e82cbaa054e00e14696",
+        "formal_fit_attempts": 1
+      }
+    },
+    {
+      "name": "cst_mil_r3/training_boundary",
+      "passed": true,
+      "detail": {
+        "training_ids_match": true,
+        "training_session_ids_include_dev_or_test": false,
+        "message_labels_used": false
+      }
+    },
+    {
+      "name": "cst_mil_r3/crossfit",
+      "passed": true,
+      "detail": {
+        "folds": [
+          {
+            "fold": 0,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 7071,
+            "held_instances": 2952,
+            "expected_instances": 10023,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 4,
+            "fallbacks_used": false
+          },
+          {
+            "fold": 1,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 6592,
+            "held_instances": 3431,
+            "expected_instances": 10023,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 4,
+            "fallbacks_used": false
+          },
+          {
+            "fold": 2,
+            "train_bags": 120,
+            "held_bags": 60,
+            "disjoint": true,
+            "covers_training_bags": true,
+            "fitted_instances": 6383,
+            "held_instances": 3640,
+            "expected_instances": 10023,
+            "instance_count_matches": true,
+            "risk_classifier_fits": 4,
+            "fallbacks_used": false
+          }
+        ],
+        "total_classifier_fits": 16,
+        "final_full_training_fits": 4
+      }
+    },
+    {
+      "name": "cst_mil_r3/cpu",
+      "passed": true,
+      "detail": {
+        "assigned_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "training_peak_affinity_width": 4,
+        "affinity_enforced": true
+      }
+    },
+    {
+      "name": "cst_mil_r3/configuration",
+      "passed": true,
+      "detail": {
+        "matches_binding": true,
+        "cohort": "b5336b29ac9bfdd5dddbe41305f5ce28d175fa52becf3e82cbaa054e00e14696",
+        "formal_fit_attempts": 1
+      }
+    },
+    {
+      "name": "baseline_reference",
+      "passed": true,
+      "detail": {
+        "calculated": "bertopic",
+        "recorded": "bertopic"
+      }
+    },
+    {
+      "name": "r1/revision_lineage",
+      "passed": true,
+      "detail": {
+        "base_revision": "r0",
+        "config_differences": [
+          "word_features"
+        ]
+      }
+    },
+    {
+      "name": "r1/replacement_decision",
+      "passed": true,
+      "detail": {
+        "calculated": false,
+        "recorded": false
+      }
+    },
+    {
+      "name": "r1/recorded_dev_metrics",
+      "passed": true,
+      "detail": {
+        "matched": true
+      }
+    },
+    {
+      "name": "r2/revision_lineage",
+      "passed": true,
+      "detail": {
+        "base_revision": "r0",
+        "config_differences": [
+          "risk_weighted_topics"
+        ]
+      }
+    },
+    {
+      "name": "r2/replacement_decision",
+      "passed": true,
+      "detail": {
+        "calculated": false,
+        "recorded": false
+      }
+    },
+    {
+      "name": "r2/recorded_dev_metrics",
+      "passed": true,
+      "detail": {
+        "matched": true
+      }
+    },
+    {
+      "name": "r3/revision_lineage",
+      "passed": true,
+      "detail": {
+        "base_revision": "r0",
+        "config_differences": [
+          "multiscale"
+        ]
+      }
+    },
+    {
+      "name": "r3/replacement_decision",
+      "passed": true,
+      "detail": {
+        "calculated": false,
+        "recorded": false
+      }
+    },
+    {
+      "name": "r3/recorded_dev_metrics",
+      "passed": true,
+      "detail": {
+        "matched": true
+      }
+    },
+    {
+      "name": "selection_r0",
+      "passed": true,
+      "detail": "No additional candidate crossed the predeclared replacement gate."
+    },
+    {
+      "name": "stop_target_not_met",
+      "passed": true,
+      "detail": {
+        "macro_f1": false,
+        "npmi": true,
+        "topic_diversity": true,
+        "coverage": true,
+        "functional_checks": true
+      }
+    },
+    {
+      "name": "selection_dev_only",
+      "passed": true,
+      "detail": {
+        "metadata_only": true,
+        "test_predictions_read": false
+      }
+    },
+    {
+      "name": "weighted_topics_r2",
+      "passed": true,
+      "detail": {
+        "min": 1.0251564877001844,
+        "max": 2.6471835708852463
+      }
+    },
+    {
+      "name": "lda/training_source_snapshot",
+      "passed": true,
+      "detail": {
+        "saved_model_source_sha256": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67",
+        "current_model_source_sha256": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67"
+      }
+    },
+    {
+      "name": "lda/stratified_class_balance",
+      "passed": true,
+      "detail": [
+        {
+          "fold": 0,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        },
+        {
+          "fold": 1,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        },
+        {
+          "fold": 2,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        }
+      ]
+    },
+    {
+      "name": "lda/same_crossfit_sessions",
+      "passed": true,
+      "detail": "All methods share the same ordered 180 training IDs and held/training session indices."
+    },
+    {
+      "name": "btm/training_source_snapshot",
+      "passed": true,
+      "detail": {
+        "saved_model_source_sha256": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67",
+        "current_model_source_sha256": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67"
+      }
+    },
+    {
+      "name": "btm/stratified_class_balance",
+      "passed": true,
+      "detail": [
+        {
+          "fold": 0,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        },
+        {
+          "fold": 1,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        },
+        {
+          "fold": 2,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        }
+      ]
+    },
+    {
+      "name": "btm/same_crossfit_sessions",
+      "passed": true,
+      "detail": "All methods share the same ordered 180 training IDs and held/training session indices."
+    },
+    {
+      "name": "gsdmm/training_source_snapshot",
+      "passed": true,
+      "detail": {
+        "saved_model_source_sha256": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67",
+        "current_model_source_sha256": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67"
+      }
+    },
+    {
+      "name": "gsdmm/stratified_class_balance",
+      "passed": true,
+      "detail": [
+        {
+          "fold": 0,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        },
+        {
+          "fold": 1,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        },
+        {
+          "fold": 2,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        }
+      ]
+    },
+    {
+      "name": "gsdmm/same_crossfit_sessions",
+      "passed": true,
+      "detail": "All methods share the same ordered 180 training IDs and held/training session indices."
+    },
+    {
+      "name": "nmf/training_source_snapshot",
+      "passed": true,
+      "detail": {
+        "saved_model_source_sha256": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67",
+        "current_model_source_sha256": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67"
+      }
+    },
+    {
+      "name": "nmf/stratified_class_balance",
+      "passed": true,
+      "detail": [
+        {
+          "fold": 0,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        },
+        {
+          "fold": 1,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        },
+        {
+          "fold": 2,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        }
+      ]
+    },
+    {
+      "name": "nmf/same_crossfit_sessions",
+      "passed": true,
+      "detail": "All methods share the same ordered 180 training IDs and held/training session indices."
+    },
+    {
+      "name": "bertopic/training_source_snapshot",
+      "passed": true,
+      "detail": {
+        "saved_model_source_sha256": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67",
+        "current_model_source_sha256": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67"
+      }
+    },
+    {
+      "name": "bertopic/stratified_class_balance",
+      "passed": true,
+      "detail": [
+        {
+          "fold": 0,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        },
+        {
+          "fold": 1,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        },
+        {
+          "fold": 2,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        }
+      ]
+    },
+    {
+      "name": "bertopic/same_crossfit_sessions",
+      "passed": true,
+      "detail": "All methods share the same ordered 180 training IDs and held/training session indices."
+    },
+    {
+      "name": "cst_mil_r0/training_source_snapshot",
+      "passed": true,
+      "detail": {
+        "saved_model_source_sha256": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67",
+        "current_model_source_sha256": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67"
+      }
+    },
+    {
+      "name": "cst_mil_r0/stratified_class_balance",
+      "passed": true,
+      "detail": [
+        {
+          "fold": 0,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        },
+        {
+          "fold": 1,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        },
+        {
+          "fold": 2,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        }
+      ]
+    },
+    {
+      "name": "cst_mil_r0/same_crossfit_sessions",
+      "passed": true,
+      "detail": "All methods share the same ordered 180 training IDs and held/training session indices."
+    },
+    {
+      "name": "cst_mil_r1/training_source_snapshot",
+      "passed": true,
+      "detail": {
+        "saved_model_source_sha256": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67",
+        "current_model_source_sha256": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67"
+      }
+    },
+    {
+      "name": "cst_mil_r1/stratified_class_balance",
+      "passed": true,
+      "detail": [
+        {
+          "fold": 0,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        },
+        {
+          "fold": 1,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        },
+        {
+          "fold": 2,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        }
+      ]
+    },
+    {
+      "name": "cst_mil_r1/same_crossfit_sessions",
+      "passed": true,
+      "detail": "All methods share the same ordered 180 training IDs and held/training session indices."
+    },
+    {
+      "name": "cst_mil_r2/training_source_snapshot",
+      "passed": true,
+      "detail": {
+        "saved_model_source_sha256": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67",
+        "current_model_source_sha256": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67"
+      }
+    },
+    {
+      "name": "cst_mil_r2/stratified_class_balance",
+      "passed": true,
+      "detail": [
+        {
+          "fold": 0,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        },
+        {
+          "fold": 1,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        },
+        {
+          "fold": 2,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        }
+      ]
+    },
+    {
+      "name": "cst_mil_r2/same_crossfit_sessions",
+      "passed": true,
+      "detail": "All methods share the same ordered 180 training IDs and held/training session indices."
+    },
+    {
+      "name": "cst_mil_r3/training_source_snapshot",
+      "passed": true,
+      "detail": {
+        "saved_model_source_sha256": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67",
+        "current_model_source_sha256": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67"
+      }
+    },
+    {
+      "name": "cst_mil_r3/stratified_class_balance",
+      "passed": true,
+      "detail": [
+        {
+          "fold": 0,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        },
+        {
+          "fold": 1,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        },
+        {
+          "fold": 2,
+          "train_counts": {
+            "0": 60,
+            "1": 60
+          },
+          "held_counts": {
+            "0": 30,
+            "1": 30
+          }
+        }
+      ]
+    },
+    {
+      "name": "cst_mil_r3/same_crossfit_sessions",
+      "passed": true,
+      "detail": "All methods share the same ordered 180 training IDs and held/training session indices."
+    }
+  ],
+  "valid_runs": [
+    {
+      "name": "lda",
+      "training_sessions": 180,
+      "dev_sessions": 60,
+      "training_messages": 10023,
+      "training_windows": 4785,
+      "training_ids_match": true,
+      "crossfit_passed": true,
+      "crossfit_folds": [
+        {
+          "fold": 0,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 3387,
+          "held_instances": 1398,
+          "expected_instances": 4785,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 1,
+          "fallbacks_used": false
+        },
+        {
+          "fold": 1,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 3145,
+          "held_instances": 1640,
+          "expected_instances": 4785,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 1,
+          "fallbacks_used": false
+        },
+        {
+          "fold": 2,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 3038,
+          "held_instances": 1747,
+          "expected_instances": 4785,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 1,
+          "fallbacks_used": false
+        }
+      ],
+      "risk_classifier_fit_count": 4,
+      "final_full_training_risk_fits": 1,
+      "formal_fit_attempts": 1,
+      "model_sha256": "994d8bff87165e77139bf0eb28cdcd3c07c83861a8218c586f980bea13fcbc25",
+      "cpu_affinity_passed": true,
+      "cpu_policy": {
+        "affinity_enforced": true,
+        "assigned_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "effective_cpu_count": 4,
+        "eligible_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "environment": {
+          "CUDA_VISIBLE_DEVICES": "",
+          "MKL_DYNAMIC": "FALSE",
+          "MKL_NUM_THREADS": "4",
+          "NUMBA_NUM_THREADS": "4",
+          "NUMEXPR_MAX_THREADS": "4",
+          "NUMEXPR_NUM_THREADS": "4",
+          "OMP_NUM_THREADS": "4",
+          "OMP_WAIT_POLICY": "PASSIVE",
+          "OPENBLAS_NUM_THREADS": "4",
+          "TOKENIZERS_PARALLELISM": "false"
+        },
+        "policy_version": "cpu-affinity-v1",
+        "thread_limit": 4
+      },
+      "training_peak_affinity_width": 4,
+      "dev": {
+        "macro_f1": 0.7146853146853147,
+        "npmi": -0.26096378386706176,
+        "topic_diversity": 0.5125,
+        "coverage": 0.5361073825503355
+      },
+      "flags": {
+        "word_features": false,
+        "risk_weighted_topics": false,
+        "multiscale": false
+      },
+      "sample_weight_min": null,
+      "sample_weight_max": null,
+      "source_only_supervision": true
+    },
+    {
+      "name": "btm",
+      "training_sessions": 180,
+      "dev_sessions": 60,
+      "training_messages": 10023,
+      "training_windows": 4785,
+      "training_ids_match": true,
+      "crossfit_passed": true,
+      "crossfit_folds": [
+        {
+          "fold": 0,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 3387,
+          "held_instances": 1398,
+          "expected_instances": 4785,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 1,
+          "fallbacks_used": false
+        },
+        {
+          "fold": 1,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 3145,
+          "held_instances": 1640,
+          "expected_instances": 4785,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 1,
+          "fallbacks_used": false
+        },
+        {
+          "fold": 2,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 3038,
+          "held_instances": 1747,
+          "expected_instances": 4785,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 1,
+          "fallbacks_used": false
+        }
+      ],
+      "risk_classifier_fit_count": 4,
+      "final_full_training_risk_fits": 1,
+      "formal_fit_attempts": 1,
+      "model_sha256": "3ca27d56cc14d27ad1642cf6fa8f72e4cbf46031e99d3cda4537cb8df329a367",
+      "cpu_affinity_passed": true,
+      "cpu_policy": {
+        "affinity_enforced": true,
+        "assigned_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "effective_cpu_count": 4,
+        "eligible_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "environment": {
+          "CUDA_VISIBLE_DEVICES": "",
+          "MKL_DYNAMIC": "FALSE",
+          "MKL_NUM_THREADS": "4",
+          "NUMBA_NUM_THREADS": "4",
+          "NUMEXPR_MAX_THREADS": "4",
+          "NUMEXPR_NUM_THREADS": "4",
+          "OMP_NUM_THREADS": "4",
+          "OMP_WAIT_POLICY": "PASSIVE",
+          "OPENBLAS_NUM_THREADS": "4",
+          "TOKENIZERS_PARALLELISM": "false"
+        },
+        "policy_version": "cpu-affinity-v1",
+        "thread_limit": 4
+      },
+      "training_peak_affinity_width": 4,
+      "dev": {
+        "macro_f1": 0.8499583217560434,
+        "npmi": -0.22729412566256163,
+        "topic_diversity": 0.484375,
+        "coverage": 0.060939597315436245
+      },
+      "flags": {
+        "word_features": false,
+        "risk_weighted_topics": false,
+        "multiscale": false
+      },
+      "sample_weight_min": null,
+      "sample_weight_max": null,
+      "source_only_supervision": true
+    },
+    {
+      "name": "gsdmm",
+      "training_sessions": 180,
+      "dev_sessions": 60,
+      "training_messages": 10023,
+      "training_windows": 4785,
+      "training_ids_match": true,
+      "crossfit_passed": true,
+      "crossfit_folds": [
+        {
+          "fold": 0,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 3387,
+          "held_instances": 1398,
+          "expected_instances": 4785,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 1,
+          "fallbacks_used": false
+        },
+        {
+          "fold": 1,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 3145,
+          "held_instances": 1640,
+          "expected_instances": 4785,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 1,
+          "fallbacks_used": false
+        },
+        {
+          "fold": 2,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 3038,
+          "held_instances": 1747,
+          "expected_instances": 4785,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 1,
+          "fallbacks_used": false
+        }
+      ],
+      "risk_classifier_fit_count": 4,
+      "final_full_training_risk_fits": 1,
+      "formal_fit_attempts": 1,
+      "model_sha256": "e97c8feab5e2341620104eec7866305d72a65a40cdd8acf6b64a3bfbb148b824",
+      "cpu_affinity_passed": true,
+      "cpu_policy": {
+        "affinity_enforced": true,
+        "assigned_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "effective_cpu_count": 4,
+        "eligible_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "environment": {
+          "CUDA_VISIBLE_DEVICES": "",
+          "MKL_DYNAMIC": "FALSE",
+          "MKL_NUM_THREADS": "4",
+          "NUMBA_NUM_THREADS": "4",
+          "NUMEXPR_MAX_THREADS": "4",
+          "NUMEXPR_NUM_THREADS": "4",
+          "OMP_NUM_THREADS": "4",
+          "OMP_WAIT_POLICY": "PASSIVE",
+          "OPENBLAS_NUM_THREADS": "4",
+          "TOKENIZERS_PARALLELISM": "false"
+        },
+        "policy_version": "cpu-affinity-v1",
+        "thread_limit": 4
+      },
+      "training_peak_affinity_width": 4,
+      "dev": {
+        "macro_f1": 0.8141368628555337,
+        "npmi": -0.22363717497496124,
+        "topic_diversity": 0.40625,
+        "coverage": 0.9068456375838926
+      },
+      "flags": {
+        "word_features": false,
+        "risk_weighted_topics": false,
+        "multiscale": false
+      },
+      "sample_weight_min": null,
+      "sample_weight_max": null,
+      "source_only_supervision": true
+    },
+    {
+      "name": "nmf",
+      "training_sessions": 180,
+      "dev_sessions": 60,
+      "training_messages": 10023,
+      "training_windows": 4785,
+      "training_ids_match": true,
+      "crossfit_passed": true,
+      "crossfit_folds": [
+        {
+          "fold": 0,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 3387,
+          "held_instances": 1398,
+          "expected_instances": 4785,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 1,
+          "fallbacks_used": false
+        },
+        {
+          "fold": 1,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 3145,
+          "held_instances": 1640,
+          "expected_instances": 4785,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 1,
+          "fallbacks_used": false
+        },
+        {
+          "fold": 2,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 3038,
+          "held_instances": 1747,
+          "expected_instances": 4785,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 1,
+          "fallbacks_used": false
+        }
+      ],
+      "risk_classifier_fit_count": 4,
+      "final_full_training_risk_fits": 1,
+      "formal_fit_attempts": 1,
+      "model_sha256": "9a6ffe4882e941537d07fc58075643c9f8cc1e7ccb6c63ccad57a8ee7bfe3067",
+      "cpu_affinity_passed": true,
+      "cpu_policy": {
+        "affinity_enforced": true,
+        "assigned_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "effective_cpu_count": 4,
+        "eligible_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "environment": {
+          "CUDA_VISIBLE_DEVICES": "",
+          "MKL_DYNAMIC": "FALSE",
+          "MKL_NUM_THREADS": "4",
+          "NUMBA_NUM_THREADS": "4",
+          "NUMEXPR_MAX_THREADS": "4",
+          "NUMEXPR_NUM_THREADS": "4",
+          "OMP_NUM_THREADS": "4",
+          "OMP_WAIT_POLICY": "PASSIVE",
+          "OPENBLAS_NUM_THREADS": "4",
+          "TOKENIZERS_PARALLELISM": "false"
+        },
+        "policy_version": "cpu-affinity-v1",
+        "thread_limit": 4
+      },
+      "training_peak_affinity_width": 4,
+      "dev": {
+        "macro_f1": 0.8333333333333334,
+        "npmi": -0.7246508132989952,
+        "topic_diversity": 0.91875,
+        "coverage": 0.8394630872483222
+      },
+      "flags": {
+        "word_features": false,
+        "risk_weighted_topics": false,
+        "multiscale": false
+      },
+      "sample_weight_min": null,
+      "sample_weight_max": null,
+      "source_only_supervision": true
+    },
+    {
+      "name": "bertopic",
+      "training_sessions": 180,
+      "dev_sessions": 60,
+      "training_messages": 10023,
+      "training_windows": 4785,
+      "training_ids_match": true,
+      "crossfit_passed": true,
+      "crossfit_folds": [
+        {
+          "fold": 0,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 3387,
+          "held_instances": 1398,
+          "expected_instances": 4785,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 1,
+          "fallbacks_used": false
+        },
+        {
+          "fold": 1,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 3145,
+          "held_instances": 1640,
+          "expected_instances": 4785,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 1,
+          "fallbacks_used": false
+        },
+        {
+          "fold": 2,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 3038,
+          "held_instances": 1747,
+          "expected_instances": 4785,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 1,
+          "fallbacks_used": false
+        }
+      ],
+      "risk_classifier_fit_count": 4,
+      "final_full_training_risk_fits": 1,
+      "formal_fit_attempts": 1,
+      "model_sha256": "8bc72ae80bca3e5321ba21f2679519fd7322fe4bba2a97f0a14e0fb58a5c6eb6",
+      "cpu_affinity_passed": true,
+      "cpu_policy": {
+        "affinity_enforced": true,
+        "assigned_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "effective_cpu_count": 4,
+        "eligible_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "environment": {
+          "CUDA_VISIBLE_DEVICES": "",
+          "MKL_DYNAMIC": "FALSE",
+          "MKL_NUM_THREADS": "4",
+          "NUMBA_NUM_THREADS": "4",
+          "NUMEXPR_MAX_THREADS": "4",
+          "NUMEXPR_NUM_THREADS": "4",
+          "OMP_NUM_THREADS": "4",
+          "OMP_WAIT_POLICY": "PASSIVE",
+          "OPENBLAS_NUM_THREADS": "4",
+          "TOKENIZERS_PARALLELISM": "false"
+        },
+        "policy_version": "cpu-affinity-v1",
+        "thread_limit": 4
+      },
+      "training_peak_affinity_width": 4,
+      "dev": {
+        "macro_f1": 0.883300916921367,
+        "npmi": -0.8896461980313977,
+        "topic_diversity": 0.9038054968287527,
+        "coverage": 0.35570469798657717
+      },
+      "flags": {
+        "word_features": false,
+        "risk_weighted_topics": false,
+        "multiscale": false
+      },
+      "sample_weight_min": null,
+      "sample_weight_max": null,
+      "source_only_supervision": true
+    },
+    {
+      "name": "cst_mil_r0",
+      "training_sessions": 180,
+      "dev_sessions": 60,
+      "training_messages": 10023,
+      "training_windows": 4785,
+      "training_ids_match": true,
+      "crossfit_passed": true,
+      "crossfit_folds": [
+        {
+          "fold": 0,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 7071,
+          "held_instances": 2952,
+          "expected_instances": 10023,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 4,
+          "fallbacks_used": false
+        },
+        {
+          "fold": 1,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 6592,
+          "held_instances": 3431,
+          "expected_instances": 10023,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 4,
+          "fallbacks_used": false
+        },
+        {
+          "fold": 2,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 6383,
+          "held_instances": 3640,
+          "expected_instances": 10023,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 4,
+          "fallbacks_used": false
+        }
+      ],
+      "risk_classifier_fit_count": 16,
+      "final_full_training_risk_fits": 4,
+      "formal_fit_attempts": 1,
+      "model_sha256": "4b4c92360d19c7da17ded7fb44b30845d622b7d417fad3fa66c2391cba7c2bf7",
+      "cpu_affinity_passed": true,
+      "cpu_policy": {
+        "affinity_enforced": true,
+        "assigned_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "effective_cpu_count": 4,
+        "eligible_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "environment": {
+          "CUDA_VISIBLE_DEVICES": "",
+          "MKL_DYNAMIC": "FALSE",
+          "MKL_NUM_THREADS": "4",
+          "NUMBA_NUM_THREADS": "4",
+          "NUMEXPR_MAX_THREADS": "4",
+          "NUMEXPR_NUM_THREADS": "4",
+          "OMP_NUM_THREADS": "4",
+          "OMP_WAIT_POLICY": "PASSIVE",
+          "OPENBLAS_NUM_THREADS": "4",
+          "TOKENIZERS_PARALLELISM": "false"
+        },
+        "policy_version": "cpu-affinity-v1",
+        "thread_limit": 4
+      },
+      "training_peak_affinity_width": 4,
+      "dev": {
+        "macro_f1": 0.8666666666666667,
+        "npmi": -0.7246508132989952,
+        "topic_diversity": 0.91875,
+        "coverage": 0.8394630872483222
+      },
+      "flags": {
+        "word_features": false,
+        "risk_weighted_topics": false,
+        "multiscale": false
+      },
+      "sample_weight_min": null,
+      "sample_weight_max": null,
+      "source_only_supervision": true
+    },
+    {
+      "name": "cst_mil_r1",
+      "training_sessions": 180,
+      "dev_sessions": 60,
+      "training_messages": 10023,
+      "training_windows": 4785,
+      "training_ids_match": true,
+      "crossfit_passed": true,
+      "crossfit_folds": [
+        {
+          "fold": 0,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 7071,
+          "held_instances": 2952,
+          "expected_instances": 10023,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 4,
+          "fallbacks_used": false
+        },
+        {
+          "fold": 1,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 6592,
+          "held_instances": 3431,
+          "expected_instances": 10023,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 4,
+          "fallbacks_used": false
+        },
+        {
+          "fold": 2,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 6383,
+          "held_instances": 3640,
+          "expected_instances": 10023,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 4,
+          "fallbacks_used": false
+        }
+      ],
+      "risk_classifier_fit_count": 16,
+      "final_full_training_risk_fits": 4,
+      "formal_fit_attempts": 1,
+      "model_sha256": "49c19916dcf0b05c606ed574f257fd447a59a4bd4a0183f60882b5e69581ae25",
+      "cpu_affinity_passed": true,
+      "cpu_policy": {
+        "affinity_enforced": true,
+        "assigned_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "effective_cpu_count": 4,
+        "eligible_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "environment": {
+          "CUDA_VISIBLE_DEVICES": "",
+          "MKL_DYNAMIC": "FALSE",
+          "MKL_NUM_THREADS": "4",
+          "NUMBA_NUM_THREADS": "4",
+          "NUMEXPR_MAX_THREADS": "4",
+          "NUMEXPR_NUM_THREADS": "4",
+          "OMP_NUM_THREADS": "4",
+          "OMP_WAIT_POLICY": "PASSIVE",
+          "OPENBLAS_NUM_THREADS": "4",
+          "TOKENIZERS_PARALLELISM": "false"
+        },
+        "policy_version": "cpu-affinity-v1",
+        "thread_limit": 4
+      },
+      "training_peak_affinity_width": 4,
+      "dev": {
+        "macro_f1": 0.8666666666666667,
+        "npmi": -0.7246508132989952,
+        "topic_diversity": 0.91875,
+        "coverage": 0.8394630872483222
+      },
+      "flags": {
+        "word_features": true,
+        "risk_weighted_topics": false,
+        "multiscale": false
+      },
+      "sample_weight_min": null,
+      "sample_weight_max": null,
+      "source_only_supervision": true
+    },
+    {
+      "name": "cst_mil_r2",
+      "training_sessions": 180,
+      "dev_sessions": 60,
+      "training_messages": 10023,
+      "training_windows": 4785,
+      "training_ids_match": true,
+      "crossfit_passed": true,
+      "crossfit_folds": [
+        {
+          "fold": 0,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 7071,
+          "held_instances": 2952,
+          "expected_instances": 10023,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 4,
+          "fallbacks_used": false
+        },
+        {
+          "fold": 1,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 6592,
+          "held_instances": 3431,
+          "expected_instances": 10023,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 4,
+          "fallbacks_used": false
+        },
+        {
+          "fold": 2,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 6383,
+          "held_instances": 3640,
+          "expected_instances": 10023,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 4,
+          "fallbacks_used": false
+        }
+      ],
+      "risk_classifier_fit_count": 16,
+      "final_full_training_risk_fits": 4,
+      "formal_fit_attempts": 1,
+      "model_sha256": "be74d8a5951d47f2e3958a1280f1f70c71ff421a445bcdc10bab7c30c68c0d33",
+      "cpu_affinity_passed": true,
+      "cpu_policy": {
+        "affinity_enforced": true,
+        "assigned_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "effective_cpu_count": 4,
+        "eligible_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "environment": {
+          "CUDA_VISIBLE_DEVICES": "",
+          "MKL_DYNAMIC": "FALSE",
+          "MKL_NUM_THREADS": "4",
+          "NUMBA_NUM_THREADS": "4",
+          "NUMEXPR_MAX_THREADS": "4",
+          "NUMEXPR_NUM_THREADS": "4",
+          "OMP_NUM_THREADS": "4",
+          "OMP_WAIT_POLICY": "PASSIVE",
+          "OPENBLAS_NUM_THREADS": "4",
+          "TOKENIZERS_PARALLELISM": "false"
+        },
+        "policy_version": "cpu-affinity-v1",
+        "thread_limit": 4
+      },
+      "training_peak_affinity_width": 4,
+      "dev": {
+        "macro_f1": 0.8666666666666667,
+        "npmi": -0.7154363158594547,
+        "topic_diversity": 0.89375,
+        "coverage": 0.731006711409396
+      },
+      "flags": {
+        "word_features": false,
+        "risk_weighted_topics": true,
+        "multiscale": false
+      },
+      "sample_weight_min": 1.0251564877001844,
+      "sample_weight_max": 2.6471835708852463,
+      "source_only_supervision": true
+    },
+    {
+      "name": "cst_mil_r3",
+      "training_sessions": 180,
+      "dev_sessions": 60,
+      "training_messages": 10023,
+      "training_windows": 4785,
+      "training_ids_match": true,
+      "crossfit_passed": true,
+      "crossfit_folds": [
+        {
+          "fold": 0,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 7071,
+          "held_instances": 2952,
+          "expected_instances": 10023,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 4,
+          "fallbacks_used": false
+        },
+        {
+          "fold": 1,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 6592,
+          "held_instances": 3431,
+          "expected_instances": 10023,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 4,
+          "fallbacks_used": false
+        },
+        {
+          "fold": 2,
+          "train_bags": 120,
+          "held_bags": 60,
+          "disjoint": true,
+          "covers_training_bags": true,
+          "fitted_instances": 6383,
+          "held_instances": 3640,
+          "expected_instances": 10023,
+          "instance_count_matches": true,
+          "risk_classifier_fits": 4,
+          "fallbacks_used": false
+        }
+      ],
+      "risk_classifier_fit_count": 16,
+      "final_full_training_risk_fits": 4,
+      "formal_fit_attempts": 1,
+      "model_sha256": "21a0aed9b285d1536c50fb79b9971ce1d63fd5ca102cfcb87b2602a6bb3a3043",
+      "cpu_affinity_passed": true,
+      "cpu_policy": {
+        "affinity_enforced": true,
+        "assigned_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "effective_cpu_count": 4,
+        "eligible_cpus": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "environment": {
+          "CUDA_VISIBLE_DEVICES": "",
+          "MKL_DYNAMIC": "FALSE",
+          "MKL_NUM_THREADS": "4",
+          "NUMBA_NUM_THREADS": "4",
+          "NUMEXPR_MAX_THREADS": "4",
+          "NUMEXPR_NUM_THREADS": "4",
+          "OMP_NUM_THREADS": "4",
+          "OMP_WAIT_POLICY": "PASSIVE",
+          "OPENBLAS_NUM_THREADS": "4",
+          "TOKENIZERS_PARALLELISM": "false"
+        },
+        "policy_version": "cpu-affinity-v1",
+        "thread_limit": 4
+      },
+      "training_peak_affinity_width": 4,
+      "dev": {
+        "macro_f1": 0.8653198653198653,
+        "npmi": -0.7246508132989952,
+        "topic_diversity": 0.91875,
+        "coverage": 0.8416107382550335
+      },
+      "flags": {
+        "word_features": false,
+        "risk_weighted_topics": false,
+        "multiscale": true
+      },
+      "sample_weight_min": null,
+      "sample_weight_max": null,
+      "source_only_supervision": true
+    }
+  ],
+  "revision_audit": [
+    {
+      "revision": "r1",
+      "base_revision": "r0",
+      "changed_flags": [
+        "word_features"
+      ],
+      "flags_match": true,
+      "macro_f1_delta": 0,
+      "npmi_delta": 0,
+      "topic_diversity_delta": 0,
+      "coverage_delta": 0,
+      "quality_gate": true,
+      "risk_improvement_gate": false,
+      "topic_improvement_gate": false,
+      "accepted": false,
+      "recorded_accepted": false
+    },
+    {
+      "revision": "r2",
+      "base_revision": "r0",
+      "changed_flags": [
+        "risk_weighted_topics"
+      ],
+      "flags_match": true,
+      "macro_f1_delta": 0,
+      "npmi_delta": 0.009214497439540503,
+      "topic_diversity_delta": -0.02499999999999991,
+      "coverage_delta": -0.1084563758389262,
+      "quality_gate": false,
+      "risk_improvement_gate": false,
+      "topic_improvement_gate": false,
+      "accepted": false,
+      "recorded_accepted": false
+    },
+    {
+      "revision": "r3",
+      "base_revision": "r0",
+      "changed_flags": [
+        "multiscale"
+      ],
+      "flags_match": true,
+      "macro_f1_delta": -0.0013468013468014295,
+      "npmi_delta": 0,
+      "topic_diversity_delta": 0,
+      "coverage_delta": 0.0021476510067113264,
+      "quality_gate": true,
+      "risk_improvement_gate": false,
+      "topic_improvement_gate": false,
+      "accepted": false,
+      "recorded_accepted": false
+    }
+  ],
+  "selection_audit": {
+    "selected_revision": "r0",
+    "baseline_reference": "bertopic",
+    "baseline_dev_macro_f1": 0.883300916921367,
+    "selected_dev_macro_f1": 0.8666666666666667,
+    "macro_f1_gap": -0.016634250254700333,
+    "allowed_gap": -0.01,
+    "stop_condition_passes": {
+      "macro_f1": false,
+      "npmi": true,
+      "topic_diversity": true,
+      "coverage": true,
+      "functional_checks": true
+    },
+    "stop_target_met": false,
+    "selected_only_on_dev": true,
+    "reasons": {
+      "r0_selected": "All three additional revisions failed the predeclared replacement rule; r0 retained, not selected by test performance.",
+      "r1_rejected": "Development macro-F1 and NPMI both unchanged. AP improved, but AP is not a replacement criterion.",
+      "r2_rejected": "Development macro-F1 unchanged, NPMI gain 0.0092145 is below required 0.02, and coverage falls 0.1084564, beyond allowed 0.05.",
+      "r3_rejected": "Development macro-F1 falls 0.0013468 and NPMI is unchanged. Recall improves, but does not independently satisfy the replacement rule.",
+      "stop_target_not_met": "Against BERTopic, r0 development macro-F1 is lower by 0.0166343, exceeding the allowed 0.01; all other stopping conditions pass."
+    }
+  },
+  "limitations": [
+    "Metadata plus the saved training source establish declared partitions and fit counts; this audit does not independently retrain or recover feature matrices from the pickles.",
+    "CPU evidence is the enforced affinity policy and recorded sampled training peak; it is not a new wall-clock instrumentation run.",
+    "Topic metrics are unsupervised proxies and do not establish true topic count/boundary accuracy."
+  ],
+  "audited_at_utc": "2026-09-12T19:26:03.0803688Z",
+  "evidence_sha256": {
+    "benchmark/runs/pilot300/lda/config.json": "7c91888f40abcf2378971f287cd63df6d6a6a7352ca1ebeddb51a079394b0ee9",
+    "benchmark/runs/pilot300/lda/training_summary.json": "5d196ed70ee066fe8063432f2b14ce415cd2a0abdc4800c50da45ee6aca9ae9d",
+    "benchmark/runs/pilot300/lda/dev_metrics.json": "00f8db80f7bfd57db538ef977a03a35749b1bf7a7bddc870333f330d2793674d",
+    "benchmark/runs/pilot300/lda/TRAINED.json": "e8955fb7e83429b3e95fb1992fccb828e0532aeef25c80d68cf200f8f1f14a28",
+    "benchmark/runs/pilot300/lda/run_manifest.json": "471f346f6ff6313977d366677dd50b97c30122e25d0818a3200e4eee038e275b",
+    "benchmark/runs/pilot300/lda/source_snapshot/src/cst_mil/bench/model.py": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67",
+    "benchmark/runs/pilot300/btm/config.json": "7c91888f40abcf2378971f287cd63df6d6a6a7352ca1ebeddb51a079394b0ee9",
+    "benchmark/runs/pilot300/btm/training_summary.json": "8d14113ac44456263e4485583bfc0d8483268ba1b55a0b67725dab4425938cf5",
+    "benchmark/runs/pilot300/btm/dev_metrics.json": "d2bb2321b49f5d2c3d90af7a06a674d11852adffde51f5f5554ce9e704df7d74",
+    "benchmark/runs/pilot300/btm/TRAINED.json": "eea9093c7945da9d106799990b00aaf9a6d560ec12ff8f75ae9972a84b2cd2cf",
+    "benchmark/runs/pilot300/btm/run_manifest.json": "a8161fb4668cd4cb7e32c52f68efc1e9db6c3c57f2a10ae8fafc4b15c40866c1",
+    "benchmark/runs/pilot300/btm/source_snapshot/src/cst_mil/bench/model.py": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67",
+    "benchmark/runs/pilot300/gsdmm/config.json": "7c91888f40abcf2378971f287cd63df6d6a6a7352ca1ebeddb51a079394b0ee9",
+    "benchmark/runs/pilot300/gsdmm/training_summary.json": "4ee5cba835b1f84571774de78b0dcdc0bd0a41779fbc360bebfa41d7f2ecb4c6",
+    "benchmark/runs/pilot300/gsdmm/dev_metrics.json": "00173a9fa01903a108c06fc01750bfce273fac8ea57eee3797c39c7720b158ff",
+    "benchmark/runs/pilot300/gsdmm/TRAINED.json": "45bf63f87620f1565c0831899462618a50442ab0c3e0a1cb78323ae7a00d250e",
+    "benchmark/runs/pilot300/gsdmm/run_manifest.json": "cf93f7268349276147f187975e2cc22e54490aa6900821cd13d3d57133484034",
+    "benchmark/runs/pilot300/gsdmm/source_snapshot/src/cst_mil/bench/model.py": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67",
+    "benchmark/runs/pilot300/nmf/config.json": "7c91888f40abcf2378971f287cd63df6d6a6a7352ca1ebeddb51a079394b0ee9",
+    "benchmark/runs/pilot300/nmf/training_summary.json": "b7f4106de6cecc10f88f8e8b7df97351665696ed6e8293fb6bba4fe7d45c8be4",
+    "benchmark/runs/pilot300/nmf/dev_metrics.json": "9c88253ba32c879d8d9d3229c864418f531b8119a8dd1ce12e5d9be5e5b18a1c",
+    "benchmark/runs/pilot300/nmf/TRAINED.json": "f1d011a8181fa4ddb9e17d86f199e90dbc57bb86fc45633091fc1d78b5173382",
+    "benchmark/runs/pilot300/nmf/run_manifest.json": "d7d26c8e9a539567455d299c84015b25068eab9b4db2940518c37ebd30d5af63",
+    "benchmark/runs/pilot300/nmf/source_snapshot/src/cst_mil/bench/model.py": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67",
+    "benchmark/runs/pilot300/bertopic/config.json": "7c91888f40abcf2378971f287cd63df6d6a6a7352ca1ebeddb51a079394b0ee9",
+    "benchmark/runs/pilot300/bertopic/training_summary.json": "f452ad07e18c99a0107089746fa5233c60f79bbfb504f430bef49563ebbec99c",
+    "benchmark/runs/pilot300/bertopic/dev_metrics.json": "c8184bc0924855e309cf0ca8af18405806310b411a47fc3e3105a5e1f5561041",
+    "benchmark/runs/pilot300/bertopic/TRAINED.json": "fed1e4beb8a8f181bf05c629416b1751ea80f779a2015294a6b5d31cea7687e7",
+    "benchmark/runs/pilot300/bertopic/run_manifest.json": "c6a00c1024158fc24387615443228cf94659391d479b34a658cd90363c8a5748",
+    "benchmark/runs/pilot300/bertopic/source_snapshot/src/cst_mil/bench/model.py": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67",
+    "benchmark/runs/pilot300/cst_mil_r0/config.json": "72b821af5c16fa25297a5277c10bf4a99315e98b8f6a1fbf597af011a84a68ec",
+    "benchmark/runs/pilot300/cst_mil_r0/training_summary.json": "48bc044236d4c9aec506153bf68055727ac22129ff4fc20038e46afa09e178b0",
+    "benchmark/runs/pilot300/cst_mil_r0/dev_metrics.json": "e1357afcd5353ec8025e4d63b3bebaa10f1de66449ac55564b37353361ab1c8a",
+    "benchmark/runs/pilot300/cst_mil_r0/TRAINED.json": "23ad06f90a4194c888a6e76d8687731bb665d131c1c2057e7ea45367eba3fc87",
+    "benchmark/runs/pilot300/cst_mil_r0/run_manifest.json": "162dd5ce57f22a2d6f38e7c30b3ff6b9fedc4ea0dbfc6a6221f3df25b6889c9c",
+    "benchmark/runs/pilot300/cst_mil_r0/source_snapshot/src/cst_mil/bench/model.py": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67",
+    "benchmark/runs/pilot300/cst_mil_r1/config.json": "e45b042afbb61a61a53e81418e677f6bc1a2b4bfdbf0ce6b5bdcd73653c540f9",
+    "benchmark/runs/pilot300/cst_mil_r1/training_summary.json": "f4779fb37385b9c68f5927d179d17269570c8d652dbde36f6b33787327189b65",
+    "benchmark/runs/pilot300/cst_mil_r1/dev_metrics.json": "542840282dd549f3556c50487e2589646d7fc4ef099d5e72c68499c0031d5f96",
+    "benchmark/runs/pilot300/cst_mil_r1/TRAINED.json": "fecc95bb2772358bf7b33d57e763b4b45e8b2d1c8462e9c54ac1c5df739dea0f",
+    "benchmark/runs/pilot300/cst_mil_r1/run_manifest.json": "8b48eddd01511ba53812f723d12ec0beb17714a7c08f5a8e43d2d67537eb9dc7",
+    "benchmark/runs/pilot300/cst_mil_r1/source_snapshot/src/cst_mil/bench/model.py": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67",
+    "benchmark/runs/pilot300/cst_mil_r2/config.json": "8022f43792a77c83c097362648a408620a1df13cd3c8a4ed2fe3f550759cc657",
+    "benchmark/runs/pilot300/cst_mil_r2/training_summary.json": "613c1737e5aae470b1d2df785257a13fc7b8fdbbcd5ab8adf4c14e91d2ffd03d",
+    "benchmark/runs/pilot300/cst_mil_r2/dev_metrics.json": "8a5cdb11e3b93c63dc45e31572123d5c5d847fc16a01c6465416228a60847c4a",
+    "benchmark/runs/pilot300/cst_mil_r2/TRAINED.json": "9e297912a3fa97de7a9278eb696385f0a6ce3863216c36e36d9ba07afd08c629",
+    "benchmark/runs/pilot300/cst_mil_r2/run_manifest.json": "84044f08648540bcbe2ffdc04fbd5431a00e5c2d3417082f0305347807db969a",
+    "benchmark/runs/pilot300/cst_mil_r2/source_snapshot/src/cst_mil/bench/model.py": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67",
+    "benchmark/runs/pilot300/cst_mil_r3/config.json": "f57861fc869ec7a663327a5ecaf0db9f8150793c2fba5e5f664ace7183167eb9",
+    "benchmark/runs/pilot300/cst_mil_r3/training_summary.json": "457537fc47963a2b80d05e06910c99d82887aadf291b98758317bee36af57e31",
+    "benchmark/runs/pilot300/cst_mil_r3/dev_metrics.json": "e9104bafcb8deabc07eeba2b57352702310ec0b6a016c227ac8fdba76aedefc1",
+    "benchmark/runs/pilot300/cst_mil_r3/TRAINED.json": "92da2e6b5233e0fefa6f8624bdb5c262b95214cd2f5df310633d41bfef36db0a",
+    "benchmark/runs/pilot300/cst_mil_r3/run_manifest.json": "16607c204c7eac4e78014684a5e7e3c69106fd4950b1cbbfd4dad25d71f64cf0",
+    "benchmark/runs/pilot300/cst_mil_r3/source_snapshot/src/cst_mil/bench/model.py": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67",
+    "benchmark/selection.json": "1a8756108adc8c9ff85a82e10230adc24c0bc243c4f4f75a2ec0b517c11ab103",
+    "benchmark/revisions/r1.json": "111b71181ae2353983feea25e157c842b0e10375b1377eca46fd4cfc9adf3b6a",
+    "benchmark/revisions/r2.json": "f4af8a19932480b15591d9fe181c34c2cb4759f661a021360dfa75eb7807bacc",
+    "benchmark/revisions/r3.json": "80b48c205898be5e77aaecab1a369937e85a5d4bec3283b983dc9cb117b7c8c4",
+    "benchmark/data/pilot300/manifest.json": "4b667882b4cd9a3bc9945ed0e2293f49a3b68027ff6ed20eb46d4f0de2413250",
+    "benchmark/data/pilot300/sessions.jsonl": "3fb8ec865cc8e5a7cadc976c986d8f952b99a0234a49a6e05f5159dc7b550d83",
+    "src/cst_mil/bench/model.py": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67"
+  },
+  "method_change_evidence": {
+    "r1": {
+      "source_snapshot": "benchmark/runs/pilot300/cst_mil_r1/source_snapshot/src/cst_mil/bench/model.py",
+      "lines": {
+        "word_flag": 88,
+        "tfidf_definition": 90
+      },
+      "behavior": "Adds word unigram/bigram TF-IDF to unchanged character features; word vectorizer is fitted separately within each training fold."
+    },
+    "r2": {
+      "source_snapshot": "benchmark/runs/pilot300/cst_mil_r2/source_snapshot/src/cst_mil/bench/model.py",
+      "lines": {
+        "window_weight": 397,
+        "weighted_topic_fit": 403
+      },
+      "behavior": "Each 5-message training window receives 1 + 2 * mean(out-of-fold message risk); downstream NMF uses weighted fitting without development/test labels."
+    },
+    "r3": {
+      "source_snapshot": "benchmark/runs/pilot300/cst_mil_r3/source_snapshot/src/cst_mil/bench/model.py",
+      "lines": {
+        "inference_window10": 314,
+        "inference_equal_fusion": 317,
+        "training_window10": 425,
+        "training_equal_fusion": 427
+      },
+      "behavior": "Adds 10-message context transformed by the same fixed topic model, then equal-weight fuses 5-message and 10-message distributions in both training and inference."
+    }
+  }
+}

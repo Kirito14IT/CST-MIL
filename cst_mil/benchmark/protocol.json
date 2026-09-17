@@ -1,0 +1,52 @@
+{
+  "config": {
+    "btm": {
+      "alpha": 1.5625,
+      "beta": 0.005,
+      "iterations": 100
+    },
+    "char_n_features": 65536,
+    "evidence_top_k": 3,
+    "gsdmm": {
+      "alpha": 0.1,
+      "beta": 0.1,
+      "iterations": 100
+    },
+    "instance_c": 4.0,
+    "lda": {
+      "em_max_iter": 100,
+      "var_max_iter": 20
+    },
+    "membership_threshold": 0.25,
+    "mil_rounds": 3,
+    "multiscale": false,
+    "n_topics": 32,
+    "nmf": {
+      "max_iter": 300,
+      "tol": 0.0001
+    },
+    "positive_top_fraction": 0.2,
+    "relative_threshold": 0.5,
+    "risk_weighted_topics": false,
+    "seed": 42,
+    "session_c": 1.0,
+    "stride": 2,
+    "strong_threshold": 0.6,
+    "threads": 4,
+    "window_size": 5,
+    "word_features": false
+  },
+  "full_ids": "8d378a0b7c1dc9485baf462dab393105b1992610e5c3d4bf173c0645730d35e0",
+  "iterations": {
+    "r1": "word_features",
+    "r2": "risk_weighted_topics",
+    "r3": "multiscale"
+  },
+  "pilot_ids": "b5336b29ac9bfdd5dddbe41305f5ce28d175fa52becf3e82cbaa054e00e14696",
+  "schema_version": 1,
+  "selection_data": "pilot300 dev only",
+  "smoke_only_prior_folds": true,
+  "test_order": "train then dev then test",
+  "test_unlock": "selection.json",
+  "threads": 4
+}
