@@ -20,6 +20,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Scope: this license covers original CST-MIL code and original repository visual
-assets. Third-party components retain their own licenses. Separately distributed
-trained model weights are governed by MODEL_LICENSE.md, not this MIT license.
