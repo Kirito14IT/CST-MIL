@@ -32,7 +32,7 @@
 
 <p align="center"><a href="assets/demo.mp4">HD MP4</a> · <a href="assets/demo-poster.png">Static preview</a></p>
 
-The demonstration uses an authored campus-competition comment example: **import → analyze → inspect topics → locate source text → save a review note**. Scores, topics and quotations come from the actual model. The recording includes guided pauses; the roughly 26-second clip is not an inference-latency measurement. This is a functional demonstration, not a test-set result.
+The demonstration uses a campus-competition comment example: **import → analyze → inspect topics → locate source text → save a review note**. Topics, scores and quotations come from an actual run. The example demonstrates the application's functionality.
 
 ## What it does
 
@@ -48,7 +48,11 @@ Deployment loads **one model bundle**. Risk categories support multilabel output
 
 ## Architecture and outputs
 
-![CST-MIL architecture: shared semantic encoding, character features, risk heads, dynamic topics and source evidence](assets/architecture-en.svg)
+### From messages to risk clues and discussion topics
+
+<p align="center"><a href="assets/algorithm-overview-en.png"><img src="assets/algorithm-overview-en.png" width="1000" alt="Algorithm overview: shared short-text encoding supports risk screening and dynamic topic interpretation; conversation aggregation produces an SCCD reference score and topic outputs retain source evidence"></a></p>
+
+The figure shows the main processing paths. Reply statistics also use real parent IDs, semantic representations and message risk. Topic grouping uses stance and risk-distance constraints; explanation outputs do not change risk scores.
 
 - **Shared encoding:** a frozen multilingual MiniLM provides 384-dimensional vectors, with chunking for long messages. One encoding pass serves both branches.
 - **Lightweight supervision:** character 2–5 grams and semantic vectors feed three logistic-regression heads. Label masks preserve unobserved categories as unknown; source/class weights balance supervision.
@@ -56,7 +60,13 @@ Deployment loads **one model bundle**. Risk categories support multilabel output
 - **Topic interpretation:** cosine-based hierarchical clustering yields a variable number of topics with source-grounded names and keyword spans. Eligible short replies may link to their real direct parent's topic without inheriting its risk score.
 - **Local application:** React, an Express serial queue, a resident Python worker and SQLite provide source navigation, review notes, history and CSV/JSON export.
 
-This release is a **supervised, pretrained-semantic-enhanced approach**. The repository also retains the earlier weakly supervised CST-MIL and adapters for LDA, BTM, GSDMM, NMF and BERTopic. Historical SCCD results do not represent this release. Topic names, sarcasm, discouragement and very short replies may still be misinterpreted; candidate evidence needs contextual review.
+### How topics link back to source text
+
+<p align="center"><a href="assets/topic-evidence-en.png"><img src="assets/topic-evidence-en.png" width="1000" alt="Topic interpretation: preserve source spans for negation and questions, form semantic groups with distinctive names, associate short replies with real direct parents, and retain message IDs and evidence spans"></a></p>
+
+Names retain the source spans needed to preserve negation and questions. Core topic members and parent-linked short replies are recorded separately. Linked replies are excluded from naming statistics and do not inherit their parent's risk score. Supporting message IDs and character spans connect each topic back to its source text.
+
+This release is a **supervised, pretrained-semantic-enhanced approach**. The repository also includes weakly supervised CST-MIL and adapters for LDA, BTM, GSDMM, NMF and BERTopic. Historical SCCD results do not represent this release. Topic names, sarcasm, discouragement and very short replies may still be misinterpreted; candidate evidence needs contextual review.
 
 ## Quick start
 
@@ -81,7 +91,8 @@ npm ci
 npm start
 ```
 
-Open **http://127.0.0.1:3210**, select a built-in campus example or import comments. On later runs, enter the same `app` directory and run `npm start`. Startup verifies model identity and builds the interface; it does not train models or silently download assets.
+Open http://127.0.0.1:3210
+Select a built-in campus example or import comments. On later runs, enter the same `app` directory and run `npm start`. Startup verifies model identity and builds the interface; it does not train models or silently download assets.
 
 `setup` downloads a fixed-release model and a pinned upstream encoder, supports resumable downloads and SHA-256 checks, and creates `.runtime/deployment.json` inside the repository. Missing assets or fingerprint mismatches produce explicit errors.
 
@@ -118,7 +129,7 @@ Paths may contain spaces. Offline installation performs the same integrity check
 
 Joint training preserves train/dev/test separation; unobserved categories are not assumed negative. Text is not uniformly truncated to 30 characters, and lengths and label definitions differ by source. ScamSpot is not a pure fraud-detection task. A multilingual encoder's supported languages are not equivalent to independently validated performance in every language.
 
-Original code uses the [MIT license](LICENSE). Released weights have separate [model terms](MODEL_LICENSE.md) and **are not covered by the code's MIT license**. Third-party encoders, algorithms and datasets retain their own terms; see [third-party notices](THIRD_PARTY_NOTICES.md). The default service binds to localhost. Inputs and history stay local and are not published with the repository.
+Original code uses the [MIT license](LICENSE). Released weights have separate [model terms](MODEL_LICENSE.md) and **are not covered by the code's MIT license**. Third-party encoders, algorithms and datasets retain their own terms; see [third-party notices](THIRD_PARTY_NOTICES.md). The default service binds to localhost.
 
 ## Research code and reproducibility
 
@@ -147,7 +158,7 @@ npm run build
 npx tsx --test tests/ui-source.test.ts tests/portable-deployment.test.ts
 ```
 
-The [CI workflow](.github/workflows/release.yml) runs synthetic-data Python tests, portable-deployment tests, the frontend build and Node checks without private data. Real-model integration and browser checks require model assets. Asset-free CI is an engineering check, not a new algorithm-performance evaluation.
+The [CI workflow](.github/workflows/release.yml) runs synthetic-data Python tests, portable-deployment tests, the frontend build and Node checks without private data. Real-model integration and browser checks require model assets.
 
 ## Repository layout
 
