@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="850" viewBox="0 0 1440 850" role="img" aria-labelledby="title desc">
+<title id="title">CST-MIL semantic architecture</title><desc id="desc">One shared frozen semantic encoding, character features, supervised risk heads, independent topic clustering and original-text evidence.</desc>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M1 1 8 4.5 1 8" fill="none" stroke="#6F869B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect width="1440" height="850" rx="28" fill="#FBFCFD"/>
+<style>text{font-family:'Microsoft YaHei','Noto Sans CJK SC','Segoe UI',sans-serif;fill:#28445C} .head{font-size:24px;font-weight:700} .body{font-size:19px} .small{font-size:17px;fill:#65798A} .micro{font-size:15px;fill:#65798A} .step{font-size:15px;font-weight:700;letter-spacing:1.5px;fill:#65798A}</style>
+<text x="38" y="64" class="step">01  输入</text>
+<text x="300" y="64" class="step">02  共享表示</text>
+<text x="665" y="64" class="step">03  双支路分析</text>
+<text x="1070" y="64" class="step">04  可追溯输出</text>
+<rect x="30" y="100" width="230" height="510" rx="20" fill="#FFFFFF" stroke="#DDE6EB" stroke-width="1.6"/>
+<text x="52" y="142" class="head">短文本 / 评论</text>
+<rect x="52" y="180" width="184" height="54" rx="12" fill="#EEF4F8" stroke="#DCE7EF" stroke-width="1.6"/>
+<path d="M68 198h127M68 214h97" stroke="#91A6B7" stroke-width="4" stroke-linecap="round"/>
+<rect x="52" y="250" width="184" height="54" rx="12" fill="#EEF4F8" stroke="#DCE7EF" stroke-width="1.6"/>
+<path d="M68 268h91M68 284h61" stroke="#91A6B7" stroke-width="4" stroke-linecap="round"/>
+<rect x="52" y="320" width="184" height="54" rx="12" fill="#EEF4F8" stroke="#DCE7EF" stroke-width="1.6"/>
+<path d="M68 338h114M68 354h84" stroke="#91A6B7" stroke-width="4" stroke-linecap="round"/>
+<text x="52" y="427" class="body">原文完整保留</text>
+<text x="52" y="467" class="small">消息编号与真实父回复</text>
+<text x="52" y="550" class="micro">标签不进入推理输入</text>
+<rect x="300" y="100" width="300" height="510" rx="20" fill="#F4F8FB" stroke="#CBDAE8" stroke-width="1.6"/>
+<text x="322" y="142" class="head">一次语义编码</text>
+<rect x="322" y="175" width="256" height="151" rx="14" fill="#E1EDF8" stroke="#BFD3E6" stroke-width="1.6"/>
+<text x="340" y="211" class="body">Multilingual MiniLM</text>
+<text x="340" y="249" class="small">冻结编码器 · 384维</text>
+<text x="340" y="286" class="small">长消息分块后聚合</text>
+<rect x="322" y="379" width="256" height="123" rx="14" fill="#E5F3F0" stroke="#B9DAD4" stroke-width="1.6"/>
+<text x="340" y="418" class="body">字符特征</text>
+<text x="340" y="458" class="small">2–5 gram · 哈希表示</text>
+<text x="322" y="553" class="small">CPU本地推理</text>
+<path d="M260 280H300" fill="none" stroke="#6F869B" stroke-width="2.4" marker-end="url(#arrow)"/>
+<rect x="665" y="100" width="340" height="220" rx="20" fill="#FFFFFF" stroke="#BFD1E4" stroke-width="1.6"/>
+<text x="689" y="142" class="head">固定风险类别</text>
+<text x="689" y="185" class="small">字符 + 语义 → 3个LR输出层</text>
+<text x="689" y="228" class="body">攻击 / 仇恨 / 垃圾诈骗推广</text>
+<text x="689" y="274" class="small">各类别独立阈值 · 多标签输出</text>
+<path d="M578 230H630V202H665" fill="none" stroke="#6F869B" stroke-width="2.4" marker-end="url(#arrow)"/>
+<rect x="665" y="380" width="340" height="230" rx="20" fill="#FFFFFF" stroke="#B7D9D3" stroke-width="1.6"/>
+<text x="689" y="422" class="head">动态讨论主题</text>
+<text x="689" y="464" class="small">余弦层次聚类 → 原文短语命名</text>
+<text x="689" y="506" class="body">零个 / 一个 / 多个主题</text>
+<text x="689" y="550" class="small">基本成员 + 直接父回复关联</text>
+<text x="689" y="582" class="micro">不使用风险类别代替主题名</text>
+<path d="M578 285H620V480H665" fill="none" stroke="#6F869B" stroke-width="2.4" marker-end="url(#arrow)"/>
+<path d="M578 440H645V280H665" fill="none" stroke="#FBFCFD" stroke-width="10"/>
+<path d="M578 440H645V280H665" fill="none" stroke="#6F869B" stroke-width="2.4" marker-end="url(#arrow)"/>
+<rect x="1070" y="100" width="340" height="510" rx="20" fill="#FDFBF9" stroke="#E8D6CD" stroke-width="1.6"/>
+<text x="1094" y="143" class="head">风险线索与主题证据</text>
+<rect x="1094" y="174" width="292" height="114" rx="12" fill="#FFFFFF" stroke="#E6E3E0" stroke-width="1.6"/>
+<text x="1112" y="208" class="body">类别分数 · Top-3候选</text>
+<text x="1112" y="244" class="small">SCCD会话层聚合参考</text>
+<path d="M1005 215H1070" fill="none" stroke="#6F869B" stroke-width="2.4" marker-end="url(#arrow)"/>
+<rect x="1094" y="337" width="292" height="135" rx="12" fill="#FFFFFF" stroke="#E4DFDB" stroke-width="1.6"/>
+<text x="1112" y="373" class="body">主题短语 · 消息成员</text>
+<text x="1112" y="411" class="small">原文编号 / 摘录 / 字符跨度</text>
+<path d="M1111 438v-11h11m232 0h11v11m0 12v11h-11m-232 0h-11v-11" fill="none" stroke="#E78D84" stroke-width="2.8"/>
+<path d="M1005 493H1040V410H1070" fill="none" stroke="#6F869B" stroke-width="2.4" marker-end="url(#arrow)"/>
+<text x="1094" y="531" class="body">点击定位原文 → 人工核查</text>
+<text x="1094" y="572" class="small">历史记录与模型身份追溯</text>
+<rect x="30" y="666" width="1380" height="154" rx="18" fill="#F0F4F6" stroke="#D9E2E7" stroke-width="1.6"/>
+<text x="52" y="703" class="step">训练阶段</text>
+<text x="52" y="742" class="body">SCCD · CONDA · ToxiCN · ScamSpot · HateBR</text>
+<text x="52" y="781" class="small">仅训练区拟合；验证区选择阈值</text>
+<path d="M604 751H655" fill="none" stroke="#6F869B" stroke-width="2.4" marker-end="url(#arrow)"/>
+<text x="679" y="742" class="body">标注掩码 + 来源与类别权重</text>
+<text x="679" y="781" class="small">三折会话交叉拟合 → 冻结模型包</text>
+</svg>

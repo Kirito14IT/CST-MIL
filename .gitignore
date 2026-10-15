@@ -1,69 +1,79 @@
-# OS
+# Local settings and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.vscode/
+.idea/
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-
-# Virtual envs & tool caches
+# Runtime assets, user content, dependencies and caches
+.runtime/
+data/
+/models/*
+!/models/semantic-demo-2026.10.15.json
+*.joblib
+*.pkl
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
 .venv/
 venv/
 env/
-.pytest_cache/
-.ruff_cache/
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest*/
 .mypy_cache/
+.ruff_cache/
+.cache/
+*.log
+*.tmp
+*.pending
+*.class
+*.exe
 
-# Test temp dirs (project-specific)
-.pytest-tmp-*/
-
-# Build artifacts
+# Generated build and test artifacts
 dist/
 build/
 *.egg-info/
 *.whl
 *.tar.gz
+test-results/
+playwright-report/
+browser-runs/
+.test_tmp/
 
-# Large runtime data, models, caches (re-downloadable)
-data/
-cst_mil/data/
-cst_mil/dist/
-cst_mil/artifacts/run_001/model.joblib
-cst_mil/artifacts/run_001/analysis/figures/
-cst_mil/benchmark/runs/
-cst_mil/benchmark/quarantine/
-cst_mil/benchmark/tmp/
-cst_mil/benchmark/tools/
-cst_mil/benchmark/data/
-cst_mil/benchmark/legacy_runtime/
-
-# BERTopic weights + embedding cache + pytest test_tmp (at repo root)
-benchmark/cache/
-benchmark/models/
-benchmark/test_tmp/
-
-# BERTopic baseline embedded model snapshot
-baseline/BERTopic/build/
-baseline/BERTopic/tests/
-
-# Shanghai University of Technology related docs (internship)
+# Original research materials and private records
+cst_mil/reports/
+cst_mil/releases/
+cst_mil/analysis/
+cst_mil/artifacts/
+cst_mil/benchmark/**
+!cst_mil/benchmark/research_followup/
+!cst_mil/benchmark/research_followup/20260922/
+!cst_mil/benchmark/research_followup/20260922/performance.json
+!cst_mil/benchmark/research_followup/20260922/evidence.json
+!cst_mil/benchmark/research_followup/20260922/costs.json
+!cst_mil/benchmark/finalize_delivery.py
+!cst_mil/benchmark/preserve_legacy.py
+!cst_mil/benchmark/validate_functional.py
+/benchmark/
+任务要求*.docx
+专利交底书模板*.docx
+待办事项.md
+任务进度报告*.md
+notes.md
+task_plan.md
+report_evidence.md
 上海理工大学*/
 *上海理工*
 
-# Original task / patent template docs (school-specific)
-任务要求.docx
-任务要求 - 副本.docx
-专利交底书模板.docx
-
-# Logs (very large driver outputs)
-*.log
-
-# Editor / IDE
-.vscode/
-.idea/
-*.swp
-*.swo
+# Optional upstream baselines installed by baseline/setup.py
+baseline/LDA/
+baseline/GSDMM/
+baseline/.downloads/

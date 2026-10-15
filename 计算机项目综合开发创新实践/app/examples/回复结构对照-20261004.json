@@ -1,0 +1,538 @@
+[
+  {
+    "id": "campus-1-semantic",
+    "intent": "相同文本，回复结构诊断对照",
+    "session": {
+      "title": "课程小组的分工讨论（semantic）",
+      "source": "demo",
+      "includePost": false,
+      "postText": "",
+      "messages": [
+        {
+          "id": "m1",
+          "text": "我们周五交报告，今天先把任务分好吧。",
+          "order": 0,
+          "speaker": "同学A",
+          "parentId": null
+        },
+        {
+          "id": "m2",
+          "text": "我整理问卷数据，明晚发给大家。",
+          "order": 1,
+          "speaker": "同学B",
+          "parentId": "m1"
+        },
+        {
+          "id": "m3",
+          "text": "我负责图表和页面，文字部分谁来检查？",
+          "order": 2,
+          "speaker": "同学C",
+          "parentId": "m1"
+        },
+        {
+          "id": "m4",
+          "text": "我来校对，引用的来源也一起核对。",
+          "order": 3,
+          "speaker": "同学D",
+          "parentId": "m3"
+        },
+        {
+          "id": "m5",
+          "text": "辛苦大家，有问题就在群里说。",
+          "order": 4,
+          "speaker": "同学A",
+          "parentId": "m1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "campus-1-flat",
+    "intent": "相同文本，回复结构诊断对照",
+    "session": {
+      "title": "课程小组的分工讨论（flat）",
+      "source": "demo",
+      "includePost": false,
+      "postText": "",
+      "messages": [
+        {
+          "id": "m1",
+          "text": "我们周五交报告，今天先把任务分好吧。",
+          "order": 0,
+          "speaker": "同学A",
+          "parentId": null
+        },
+        {
+          "id": "m2",
+          "text": "我整理问卷数据，明晚发给大家。",
+          "order": 1,
+          "speaker": "同学B",
+          "parentId": null
+        },
+        {
+          "id": "m3",
+          "text": "我负责图表和页面，文字部分谁来检查？",
+          "order": 2,
+          "speaker": "同学C",
+          "parentId": null
+        },
+        {
+          "id": "m4",
+          "text": "我来校对，引用的来源也一起核对。",
+          "order": 3,
+          "speaker": "同学D",
+          "parentId": null
+        },
+        {
+          "id": "m5",
+          "text": "辛苦大家，有问题就在群里说。",
+          "order": 4,
+          "speaker": "同学A",
+          "parentId": null
+        }
+      ]
+    }
+  },
+  {
+    "id": "campus-2-semantic",
+    "intent": "相同文本，回复结构诊断对照",
+    "session": {
+      "title": "宿舍生活中的意见分歧（semantic）",
+      "source": "demo",
+      "includePost": false,
+      "postText": "",
+      "messages": [
+        {
+          "id": "m1",
+          "text": "最近晚上十二点还有键盘声，我有点睡不好。",
+          "order": 0,
+          "speaker": "同学A",
+          "parentId": null
+        },
+        {
+          "id": "m2",
+          "text": "抱歉，项目没做完，今晚我去公共自习区。",
+          "order": 1,
+          "speaker": "同学B",
+          "parentId": "m1"
+        },
+        {
+          "id": "m3",
+          "text": "我们能不能约定十一点以后戴耳机、放轻动作？",
+          "order": 2,
+          "speaker": "同学C",
+          "parentId": "m2"
+        },
+        {
+          "id": "m4",
+          "text": "可以，我也注意闹钟音量。",
+          "order": 3,
+          "speaker": "同学D",
+          "parentId": "m3"
+        },
+        {
+          "id": "m5",
+          "text": "谢谢，大家商量一下就好。",
+          "order": 4,
+          "speaker": "同学A",
+          "parentId": "m4"
+        }
+      ]
+    }
+  },
+  {
+    "id": "campus-2-flat",
+    "intent": "相同文本，回复结构诊断对照",
+    "session": {
+      "title": "宿舍生活中的意见分歧（flat）",
+      "source": "demo",
+      "includePost": false,
+      "postText": "",
+      "messages": [
+        {
+          "id": "m1",
+          "text": "最近晚上十二点还有键盘声，我有点睡不好。",
+          "order": 0,
+          "speaker": "同学A",
+          "parentId": null
+        },
+        {
+          "id": "m2",
+          "text": "抱歉，项目没做完，今晚我去公共自习区。",
+          "order": 1,
+          "speaker": "同学B",
+          "parentId": null
+        },
+        {
+          "id": "m3",
+          "text": "我们能不能约定十一点以后戴耳机、放轻动作？",
+          "order": 2,
+          "speaker": "同学C",
+          "parentId": null
+        },
+        {
+          "id": "m4",
+          "text": "可以，我也注意闹钟音量。",
+          "order": 3,
+          "speaker": "同学D",
+          "parentId": null
+        },
+        {
+          "id": "m5",
+          "text": "谢谢，大家商量一下就好。",
+          "order": 4,
+          "speaker": "同学A",
+          "parentId": null
+        }
+      ]
+    }
+  },
+  {
+    "id": "campus-3-semantic",
+    "intent": "相同文本，回复结构诊断对照",
+    "session": {
+      "title": "比赛失利后的不当评论（semantic）",
+      "source": "demo",
+      "includePost": false,
+      "postText": "",
+      "messages": [
+        {
+          "id": "m1",
+          "text": "今天比赛输了，大家复盘一下配合问题吧。",
+          "order": 0,
+          "speaker": "同学A",
+          "parentId": null
+        },
+        {
+          "id": "m2",
+          "text": "那个队员真是废物，别再让他上场了。",
+          "order": 1,
+          "speaker": "同学B",
+          "parentId": "m1"
+        },
+        {
+          "id": "m3",
+          "text": "说他废物就过分了，每个人都有失误。",
+          "order": 2,
+          "speaker": "同学C",
+          "parentId": "m2"
+        },
+        {
+          "id": "m4",
+          "text": "他就是拖后腿，我们以后都别理他。",
+          "order": 3,
+          "speaker": "同学D",
+          "parentId": "m2"
+        },
+        {
+          "id": "m5",
+          "text": "可以讨论技术，别针对同学本人。",
+          "order": 4,
+          "speaker": "同学A",
+          "parentId": "m4"
+        },
+        {
+          "id": "m6",
+          "text": "先把训练录像整理出来，下次一起改进。",
+          "order": 5,
+          "speaker": "同学B",
+          "parentId": "m1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "campus-3-flat",
+    "intent": "相同文本，回复结构诊断对照",
+    "session": {
+      "title": "比赛失利后的不当评论（flat）",
+      "source": "demo",
+      "includePost": false,
+      "postText": "",
+      "messages": [
+        {
+          "id": "m1",
+          "text": "今天比赛输了，大家复盘一下配合问题吧。",
+          "order": 0,
+          "speaker": "同学A",
+          "parentId": null
+        },
+        {
+          "id": "m2",
+          "text": "那个队员真是废物，别再让他上场了。",
+          "order": 1,
+          "speaker": "同学B",
+          "parentId": null
+        },
+        {
+          "id": "m3",
+          "text": "说他废物就过分了，每个人都有失误。",
+          "order": 2,
+          "speaker": "同学C",
+          "parentId": null
+        },
+        {
+          "id": "m4",
+          "text": "他就是拖后腿，我们以后都别理他。",
+          "order": 3,
+          "speaker": "同学D",
+          "parentId": null
+        },
+        {
+          "id": "m5",
+          "text": "可以讨论技术，别针对同学本人。",
+          "order": 4,
+          "speaker": "同学A",
+          "parentId": null
+        },
+        {
+          "id": "m6",
+          "text": "先把训练录像整理出来，下次一起改进。",
+          "order": 5,
+          "speaker": "同学B",
+          "parentId": null
+        }
+      ]
+    }
+  },
+  {
+    "id": "campus-4-semantic",
+    "intent": "相同文本，回复结构诊断对照",
+    "session": {
+      "title": "食堂建议与社团招募（semantic）",
+      "source": "demo",
+      "includePost": false,
+      "postText": "",
+      "messages": [
+        {
+          "id": "m1",
+          "text": "食堂二楼中午排队太久了，希望多开一个窗口。",
+          "order": 0,
+          "speaker": "同学A",
+          "parentId": null
+        },
+        {
+          "id": "m2",
+          "text": "我也遇到了，可以把高峰时段记录给食堂。",
+          "order": 1,
+          "speaker": "同学B",
+          "parentId": "m1"
+        },
+        {
+          "id": "m3",
+          "text": "周末摄影社有活动，想拍校园秋景的同学可以参加。",
+          "order": 2,
+          "speaker": "同学C",
+          "parentId": null
+        },
+        {
+          "id": "m4",
+          "text": "摄影活动几点集合，需要自己带相机吗？",
+          "order": 3,
+          "speaker": "同学D",
+          "parentId": "m3"
+        },
+        {
+          "id": "m5",
+          "text": "食堂建议我已经写好了，主要是排队和座位问题。",
+          "order": 4,
+          "speaker": "同学A",
+          "parentId": "m2"
+        },
+        {
+          "id": "m6",
+          "text": "摄影活动下午两点，用手机也可以。",
+          "order": 5,
+          "speaker": "同学B",
+          "parentId": "m4"
+        }
+      ]
+    }
+  },
+  {
+    "id": "campus-4-flat",
+    "intent": "相同文本，回复结构诊断对照",
+    "session": {
+      "title": "食堂建议与社团招募（flat）",
+      "source": "demo",
+      "includePost": false,
+      "postText": "",
+      "messages": [
+        {
+          "id": "m1",
+          "text": "食堂二楼中午排队太久了，希望多开一个窗口。",
+          "order": 0,
+          "speaker": "同学A",
+          "parentId": null
+        },
+        {
+          "id": "m2",
+          "text": "我也遇到了，可以把高峰时段记录给食堂。",
+          "order": 1,
+          "speaker": "同学B",
+          "parentId": null
+        },
+        {
+          "id": "m3",
+          "text": "周末摄影社有活动，想拍校园秋景的同学可以参加。",
+          "order": 2,
+          "speaker": "同学C",
+          "parentId": null
+        },
+        {
+          "id": "m4",
+          "text": "摄影活动几点集合，需要自己带相机吗？",
+          "order": 3,
+          "speaker": "同学D",
+          "parentId": null
+        },
+        {
+          "id": "m5",
+          "text": "食堂建议我已经写好了，主要是排队和座位问题。",
+          "order": 4,
+          "speaker": "同学A",
+          "parentId": null
+        },
+        {
+          "id": "m6",
+          "text": "摄影活动下午两点，用手机也可以。",
+          "order": 5,
+          "speaker": "同学B",
+          "parentId": null
+        }
+      ]
+    }
+  },
+  {
+    "id": "campus-5-semantic",
+    "intent": "相同文本，回复结构诊断对照",
+    "session": {
+      "title": "引用攻击性用语并劝阻（semantic）",
+      "source": "demo",
+      "includePost": false,
+      "postText": "",
+      "messages": [
+        {
+          "id": "m1",
+          "text": "有人在评论里说“你就是个废物”，这样讲话不合适。",
+          "order": 0,
+          "speaker": "同学A",
+          "parentId": null
+        },
+        {
+          "id": "m2",
+          "text": "对，不能因为一次作业没做好就骂同学。",
+          "order": 1,
+          "speaker": "同学B",
+          "parentId": "m1"
+        },
+        {
+          "id": "m3",
+          "text": "我已经提醒大家停止人身攻击了。",
+          "order": 2,
+          "speaker": "同学C",
+          "parentId": "m2"
+        },
+        {
+          "id": "m4",
+          "text": "讨论具体问题就好，别再传播那句话。",
+          "order": 3,
+          "speaker": "同学D",
+          "parentId": "m3"
+        }
+      ]
+    }
+  },
+  {
+    "id": "campus-5-flat",
+    "intent": "相同文本，回复结构诊断对照",
+    "session": {
+      "title": "引用攻击性用语并劝阻（flat）",
+      "source": "demo",
+      "includePost": false,
+      "postText": "",
+      "messages": [
+        {
+          "id": "m1",
+          "text": "有人在评论里说“你就是个废物”，这样讲话不合适。",
+          "order": 0,
+          "speaker": "同学A",
+          "parentId": null
+        },
+        {
+          "id": "m2",
+          "text": "对，不能因为一次作业没做好就骂同学。",
+          "order": 1,
+          "speaker": "同学B",
+          "parentId": null
+        },
+        {
+          "id": "m3",
+          "text": "我已经提醒大家停止人身攻击了。",
+          "order": 2,
+          "speaker": "同学C",
+          "parentId": null
+        },
+        {
+          "id": "m4",
+          "text": "讨论具体问题就好，别再传播那句话。",
+          "order": 3,
+          "speaker": "同学D",
+          "parentId": null
+        }
+      ]
+    }
+  },
+  {
+    "id": "campus-6-semantic",
+    "intent": "相同文本，回复结构诊断对照",
+    "session": {
+      "title": "简短的活动确认（semantic）",
+      "source": "demo",
+      "includePost": false,
+      "postText": "",
+      "messages": [
+        {
+          "id": "m1",
+          "text": "明天下午的读书分享还在图书馆吗？",
+          "order": 0,
+          "speaker": "同学A",
+          "parentId": null
+        },
+        {
+          "id": "m2",
+          "text": "是的，三点在二楼讨论室见。",
+          "order": 1,
+          "speaker": "同学B",
+          "parentId": "m1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "campus-6-flat",
+    "intent": "相同文本，回复结构诊断对照",
+    "session": {
+      "title": "简短的活动确认（flat）",
+      "source": "demo",
+      "includePost": false,
+      "postText": "",
+      "messages": [
+        {
+          "id": "m1",
+          "text": "明天下午的读书分享还在图书馆吗？",
+          "order": 0,
+          "speaker": "同学A",
+          "parentId": null
+        },
+        {
+          "id": "m2",
+          "text": "是的，三点在二楼讨论室见。",
+          "order": 1,
+          "speaker": "同学B",
+          "parentId": null
+        }
+      ]
+    }
+  }
+]

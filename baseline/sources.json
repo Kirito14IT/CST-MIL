@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "lda": {
+      "source": "blei-lab/lda-c",
+      "commit": "0c46575e89092683010db077f713f8aa3b3594a2",
+      "url": "https://codeload.github.com/blei-lab/lda-c/zip/0c46575e89092683010db077f713f8aa3b3594a2",
+      "archive_sha256": "b2fa6dfef34a3a50160edf3f73aa00f02c92ea8752649960d821f750a4dd5654",
+      "archive_bytes": 2989458,
+      "adapter_sha256": "afb1c85249fb7949370c346db29c2ec0e96ae8283cfa7743e51452c41ef832e2",
+      "bridge_files": {},
+      "destination": "LDA",
+      "include": [
+        "Makefile",
+        "cokus.c",
+        "cokus.h",
+        "inf-settings.txt",
+        "lda-alpha.c",
+        "lda-alpha.h",
+        "lda-data.c",
+        "lda-data.h",
+        "lda-estimate.c",
+        "lda-estimate.h",
+        "lda-inference.c",
+        "lda-inference.h",
+        "lda-model.c",
+        "lda-model.h",
+        "lda.h",
+        "license.txt",
+        "readme.txt",
+        "settings.txt",
+        "utils.c",
+        "utils.h"
+      ],
+      "installed_files": {
+        "cokus.c": "c2c0cabbb5e607a9a670597f7ab7cd1c4f2cfd33192b2b271828db05703782ad",
+        "cokus.h": "21d920f21ad199d9068a4da5507e4a0f835d313d04907593fe3540ecbbe3e734",
+        "inf-settings.txt": "ddb11e08346c6a3f59342360ad708566907618e1cf7579e7f210682ae191fdc2",
+        "lda-alpha.c": "0abc74ef34f83eca02c92f2652c468ac5eefd786055a30956c37d907c52de88d",
+        "lda-alpha.h": "02c7606aa7440e3f264f756ccd8a38aaf8cc41d4071a458156f59bb696273a5e",
+        "lda-data.c": "522948e716d985c80ac413eed4fe4c264acafd9fdf10836b47f097f51a9e050e",
+        "lda-data.h": "612a97cf48b553bd120f30929f8cb43f972b1dbe986911cbe3d60f48cbb9826d",
+        "lda-estimate.c": "65d6df2ca1ee298c28ee1cd425a96a15f1ba322570819c2ce7d571bd1da27785",
+        "lda-estimate.h": "396c21e01c2b2f9ebbeb184e07f757a625d768fb51b492b4a6199740198324c0",
+        "lda-inference.c": "f5136c256fe9a6ba38d9e9825e855928cc34a96a25a73e64736e01e1e4ca0bbc",
+        "lda-inference.h": "f69f5806875d5196d7172d1db6b03dba324b3c2c45a0562d46f0610c5da6474c",
+        "lda-model.c": "cf450b1195b8619e7aa042925c9f2746054a6273f8a16dfea3d76800ec75216a",
+        "lda-model.h": "f5dffb14d214076e255f207a1a71d440774c031d1fc164fd8401a32608ff7531",
+        "lda.h": "b74e2ec0b9b01707ddbb3f6c6368427e4b611763a97df56aa985af6ccf6b4113",
+        "license.txt": "a190dc9c8043755d90f8b0a75fa66b9e42d4af4c980bf5ddc633f0124db3cee7",
+        "Makefile": "576a286edd3e975a3decca14ae616b42088e8596c6332cc004ce3e1f4f2ec28a",
+        "readme.txt": "1eeb2e54f6b1fa1ea92eea604c7e8859146f046461179ac6a68504adb7d6fcca",
+        "settings.txt": "0182f129dc91f56aff8faa43ad6f1ee079f944cc336b823042e2c8cec0539bbe",
+        "utils.c": "3d1e4d518464a8e6485b1f01f6c71dce86f82c4e0a93f086ec0345bb43aece22",
+        "utils.h": "c9d3d264672027e053a4d085d3858225240455ed56f2d4004562384042a1c7a1"
+      }
+    },
+    "gsdmm": {
+      "source": "jackyin12/GSDMM",
+      "commit": "1b344d9de28faee43ec0df0c3cf7ea57737fe14e",
+      "url": "https://codeload.github.com/jackyin12/GSDMM/zip/1b344d9de28faee43ec0df0c3cf7ea57737fe14e",
+      "archive_sha256": "e8790e3cdffe9c7e01fd48adad492b4c29f645e1febe9746db48549682b5b70e",
+      "archive_bytes": 9170001,
+      "adapter_sha256": "dd0e863eb5419b3ec39718e7c143bd4558765b93c6b92747938c95008eeb438d",
+      "bridge_files": {
+        "src/main/Benchmark.java": {
+          "source": "adapters/gsdmm/Benchmark.java",
+          "sha256": "f74877e46d181fff48366d29e4b79a2a19517a017abf539aa2e052fb7412d6dd"
+        }
+      },
+      "destination": "GSDMM",
+      "include": [
+        "README.md",
+        "lib/org.json-20120521.jar",
+        "src/main/Document.java",
+        "src/main/DocumentSet.java",
+        "src/main/GSDMM.java",
+        "src/main/Model.java"
+      ],
+      "installed_files": {
+        "lib/org.json-20120521.jar": "3c8ec904689a7bad0d0383c06ca0387d4eea43b34e84c4c8eab84dc2825c05db",
+        "README.md": "76e3d5d77d7521033fb6084d37b7d29b615120907ab9a745aa769838b2c525d1",
+        "src/main/Benchmark.java": "f74877e46d181fff48366d29e4b79a2a19517a017abf539aa2e052fb7412d6dd",
+        "src/main/Document.java": "f3c615d701d90bb6cc153eb68de74c305c9d7fc7abd4cc097a334e3d77b5d468",
+        "src/main/DocumentSet.java": "0c78ef9ca72df2f18ff159d3de04d446354cad9f5828acd8bda45a61e8e53e3e",
+        "src/main/GSDMM.java": "d8b293bc85cefa2cfc103bbf7262b8c647d35974adeb54ce711e5f995a7c5dfb",
+        "src/main/Model.java": "b51fc0090b6f9f878af6cee70a050d26c4b262bc39b49d25f452166b7cdd3c81"
+      }
+    }
+  }
+}

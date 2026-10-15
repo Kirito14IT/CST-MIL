@@ -1,0 +1,174 @@
+[
+  {
+    "path": "src/main/Document.java",
+    "before_sha256": "0c3f323fa4986e9d63e7d42bb93f22d18e8aaaa216b97d2b9cc26fd7b538fc7a",
+    "after_sha256": "f3c615d701d90bb6cc153eb68de74c305c9d7fc7abd4cc097a334e3d77b5d468",
+    "edits": [
+      {
+        "start": 5,
+        "stop": 5,
+        "after": [
+          "import java.util.TreeMap;\n"
+        ],
+        "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "start": 13,
+        "stop": 13,
+        "after": [
+          "\t\tthis(text, wordToIdMap, true);\n",
+          "\t}\n",
+          "\n",
+          "\tpublic Document(String text, HashMap<String, Integer> wordToIdMap, boolean grow)\n",
+          "\t{\n"
+        ],
+        "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "start": 14,
+        "stop": 15,
+        "after": [
+          "\t\tMap<Integer, Integer> wordFreMap = new TreeMap<Integer, Integer>();\n"
+        ],
+        "before_sha256": "3d0ff261ca7312f51ecc707354129ce1139a6cda66d4a554248890c70577f1bb"
+      },
+      {
+        "start": 22,
+        "stop": 22,
+        "after": [
+          "\t\t\t\tif (!grow) continue;\n"
+        ],
+        "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  {
+    "path": "src/main/DocumentSet.java",
+    "before_sha256": "e8da942e5e36418f4a42643700aa594b3d17d710e105bb10a50f4355eee1efbb",
+    "after_sha256": "0c78ef9ca72df2f18ff159d3de04d446354cad9f5828acd8bda45a61e8e53e3e",
+    "edits": [
+      {
+        "start": 2,
+        "stop": 3,
+        "after": [
+          "import java.nio.file.Files;\n",
+          "import java.nio.file.Paths;\n",
+          "import java.nio.charset.StandardCharsets;\n"
+        ],
+        "before_sha256": "5f85075fb62422a9f3bee3d9233f1a1fb51f06cb7c44854edcd9d67c413b9321"
+      },
+      {
+        "start": 10,
+        "stop": 10,
+        "after": [
+          "\n",
+          "\tpublic DocumentSet() {}\n",
+          "\n",
+          "\tpublic static DocumentSet fromPlain(String path, HashMap<String, Integer> vocabulary)\n",
+          "\t\t\tthrows Exception {\n",
+          "\t\tDocumentSet result = new DocumentSet();\n",
+          "\t\ttry (BufferedReader in = Files.newBufferedReader(Paths.get(path), StandardCharsets.UTF_8)) {\n",
+          "\t\t\tString line;\n",
+          "\t\t\twhile ((line = in.readLine()) != null) {\n",
+          "\t\t\t\tresult.documents.add(new Document(line, vocabulary, false));\n",
+          "\t\t\t\tresult.D++;\n",
+          "\t\t\t}\n",
+          "\t\t}\n",
+          "\t\treturn result;\n",
+          "\t}\n"
+        ],
+        "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "start": 14,
+        "stop": 15,
+        "after": [
+          "\t\tBufferedReader in = Files.newBufferedReader(Paths.get(dataDir), StandardCharsets.UTF_8);\n"
+        ],
+        "before_sha256": "acf6822a39ae212703de87e5a6d0ce88a1b57d451d3486c5e8a634c42856be5f"
+      }
+    ]
+  },
+  {
+    "path": "src/main/Model.java",
+    "before_sha256": "4612e8fa189dea8e066e57cbebd89d9a64c88554f7a64038cf9d94eb902ecfa9",
+    "after_sha256": "b51fc0090b6f9f878af6cee70a050d26c4b262bc39b49d25f452166b7cdd3c81",
+    "edits": [
+      {
+        "start": 6,
+        "stop": 6,
+        "after": [
+          "import java.io.Serializable;\n",
+          "import java.util.Random;\n"
+        ],
+        "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "start": 7,
+        "stop": 8,
+        "after": [
+          "public class Model implements Serializable {\n",
+          "\tprivate static final long serialVersionUID = 1L;\n",
+          "\tRandom random = new Random(42L);\n"
+        ],
+        "before_sha256": "6622fc188649b5dce6947252bfa963dc5e5ea081846270f0b354592b9e86faf9"
+      },
+      {
+        "start": 56,
+        "stop": 57,
+        "after": [
+          "\t\t\tint cluster = random.nextInt(K);\n"
+        ],
+        "before_sha256": "e389efd7cfdbaa3e035cfcdd1acc87fba26a9a70d154e3428a661403361ff823"
+      },
+      {
+        "start": 97,
+        "stop": 122,
+        "after": [
+          "\t\tdouble[] prob = posterior(document);\n"
+        ],
+        "before_sha256": "266327ec502f3b9f515a4bd6ca84ac188098dbef3cd376e8c3793220f494309b"
+      },
+      {
+        "start": 125,
+        "stop": 126,
+        "after": [
+          "\t\tdouble thred = random.nextDouble() * prob[K - 1];\n"
+        ],
+        "before_sha256": "0ed0c9725511efd99ca0f7ea1bdfc7a3b84e31fc0cee2fa122e5dfa17eb042f7"
+      },
+      {
+        "start": 133,
+        "stop": 134,
+        "after": [
+          "\t\treturn Math.min(kChoosed, K - 1);\n",
+          "\t}\n",
+          "\n",
+          "\t/** Frozen Dirichlet-multinomial posterior; repeated occurrences retain +j. */\n",
+          "\tpublic double[] posterior(Document document) {\n",
+          "\t\tdouble[] prob = new double[K];\n",
+          "\t\tif (document.wordNum == 0) return prob;\n",
+          "\t\tdouble max = Double.NEGATIVE_INFINITY;\n",
+          "\t\tfor (int k = 0; k < K; k++) {\n",
+          "\t\t\tdouble value = Math.log(m_z[k] + alpha);\n",
+          "\t\t\tint total = 0;\n",
+          "\t\t\tfor (int w = 0; w < document.wordNum; w++) {\n",
+          "\t\t\t\tint word = document.wordIdArray[w];\n",
+          "\t\t\t\tfor (int j = 0; j < document.wordFreArray[w]; j++) {\n",
+          "\t\t\t\t\tvalue += Math.log(n_zv[k][word] + beta + j)\n",
+          "\t\t\t\t\t\t- Math.log(n_z[k] + beta0 + total++);\n",
+          "\t\t\t\t}\n",
+          "\t\t\t}\n",
+          "\t\t\tprob[k] = value;\n",
+          "\t\t\tmax = Math.max(max, value);\n",
+          "\t\t}\n",
+          "\t\tdouble sum = 0;\n",
+          "\t\tfor (int k = 0; k < K; k++) sum += (prob[k] = Math.exp(prob[k] - max));\n",
+          "\t\tfor (int k = 0; k < K; k++) prob[k] /= sum;\n",
+          "\t\treturn prob;\n"
+        ],
+        "before_sha256": "79bde0061a5be943f2fb519f29096020c0ef78dc9491dbaa76123df010fa6b1f"
+      }
+    ]
+  }
+]

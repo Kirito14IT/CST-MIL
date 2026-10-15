@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="260" viewBox="0 0 1000 260" role="img" aria-labelledby="title desc">
+<title id="title">CST-MIL</title><desc id="desc">Short text, topics and traceable evidence.</desc>
+<g transform="translate(5,5) scale(.78)">
+<rect x="6" y="6" width="308" height="308" rx="78" fill="#F5F8FA"/>
+<path d="M70 82h82a24 24 0 0 1 24 24v61a24 24 0 0 1-24 24h-35l-32 28v-28H70a24 24 0 0 1-24-24v-61a24 24 0 0 1 24-24Z" fill="white" stroke="#203B59" stroke-width="9" stroke-linejoin="round"/>
+<path d="M72 114h59M72 139h76M72 164h39" fill="none" stroke="#203B59" stroke-width="9" stroke-linecap="round"/>
+<path d="M182 112 228 91M182 144 247 151M171 180 215 217M228 91 247 151 215 217" fill="none" stroke="#B7CFD3" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="228" cy="91" r="16" fill="#5DAFA7"/>
+<circle cx="247" cy="151" r="20" fill="#203B59"/>
+<circle cx="215" cy="217" r="16" fill="#5DAFA7"/>
+<path d="M225 127v-8h-10m44 0h12v12m0 38v12h-12m-44 0h-10v-10" fill="none" stroke="#E78D84" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="247" cy="151" r="6" fill="white"/>
+</g><text x="285" y="117" font-family="Georgia,serif" font-size="82" font-weight="700" fill="#203B59">CST-MIL</text><text x="290" y="169" font-family="Segoe UI,sans-serif" font-size="24" letter-spacing="1.1" fill="#65798A">SHORT TEXT · TOPICS · TRACEABLE EVIDENCE</text><path d="M290 196h160" stroke="#5DAFA7" stroke-width="5" stroke-linecap="round"/><path d="M465 196h75" stroke="#E78D84" stroke-width="5" stroke-linecap="round"/>
+</svg>

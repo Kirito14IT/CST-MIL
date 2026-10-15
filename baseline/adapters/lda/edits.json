@@ -1,0 +1,150 @@
+[
+  {
+    "path": "lda-estimate.c",
+    "before_sha256": "a72acc06cf98d6ee0031a892ea56c8cb3204c10a63aa0a3f7c827d8305b3ca06",
+    "after_sha256": "65d6df2ca1ee298c28ee1cd425a96a15f1ba322570819c2ce7d571bd1da27785",
+    "edits": [
+      {
+        "start": 130,
+        "stop": 131,
+        "after": [
+          "    char filename[4096];\n"
+        ],
+        "before_sha256": "6ab9d2acb9c2059b3402edef2d007f815a06aad65a00898661d96378cd183833"
+      },
+      {
+        "start": 173,
+        "stop": 174,
+        "after": [
+          "    while (((converged < 0) || (converged > EM_CONVERGED) || (i <= 2)) && (i < EM_MAX_ITER))\n"
+        ],
+        "before_sha256": "1417a5e485204e17ad84ce90a066d52d607db32fd218cf2165f3252a63997b82"
+      },
+      {
+        "start": 197,
+        "stop": 199,
+        "after": [
+          "        converged = likelihood_old == 0 ? 1 :\n",
+          "            (likelihood_old - likelihood) / likelihood_old;\n",
+          "        /* Keep the configured per-document iteration budget fixed. */\n"
+        ],
+        "before_sha256": "c673376de8365978ade6c3fc49421c61acee148276bf9e5f9099b47d64da4ddd"
+      },
+      {
+        "start": 271,
+        "stop": 272,
+        "after": [
+          "    char filename[4096];\n"
+        ],
+        "before_sha256": "6ab9d2acb9c2059b3402edef2d007f815a06aad65a00898661d96378cd183833"
+      },
+      {
+        "start": 292,
+        "stop": 292,
+        "after": [
+          "\tfor (n = 0; n < doc->length; n++) free(phi[n]);\n",
+          "\tfree(phi);\n"
+        ],
+        "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "start": 319,
+        "stop": 323,
+        "after": [
+          "    /* Explicit reproducibility; final optional est argument is the seed. */\n",
+          "    unsigned long seed = argc > 8 ? strtoul(argv[8], NULL, 10) : 42UL;\n",
+          "    seedMT(seed);\n"
+        ],
+        "before_sha256": "ff6f8e2c6be9f2999d67bae2adbb28f0a4f2a383e4de2a1439f5153585ea8ca5"
+      },
+      {
+        "start": 328,
+        "stop": 328,
+        "after": [
+          "            if (argc < 8) return 2;\n"
+        ],
+        "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "start": 337,
+        "stop": 337,
+        "after": [
+          "            if (argc < 6) return 2;\n"
+        ],
+        "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  {
+    "path": "lda-model.c",
+    "before_sha256": "66aaadd5292399af021500b72af52506f41d2443af35a206a284926aae251547",
+    "after_sha256": "cf450b1195b8619e7aa042925c9f2746054a6273f8a16dfea3d76800ec75216a",
+    "edits": [
+      {
+        "start": 254,
+        "stop": 255,
+        "after": [
+          "    char filename[4096];\n"
+        ],
+        "before_sha256": "6ab9d2acb9c2059b3402edef2d007f815a06aad65a00898661d96378cd183833"
+      },
+      {
+        "start": 281,
+        "stop": 282,
+        "after": [
+          "    char filename[4096];\n"
+        ],
+        "before_sha256": "6ab9d2acb9c2059b3402edef2d007f815a06aad65a00898661d96378cd183833"
+      },
+      {
+        "start": 284,
+        "stop": 285,
+        "after": [
+          "    double x, alpha;\n"
+        ],
+        "before_sha256": "0136ee34dd9b3cbcb8491a5152b369546541c42ea63b29a0dce2b1044f4bbe95"
+      },
+      {
+        "start": 291,
+        "stop": 292,
+        "after": [
+          "    fscanf(fileptr, \"alpha %lf\\n\", &alpha);\n"
+        ],
+        "before_sha256": "e7196b4e8b095d934ff071df83ba52a28518a01e130d126d5c7202720379d9b8"
+      },
+      {
+        "start": 304,
+        "stop": 305,
+        "after": [
+          "            fscanf(fileptr, \"%lf\", &x);\n"
+        ],
+        "before_sha256": "1641e399f5873309b443590fd221a3d1986d78b5c3a9dcb4384dcbe7f3468184"
+      }
+    ]
+  },
+  {
+    "path": "utils.c",
+    "before_sha256": "f392566a71f33eb593b168e72559998d19c131b3cf9f7ddff5887f187a58ad31",
+    "after_sha256": "3d1e4d518464a8e6485b1f01f6c71dce86f82c4e0a93f086ec0345bb43aece22",
+    "edits": [
+      {
+        "start": 87,
+        "stop": 87,
+        "after": [
+          "#ifdef _WIN32\n",
+          "    mkdir(name);\n",
+          "#else\n"
+        ],
+        "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "start": 88,
+        "stop": 88,
+        "after": [
+          "#endif\n"
+        ],
+        "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  }
+]

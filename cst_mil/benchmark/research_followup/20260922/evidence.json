@@ -1,0 +1,62 @@
+[
+  {
+    "method": "lda",
+    "hit_count": 51,
+    "n_sessions_with_positive_comments": 101,
+    "hit_rate_at_3": 0.504950495049505,
+    "mean_recall_at_3": 0.06777453344309091,
+    "comment_ap": 0.3613562729861381,
+    "n_labeled_messages": 8028,
+    "unlabeled_top_k": 0
+  },
+  {
+    "method": "btm",
+    "hit_count": 65,
+    "n_sessions_with_positive_comments": 101,
+    "hit_rate_at_3": 0.6435643564356436,
+    "mean_recall_at_3": 0.0935530156999609,
+    "comment_ap": 0.39340172545001345,
+    "n_labeled_messages": 8028,
+    "unlabeled_top_k": 0
+  },
+  {
+    "method": "gsdmm",
+    "hit_count": 61,
+    "n_sessions_with_positive_comments": 101,
+    "hit_rate_at_3": 0.6039603960396039,
+    "mean_recall_at_3": 0.09033612586447726,
+    "comment_ap": 0.36173856458104103,
+    "n_labeled_messages": 8028,
+    "unlabeled_top_k": 0
+  },
+  {
+    "method": "nmf",
+    "hit_count": 64,
+    "n_sessions_with_positive_comments": 101,
+    "hit_rate_at_3": 0.6336633663366337,
+    "mean_recall_at_3": 0.06496049049310974,
+    "comment_ap": 0.4011712498977186,
+    "n_labeled_messages": 8028,
+    "unlabeled_top_k": 0
+  },
+  {
+    "method": "bertopic",
+    "hit_count": 59,
+    "n_sessions_with_positive_comments": 101,
+    "hit_rate_at_3": 0.5841584158415841,
+    "mean_recall_at_3": 0.06935438325673546,
+    "comment_ap": 0.34413437705598515,
+    "n_labeled_messages": 8028,
+    "unlabeled_top_k": 0
+  },
+  {
+    "method": "cst_mil_r0",
+    "hit_count": 67,
+    "n_sessions_with_positive_comments": 101,
+    "hit_rate_at_3": 0.6633663366336634,
+    "mean_recall_at_3": 0.08441907054231458,
+    "comment_ap": 0.37008609537787185,
+    "n_labeled_messages": 8028,
+    "unlabeled_top_k": 0
+  }
+]

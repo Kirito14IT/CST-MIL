@@ -1,0 +1,7 @@
+# Deployment identities bind exact bytes, including frozen CRLF sources.
+# Do not normalize these files differently on Windows and Linux checkouts.
+cst_mil/src/** -text
+计算机项目综合开发创新实践/app/config/deployment.mjs -text
+计算机项目综合开发创新实践/app/python/worker.py -text
+计算机项目综合开发创新实践/app/server/prediction.ts -text
+baseline/adapters/** -text

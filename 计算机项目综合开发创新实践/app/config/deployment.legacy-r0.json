@@ -1,0 +1,28 @@
+{
+  "manifestVersion": 1,
+  "modelVersion": "CST-MIL full677 r0",
+  "schemaVersion": 1,
+  "taskName": "SCCD会话风险筛查（旧模型）",
+  "modelPath": "cst_mil/benchmark/runs/full677/cst_mil_r0/model.joblib",
+  "modelSha256": "11fa226603be5b6afe9fa9504a7371a1af633b457973d05ece5004e327fe9c8b",
+  "predictorModule": "cst_mil.bench.model",
+  "modelClass": "BenchmarkModel",
+  "predictFunction": "predict_session",
+  "codeFingerprints": {
+    "cst_mil/src/cst_mil/bench/model.py": "21e50628823655dfa9504bbcb71761bda237bc1f096de82e95782c4dd615fa67",
+    "cst_mil/src/cst_mil/bench/common.py": "e6378e11350d7ea8fddffcadda4881402a78cef11695edc499f67b32846e6b54",
+    "cst_mil/src/cst_mil/bench/interpretation.py": "b26ab7e54d84f4a8a76e174ff30134095141395715f828dce7a374052189d8c6",
+    "cst_mil/src/cst_mil/bench/native_topics.py": "a3185de4175d83a08b28e9df006c33c4a518e59c10d82f562182ef979628bd0c",
+    "cst_mil/src/cst_mil/bench/resources.py": "fa9854bed3bc7c69b5a4a3fa98120e4cdd2e2db1f607250ea05a3b37224c1783",
+    "cst_mil/src/cst_mil/preprocess.py": "9bd14c72585f56edb0113e004b5cc4bada9d01d26bf7c8b613ea35727bf67169",
+    "cst_mil/src/cst_mil/metrics.py": "5d64336ea96534f80cdad4be434bbf71e043696f6e5ab413fb08ab11772bfbaa"
+  },
+  "encoder": null,
+  "thresholds": {
+    "attack": 0.41401140075805387
+  },
+  "conversationThreshold": 0.41401140075805387,
+  "trainingSources": [
+    "SCCD"
+  ]
+}

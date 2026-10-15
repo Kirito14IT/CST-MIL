@@ -1,0 +1,16 @@
+{
+  "sessions": [
+    {
+      "title": "社团活动讨论（演示）",
+      "source": "demo",
+      "postText": "周末社团活动安排征求意见",
+      "includePost": false,
+      "messages": [
+        {"id":"m1","speaker":"同学A","text":"周末可以去图书馆做志愿活动吗？","order":0},
+        {"id":"m2","speaker":"同学B","text":"我更想做一次旧书交换，大家参与起来方便。","parentId":"m1","order":1},
+        {"id":"m3","speaker":"同学C","text":"两个建议可以一起安排，先问一下场地。","parentId":"m2","order":2},
+        {"id":"m4","speaker":"同学A","text":"好，我明天去确认时间。","parentId":"m3","order":3}
+      ]
+    }
+  ]
+}
