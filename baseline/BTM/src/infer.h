@@ -1,3 +1,4 @@
+// Modified for CST-MIL research adapters, 2026. Original Apache-2.0 terms apply.
 #ifndef _INFERLDA_H
 #define _INFERLDA_H
 

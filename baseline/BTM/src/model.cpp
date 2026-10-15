@@ -1,3 +1,4 @@
+// Modified for CST-MIL research adapters, 2026. Original Apache-2.0 terms apply.
 #include <cassert>
 #include <iostream>
 #include <string>

@@ -1,0 +1,248 @@
+[
+  {
+    "title": "校园比赛帖下的围攻评论",
+    "source": "demo",
+    "postText": "校队今天在决赛中失利，最后一节有队员出现失误。下周继续训练，欢迎讨论战术改进。",
+    "includePost": false,
+    "messages": [
+      {
+        "id": "m1",
+        "speaker": "同学A",
+        "text": "最后那个队员就是个废物，还好意思穿队服。",
+        "order": 0
+      },
+      {
+        "id": "m2",
+        "speaker": "同学B",
+        "text": "这种垃圾赶紧滚出队伍，别再出来丢人。",
+        "order": 1
+      },
+      {
+        "id": "m3",
+        "speaker": "同学C",
+        "text": "本来能赢的，都是他拖后腿。",
+        "order": 2
+      },
+      {
+        "id": "m4",
+        "speaker": "同学D",
+        "text": "有失误可以复盘，不要直接骂队员。",
+        "order": 3
+      },
+      {
+        "id": "m5",
+        "speaker": "同学E",
+        "text": "真是恶心，输了还要找借口。",
+        "order": 4
+      },
+      {
+        "id": "m6",
+        "speaker": "同学F",
+        "text": "废物就别参加了，大家以后都别理他。",
+        "order": 5
+      },
+      {
+        "id": "m7",
+        "speaker": "同学G",
+        "text": "他已经在认真训练，讨论技术就好。",
+        "order": 6
+      },
+      {
+        "id": "m8",
+        "speaker": "同学H",
+        "text": "一场比赛就这样围攻同学，太过分了。",
+        "order": 7
+      },
+      {
+        "id": "m9",
+        "speaker": "同学I",
+        "text": "下次还让他上场我们就不去看了。",
+        "order": 8
+      },
+      {
+        "id": "m10",
+        "speaker": "同学J",
+        "text": "希望管理员处理这些人身攻击，不要继续起哄。",
+        "order": 9
+      }
+    ]
+  },
+  {
+    "title": "匿名评论区的传言与围攻",
+    "source": "demo",
+    "postText": "课程展示结束后，评论区有人指责一位参与者，没有提供可核实的材料。以下评论均为虚构。",
+    "includePost": false,
+    "messages": [
+      {
+        "id": "m1",
+        "speaker": "同学A",
+        "text": "他就是个骗子，别再相信他说的话了。",
+        "order": 0
+      },
+      {
+        "id": "m2",
+        "speaker": "同学B",
+        "text": "恶心死了，这种垃圾还天天装好人。",
+        "order": 1
+      },
+      {
+        "id": "m3",
+        "speaker": "同学C",
+        "text": "你们有证据吗？不能这样给别人下结论。",
+        "order": 2
+      },
+      {
+        "id": "m4",
+        "speaker": "同学D",
+        "text": "管他有没有证据，反正我看他不顺眼。",
+        "order": 3
+      },
+      {
+        "id": "m5",
+        "speaker": "同学E",
+        "text": "这种人就该滚出社团，谁替他说话谁也一样。",
+        "order": 4
+      },
+      {
+        "id": "m6",
+        "speaker": "同学F",
+        "text": "没有核实的事情别传播，有问题可以正式反馈。",
+        "order": 5
+      },
+      {
+        "id": "m7",
+        "speaker": "同学G",
+        "text": "废物还想要别人尊重？大家都别理他。",
+        "order": 6
+      },
+      {
+        "id": "m8",
+        "speaker": "同学H",
+        "text": "别再起哄了，这已经是在针对个人。",
+        "order": 7
+      },
+      {
+        "id": "m9",
+        "speaker": "同学I",
+        "text": "管理员能不能先暂停这些攻击评论？",
+        "order": 8
+      }
+    ]
+  },
+  {
+    "title": "比赛失利后的正常建议",
+    "source": "demo",
+    "postText": "校队今天在决赛中失利，最后一节有队员出现失误。下周继续训练，欢迎讨论战术改进。",
+    "includePost": false,
+    "messages": [
+      {
+        "id": "m1",
+        "speaker": "同学A",
+        "text": "最后一节失误有点多，可以练一下快速传球。",
+        "order": 0
+      },
+      {
+        "id": "m2",
+        "speaker": "同学B",
+        "text": "我觉得防守补位也需要一起复盘。",
+        "order": 1
+      },
+      {
+        "id": "m3",
+        "speaker": "同学C",
+        "text": "替补上场后配合不熟，多练几次应该能改善。",
+        "order": 2
+      },
+      {
+        "id": "m4",
+        "speaker": "同学D",
+        "text": "比赛有输赢，队员们辛苦了。",
+        "order": 3
+      },
+      {
+        "id": "m5",
+        "speaker": "同学E",
+        "text": "希望下次提前演练最后几分钟的战术。",
+        "order": 4
+      },
+      {
+        "id": "m6",
+        "speaker": "同学F",
+        "text": "负责录像的同学可以整理几个关键片段。",
+        "order": 5
+      },
+      {
+        "id": "m7",
+        "speaker": "同学G",
+        "text": "我愿意帮忙剪辑，发到训练群一起讨论。",
+        "order": 6
+      },
+      {
+        "id": "m8",
+        "speaker": "同学H",
+        "text": "现场观众也很投入，下次继续加油。",
+        "order": 7
+      },
+      {
+        "id": "m9",
+        "speaker": "同学I",
+        "text": "可以讨论具体问题，没必要针对某个同学。",
+        "order": 8
+      },
+      {
+        "id": "m10",
+        "speaker": "同学J",
+        "text": "看到大家愿意改进就很好，期待下一次比赛。",
+        "order": 9
+      }
+    ]
+  },
+  {
+    "title": "社团意见反馈后的威胁",
+    "source": "demo",
+    "includePost": false,
+    "messages": [
+      {
+        "id": "m1",
+        "speaker": "同学A",
+        "text": "活动报名名单少了一位同学，能重新核对吗？",
+        "order": 0
+      },
+      {
+        "id": "m2",
+        "speaker": "同学B",
+        "text": "就你多嘴，再敢说一句试试。",
+        "order": 1,
+        "parentId": "m1"
+      },
+      {
+        "id": "m3",
+        "speaker": "同学A",
+        "text": "我只是提醒核对名单。",
+        "order": 2,
+        "parentId": "m2"
+      },
+      {
+        "id": "m4",
+        "speaker": "同学B",
+        "text": "放学别走，我知道你在哪个教室，让你知道什么叫闭嘴。",
+        "order": 3,
+        "parentId": "m3"
+      },
+      {
+        "id": "m5",
+        "speaker": "同学C",
+        "text": "这是在威胁同学，请停止，问题交给负责老师处理。",
+        "order": 4,
+        "parentId": "m4"
+      },
+      {
+        "id": "m6",
+        "speaker": "同学B",
+        "text": "少管闲事，你也想挨揍吗？",
+        "order": 5,
+        "parentId": "m5"
+      }
+    ]
+  }
+]

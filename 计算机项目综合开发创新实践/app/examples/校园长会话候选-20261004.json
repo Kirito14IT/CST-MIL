@@ -1,0 +1,113 @@
+[
+  {
+    "id": "long-competition-review",
+    "intent": "虚构的比赛复盘遭围攻场景；观察持续贬损、排斥与受影响者回应、同伴劝阻混合时的表现，不预设模型输出",
+    "session": {
+      "title": "比赛复盘群中的围攻与劝阻",
+      "source": "demo",
+      "includePost": false,
+      "postText": "",
+      "messages": [
+        {"id":"m1","speaker":"队长","text":"今天大家先休息，明晚看录像复盘，具体讨论传球和补位。","order":0},
+        {"id":"m2","speaker":"同学A","text":"最后那次球是我没接住，对不起，我把那个片段找出来了。","order":1,"parentId":"m1"},
+        {"id":"m3","speaker":"同学B","text":"还看什么录像，输就输在你这个废物身上。","order":2,"parentId":"m2"},
+        {"id":"m4","speaker":"同学C","text":"平时训练也跟不上，真不知道当初谁让他进队的。","order":3,"parentId":"m3"},
+        {"id":"m5","speaker":"同学A","text":"那次失误我认，训练缺的部分也会补，但别这样说我。","order":4,"parentId":"m3"},
+        {"id":"m6","speaker":"同学B","text":"你还委屈上了？大家练了一个月，最后都给你陪跑。","order":5,"parentId":"m5"},
+        {"id":"m7","speaker":"同学D","text":"前面几次防守也有问题，不能把整场比赛都算在一个人头上。","order":6,"parentId":"m6"},
+        {"id":"m8","speaker":"同学C","text":"你愿意替他讲话就跟他练吧，以后约球别叫他。","order":7,"parentId":"m7"},
+        {"id":"m9","speaker":"同学A","text":"这两天你们一直在群里拿那次失误开玩笑，我已经不敢点开消息了。","order":8,"parentId":"m8"},
+        {"id":"m10","speaker":"同学B","text":"不敢看就退群，没人求你留下。","order":9,"parentId":"m9"},
+        {"id":"m11","speaker":"同学E","text":"我刚从课上回来，怎么变成这样了？复盘可以批评配合，不要赶人。","order":10,"parentId":"m10"},
+        {"id":"m12","speaker":"同学C","text":"每次都是别人帮他收拾残局，我不想再跟这种人一队。","order":11,"parentId":"m11"},
+        {"id":"m13","speaker":"队长","text":"先停一下。谁上场由训练和战术决定，不由群里几个人起哄决定。","order":12,"parentId":"m12"},
+        {"id":"m14","speaker":"同学A","text":"我愿意继续练，也愿意听具体建议，但希望那几条针对我的话能撤回。","order":13,"parentId":"m13"},
+        {"id":"m15","speaker":"同学D","text":"我明天陪你练接球。刚才的人身攻击确实需要道歉，不能当没发生。","order":14,"parentId":"m14"},
+        {"id":"m16","speaker":"队长","text":"今晚先结束讨论，我分别找大家谈。明天复盘只讨论录像里能说明的问题。","order":15,"parentId":"m13"}
+      ]
+    }
+  },
+  {
+    "id": "long-club-exclusion",
+    "intent": "虚构的社团持续排斥场景；包含规则借口、针对个人的贬低、当事人询问和同伴制止，用于人工核查与漏检观察",
+    "session": {
+      "title": "摄影社活动报名中的排斥",
+      "source": "demo",
+      "includePost": false,
+      "postText": "",
+      "messages": [
+        {"id":"m1","speaker":"活动负责人","text":"周六校园摄影活动还剩三个名额，想参加的同学今晚在表格登记。","order":0},
+        {"id":"m2","speaker":"同学A","text":"我已经填好表格了，这次想跟大家学一下人像构图。","order":1,"parentId":"m1"},
+        {"id":"m3","speaker":"同学B","text":"你就别来了，我们几个已经商量好了，不想带你。","order":2,"parentId":"m2"},
+        {"id":"m4","speaker":"同学A","text":"是我报名步骤弄错了吗？表格上写的是所有社员都能参加。","order":3,"parentId":"m3"},
+        {"id":"m5","speaker":"同学C","text":"别装不懂，上次聚餐没人坐你旁边，你心里还没数吗。","order":4,"parentId":"m4"},
+        {"id":"m6","speaker":"同学D","text":"报名和聚餐有什么关系？有空位就按报名顺序安排。","order":5,"parentId":"m5"},
+        {"id":"m7","speaker":"同学B","text":"他又土又烦，出去拍照也只会扫兴，你想带就自己带。","order":6,"parentId":"m6"},
+        {"id":"m8","speaker":"同学A","text":"如果上次活动有哪里影响到大家，可以告诉我，不要直接这样评价我。","order":7,"parentId":"m7"},
+        {"id":"m9","speaker":"同学C","text":"没有哪里，就是不想跟你一起。你退出社团不是更省事吗？","order":8,"parentId":"m8"},
+        {"id":"m10","speaker":"同学E","text":"我报名晚一点都通过了，不能只把一个人的名字划掉吧。","order":9,"parentId":"m9"},
+        {"id":"m11","speaker":"同学B","text":"那你们跟他分一组，我们反正不会把活动照片发给他。","order":10,"parentId":"m10"},
+        {"id":"m12","speaker":"同学A","text":"上次临时改集合点也没人通知我，我在原地等了半个小时。现在才知道不是漏发。","order":11,"parentId":"m11"},
+        {"id":"m13","speaker":"活动负责人","text":"我刚看完消息，报名资格不能按个人好恶取消。漏发通知的事我也会核实。","order":12,"parentId":"m12"},
+        {"id":"m14","speaker":"同学D","text":"评论可以有分歧，但持续不通知、劝退和贬低个人已经影响正常参加活动了。","order":13,"parentId":"m13"},
+        {"id":"m15","speaker":"同学A","text":"谢谢愿意说明情况的同学。我先保留报名，希望后续安排都能在群里公开通知。","order":14,"parentId":"m13"}
+      ]
+    }
+  },
+  {
+    "id": "long-dorm-argument",
+    "intent": "虚构的宿舍作息讨论升级为辱骂场景；保留具体争议、受攻击者回应与第三方调解，供核查风险内容及上下文",
+    "session": {
+      "title": "宿舍群中的作息争执与辱骂",
+      "source": "demo",
+      "includePost": false,
+      "postText": "",
+      "messages": [
+        {"id":"m1","speaker":"同学A","text":"已经十二点了，游戏语音能不能先关一下？我明早八点要考试。","order":0},
+        {"id":"m2","speaker":"同学B","text":"这一局还没结束，你先戴耳塞不行吗？","order":1,"parentId":"m1"},
+        {"id":"m3","speaker":"同学A","text":"我戴了，还是能听清说话声。宿舍之前约好十一点以后不外放。","order":2,"parentId":"m2"},
+        {"id":"m4","speaker":"同学B","text":"就你事多，你有病吧，别人怎么都没意见？","order":3,"parentId":"m3"},
+        {"id":"m5","speaker":"同学C","text":"我也没睡着，只是刚才在看资料。先把语音关掉吧。","order":4,"parentId":"m4"},
+        {"id":"m6","speaker":"同学B","text":"行，都帮他说话。A 你可真会装，自己早上闹钟响半天也不管。","order":5,"parentId":"m5"},
+        {"id":"m7","speaker":"同学A","text":"闹钟吵到大家那次我道过歉，也改成振动了。现在可以先处理今晚的声音吗？","order":6,"parentId":"m6"},
+        {"id":"m8","speaker":"同学B","text":"闭嘴吧傻逼，整天拿规定压人，嫌吵就滚出去住。","order":7,"parentId":"m7"},
+        {"id":"m9","speaker":"同学D","text":"我在隔壁自习，刚看到消息。别骂人，宿舍作息可以明天一起谈。","order":8,"parentId":"m8"},
+        {"id":"m10","speaker":"同学A","text":"我没有要赶谁走，也不想吵架。被你这样骂我很难受。","order":9,"parentId":"m8"},
+        {"id":"m11","speaker":"同学B","text":"说两句就受不了，你这种人跟谁住都招人烦。","order":10,"parentId":"m10"},
+        {"id":"m12","speaker":"同学C","text":"这是在商量声音大小，不是在评价谁值不值得住这里。你先停一下。","order":11,"parentId":"m11"},
+        {"id":"m13","speaker":"同学B","text":"算了，不玩了，你们满意了吧。","order":12,"parentId":"m12"},
+        {"id":"m14","speaker":"同学A","text":"谢谢关掉语音，但刚才那些话我希望明天能认真说清楚。","order":13,"parentId":"m13"},
+        {"id":"m15","speaker":"同学D","text":"我明天中午也在，四个人一起谈具体作息。需要的话可以请辅导员帮忙协调。","order":14,"parentId":"m14"},
+        {"id":"m16","speaker":"同学C","text":"今晚先休息，明天把共同的约定写下来，讨论时都不要再对人开骂。","order":15,"parentId":"m15"}
+      ]
+    }
+  },
+  {
+    "id": "long-normal-negotiation",
+    "intent": "虚构的正常协商对照；包含不同意见、具体批评、受到影响者的回应与同伴协调，不预设模型输出",
+    "session": {
+      "title": "课程展示前的分工调整与协商",
+      "source": "demo",
+      "includePost": false,
+      "postText": "",
+      "messages": [
+        {"id":"m1","speaker":"同学A","text":"周四就要展示了，我把进度表发在群里，今晚确认一下还有哪些工作。","order":0},
+        {"id":"m2","speaker":"同学B","text":"数据清洗我已经做完，图表还差两张，可能赶不上原来说的九点。","order":1,"parentId":"m1"},
+        {"id":"m3","speaker":"同学C","text":"可是我要拿图做讲稿，时间一直往后推，我这边会来不及。","order":2,"parentId":"m2"},
+        {"id":"m4","speaker":"同学B","text":"确实是我估计得不够准，下午发现有几条重复记录，重新核对耽误了。","order":3,"parentId":"m3"},
+        {"id":"m5","speaker":"同学C","text":"我不是说你没做事，只是希望延迟时早点告诉我，我可以先准备别的部分。","order":4,"parentId":"m4"},
+        {"id":"m6","speaker":"同学D","text":"先别着急，我们把剩下的两张图拆开做。我会画柱状图，可以接一张。","order":5,"parentId":"m5"},
+        {"id":"m7","speaker":"同学B","text":"谢谢，那我把已经核对的数据发你，另一张散点图我自己完成。","order":6,"parentId":"m6"},
+        {"id":"m8","speaker":"同学A","text":"我看了初稿，第二页图例有两个颜色太接近，投影时不容易分清。","order":7,"parentId":"m1"},
+        {"id":"m9","speaker":"同学B","text":"这个问题是我没注意，我换成颜色加纹理区分，再加直接标注。","order":8,"parentId":"m8"},
+        {"id":"m10","speaker":"同学C","text":"这样更清楚。你先给我图的大致结论，我可以把讲稿结构写出来。","order":9,"parentId":"m9"},
+        {"id":"m11","speaker":"同学B","text":"结论和上次讨论的一样，但差异没有想象中那么大，我会把具体数值一起发来。","order":10,"parentId":"m10"},
+        {"id":"m12","speaker":"同学D","text":"我这张图大约九点半完成。数据里有空白的那一行是没收集到，还是数值为零？","order":11,"parentId":"m7"},
+        {"id":"m13","speaker":"同学B","text":"是没收集到，不能按零处理。我在表格备注里补一下原因。","order":12,"parentId":"m12"},
+        {"id":"m14","speaker":"同学A","text":"那我们十点一起检查，重点核对图表、来源和讲稿说法是否一致。","order":13,"parentId":"m13"},
+        {"id":"m15","speaker":"同学C","text":"可以，刚才我的语气有点急，抱歉。以后有变动就在进度表里留个说明吧。","order":14,"parentId":"m14"},
+        {"id":"m16","speaker":"同学B","text":"没关系，确实应该提前说。大家先按新的分工做，十点见。","order":15,"parentId":"m15"}
+      ]
+    }
+  }
+]

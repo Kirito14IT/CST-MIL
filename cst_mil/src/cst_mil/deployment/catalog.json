@@ -1,0 +1,166 @@
+{
+  "catalogVersion": 1,
+  "release": "demo-2026.10.15",
+  "archive": {
+    "name": "cst-mil-semantic-model-demo-2026.10.15.zip",
+    "url": "https://github.com/Kirito14IT/CST-MIL/releases/download/demo-2026.10.15/cst-mil-semantic-model-demo-2026.10.15.zip",
+    "bytes": 1498682,
+    "sha256": "728d906e42967ca1ffb01096e41ee490374165b3d5f11e26198a5008ae790ab7"
+  },
+  "archive_files": {
+    "model.joblib": {
+      "bytes": 1494648,
+      "sha256": "39e842dbffe10356c6dbef4f17bb320868ef7b007c7b1972a38c315d4af87a59"
+    },
+    "model_manifest.json": {
+      "bytes": 3177,
+      "sha256": "d62b4edfd0e670354f159f3b227c2d8fedeff70c1338a8943b19e41ecf25e932"
+    },
+    "explanation_config.json": {
+      "bytes": 607,
+      "sha256": "e76b56fc7f8ea0b7ab30e4f1faefa15fde9bfa3c722c85865f6851cae5bf4cad"
+    },
+    "LICENSE-model.txt": {
+      "bytes": 1601,
+      "sha256": "c5ad7b6af499b7c9f447ecefb22aab2089d40c85b773756503e317d7a3906450"
+    }
+  },
+  "model": {
+    "bytes": 1494648,
+    "sha256": "39e842dbffe10356c6dbef4f17bb320868ef7b007c7b1972a38c315d4af87a59"
+  },
+  "codeFingerprints": {
+    "cst_mil/src/cst_mil/__init__.py": "01a2177f5af81954fbf59aeca5feff537b13e5fbb174c7f8e1a6e63365ccf807",
+    "cst_mil/src/cst_mil/bench/__init__.py": "e5d95706f75c0acba295c4babcf889f6c4180cf3d9606cfff2861e1e0305ea5e",
+    "cst_mil/src/cst_mil/bench/common.py": "e6378e11350d7ea8fddffcadda4881402a78cef11695edc499f67b32846e6b54",
+    "cst_mil/src/cst_mil/bench/interpretation.py": "b26ab7e54d84f4a8a76e174ff30134095141395715f828dce7a374052189d8c6",
+    "cst_mil/src/cst_mil/bench/resources.py": "fa9854bed3bc7c69b5a4a3fa98120e4cdd2e2db1f607250ea05a3b37224c1783",
+    "cst_mil/src/cst_mil/demo_semantic_adapter.py": "a2ce73052dde84fc3a2a4dc2d91f33be251759a6d04a212482f0ab72cc9bda25",
+    "cst_mil/src/cst_mil/deployment/__init__.py": "c44fae1c1cb5aff7e6b2e81b369740978ca1f05b9a2ceb72843071fcb3da191f",
+    "cst_mil/src/cst_mil/deployment/__main__.py": "3b709e0e9b58c5ec56ccb6716b667789f75b46f1f2a187868b8c24e5a7b812ad",
+    "cst_mil/src/cst_mil/deployment/adapter.py": "870a614b85271b2775becbaedaf64bd30d4353c39ceee3a579ae31a3a6457286",
+    "cst_mil/src/cst_mil/deployment/assets.py": "d8e0d813e7393ded84476b2dd4ab150a2c59315bfdeedca21cd50ba4268cb518",
+    "cst_mil/src/cst_mil/metrics.py": "5d64336ea96534f80cdad4be434bbf71e043696f6e5ab413fb08ab11772bfbaa",
+    "cst_mil/src/cst_mil/preprocess.py": "9bd14c72585f56edb0113e004b5cc4bada9d01d26bf7c8b613ea35727bf67169",
+    "cst_mil/src/cst_mil/research_followup/full_joint_comparison/__init__.py": "2909e8edb22a054028597ae94b781ad098c7218ffec2c38e3f636e46b169d608",
+    "cst_mil/src/cst_mil/research_followup/full_joint_comparison/__main__.py": "91923864339c390c2a5fef22d4ed679a93e30f572bc3f9b32e637d794174068a",
+    "cst_mil/src/cst_mil/research_followup/full_joint_comparison/analysis.py": "4c316f3bd8b09d7aab1b4aebb107309e2a4816073d073df12ea6d01de6732c1c",
+    "cst_mil/src/cst_mil/research_followup/full_joint_comparison/common.py": "56815c76c6a422dd62614530455f0ae37bd06785d8b5318992163633c01820a0",
+    "cst_mil/src/cst_mil/research_followup/full_joint_comparison/cost.py": "ee8472a724ebdf3245f1ef438aabd24e1a88a58878747e905018e64e47556c29",
+    "cst_mil/src/cst_mil/research_followup/full_joint_comparison/data.py": "e73bb24b9fac58d51af9faa287fdd0aba79e03655bdb5cc0696062364d024468",
+    "cst_mil/src/cst_mil/research_followup/full_joint_comparison/errors.py": "2f3ee61b9090533c5bfa89d59c2ace8d3d4a3a388799e6039ec620ee19f28279",
+    "cst_mil/src/cst_mil/research_followup/full_joint_comparison/execution.py": "a2ae86b3aef8fbe1c7aa6fa2f0655913f5864255a175871049ae28a59d60a573",
+    "cst_mil/src/cst_mil/research_followup/full_joint_comparison/figures.py": "67ed3611a2802e78de4caeae4671b9596a6184a13a6f0c45a6274ce4000d4f53",
+    "cst_mil/src/cst_mil/research_followup/full_joint_comparison/model.py": "98b5715fa7bd9a3914021de8d625063fbd0941c18f44eb3e821c007278de8f00",
+    "cst_mil/src/cst_mil/research_followup/full_joint_comparison/raw_replay.py": "fbd8a422975e0e24a1a53d8e93fc5f0ef8138807e2f988cefa92fa1af0728d78",
+    "cst_mil/src/cst_mil/research_followup/full_joint_comparison/raw_replay_v2.py": "db7c403bcbfc8cb7370d45fb1fb148c5b98a8a977f45ad17560e6d3c0543a71d",
+    "cst_mil/src/cst_mil/research_followup/full_joint_comparison/raw_replay_verification.py": "36df0c6fb42b150bf59a4745d1d5d48c4cb6f710ead5d3b240c98a5dac592c45",
+    "cst_mil/src/cst_mil/research_followup/full_joint_comparison/topic_backend.py": "7726707edf28a16cd780a39b5a689f13e3b37f45208b0cf147947964b5fa7255",
+    "cst_mil/src/cst_mil/research_followup/full_joint_comparison/verification.py": "c5f59124d5e2811731ceca8422c00fce1a942d83f9ff1e15406833d8ee98c613",
+    "cst_mil/src/cst_mil/research_followup/semantic_patent_followup/__init__.py": "8199d101fadf09bde6a0e49d98d4b6c4c2a7d41d527100aae1379604cb2bb971",
+    "cst_mil/src/cst_mil/research_followup/semantic_patent_followup/__main__.py": "1ed2440adecf283be3404c63dfbbffcca6bf465f933f9a8ffd7269f40e96a84e",
+    "cst_mil/src/cst_mil/research_followup/semantic_patent_followup/analysis.py": "9758047df0298c639c344d41feaf906b61f8599c4b5598ae7c2384c56e3d7ce8",
+    "cst_mil/src/cst_mil/research_followup/semantic_patent_followup/assisted_summary.py": "0798c530b26be2dae2170f7c5974e97dcbe60a4def95bd3f7cf41e4c89a14607",
+    "cst_mil/src/cst_mil/research_followup/semantic_patent_followup/audit.py": "7f064a56f0552f1776ee773ae5a634d931a60abdf3ca9c17896a4753e4fab272",
+    "cst_mil/src/cst_mil/research_followup/semantic_patent_followup/bundle.py": "89e214cc62318beb3b0a6a8b408314fc563f6ce171519142a61eeeb4b76ed07d",
+    "cst_mil/src/cst_mil/research_followup/semantic_patent_followup/common.py": "f41bb63119a3c41910730a745bf2f0114dd3b7e7c611ec69fe7d94015f3cf1c0",
+    "cst_mil/src/cst_mil/research_followup/semantic_patent_followup/cost.py": "a6034dbcb37e17b40ec3c884bc44723b8ae2e4381f98d27318313f038f7f61af",
+    "cst_mil/src/cst_mil/research_followup/semantic_patent_followup/cost_report.py": "dbbf93ac359a568229c7408d5cc991fa41ade14279da8c681b88ba1e01b5f6ee",
+    "cst_mil/src/cst_mil/research_followup/semantic_patent_followup/data.py": "f1be9808bd69a019a24f2e22feee110bf013ecd611ef0b1b14ba8bea12fa27c5",
+    "cst_mil/src/cst_mil/research_followup/semantic_patent_followup/execution.py": "7dd851c84b1658b143b2eabbf1d434c14b519249df24edae3edb076c0a18e2ca",
+    "cst_mil/src/cst_mil/research_followup/semantic_patent_followup/model.py": "77ad28679d6c71979ec32f47be640d0bf9df0098f36560836a3032ffabb0e5e7",
+    "cst_mil/src/cst_mil/research_followup/semantic_patent_followup/representations.py": "1d9fe695ed308f33d66ada8624eb9d87862302cafa9846f30fd102055363476f",
+    "cst_mil/src/cst_mil/research_followup/semantic_patent_followup/review.py": "0b35b9a54dbcb322096388055922b454f5d8afdf141c79f2de52eb21ae22885c",
+    "cst_mil/src/cst_mil/research_followup/semantic_patent_followup/topic_execution.py": "99589d45ef81149d7c58615c5d4599d3b10c7b86366c60f22233b60e5d893f83",
+    "cst_mil/src/cst_mil/research_followup/semantic_patent_followup/topics.py": "3fa0b8f955888fef28d871c358c505002ede689bfa8c380229d12e39f1fa68ec",
+    "cst_mil/src/cst_mil/research_followup/shorttext_nmf_stable/__init__.py": "db3116fb760dfd6f9543002dc1ca9bf6811f9ae6f4050e113a8526b1ecdf4879",
+    "cst_mil/src/cst_mil/research_followup/shorttext_nmf_stable/__main__.py": "0e4aff926ffb8d595457d5d1e006ce12456a9db30e64b8730026bba7da37ee95",
+    "cst_mil/src/cst_mil/research_followup/shorttext_nmf_stable/analysis.py": "c99fd5d6f90f973a46629725bd1378f20181b9d8aa5f5b422760d8def85286c0",
+    "cst_mil/src/cst_mil/research_followup/shorttext_nmf_stable/bertopic_backend.py": "924e89fc844cb2b6894cc0d650be67ca278e1338cab9a98e09afc4432e9462e8",
+    "cst_mil/src/cst_mil/research_followup/shorttext_nmf_stable/common.py": "f0b0a3a7df65c20dd4f79eeab19941f7a5c14dd50ae9f22242b102d23f35a01f",
+    "cst_mil/src/cst_mil/research_followup/shorttext_nmf_stable/core.py": "40974bf11e4973ba2e06d7dd73f432dd9c85b4f779855e82c9aa26e4abe1f166",
+    "cst_mil/src/cst_mil/research_followup/shorttext_nmf_stable/data.py": "d6365e9e57ea4208182c563474052cb69a06147400065f3ea1bc2aca7d219872",
+    "cst_mil/src/cst_mil/research_followup/shorttext_nmf_stable/execution.py": "7603ba3caaa606f9fbf492b14ed4e3551cde47dc2af1d7a1fa3f2983345dc024",
+    "cst_mil/src/cst_mil/research_followup/shorttext_nmf_stable/model.py": "87b95a96802266aab36c804a3baee2f1b96918837596d8be1848392f2839c7ec",
+    "cst_mil/src/cst_mil/research_followup/shorttext_nmf_stable/native_topics.py": "83d65da6c87144176a88016bd10204d7a6e358f9ac8aa69ad8ae9adfc3753246",
+    "cst_mil/src/cst_mil/research_followup/shorttext_nmf_stable/numerics.py": "864cd11d5b5c2435fca132f158e01f99b24ec0a2136dd6b0978d276674db5b97",
+    "cst_mil/src/cst_mil/unified_semantic_v1_1/__init__.py": "16a8f6b92342029308fc6c8910f7a563507f6351e1787d78e86ff32f9ae5adcb",
+    "cst_mil/src/cst_mil/unified_semantic_v1_1/cli.py": "507549da269305546f3b1d62bbcded305b148ebbd5f35d6057c3aa6cc6b8e4cc",
+    "cst_mil/src/cst_mil/unified_semantic_v1_1/cost.py": "75ff18470c9103e2510c1ec81dddd782d8710f92308781e7305da7a8a5232932",
+    "cst_mil/src/cst_mil/unified_semantic_v1_1/data.py": "bb09aee7b0e609fa181a19bc61f8b1fc8c136a741bfc54adf3e0853557542646",
+    "cst_mil/src/cst_mil/unified_semantic_v1_1/encoder.py": "13f10a6df0c3b9587abec9ad7808b6a7cb9cbb8eb7fe091a6954adb6b1eed258",
+    "cst_mil/src/cst_mil/unified_semantic_v1_1/model.py": "098cd10b0721eba6036f75397440dd42a4b9f9263933d662ec22f3ef22bf3cd0",
+    "cst_mil/src/cst_mil/unified_semantic_v1_1/qa.py": "ce0f813a36b8dab259c16c4bfde9bc32a580e0cd2bcecfda20644e9340b10cd3",
+    "cst_mil/src/cst_mil/unified_semantic_v1_1/report.py": "23381ce59a47e668c05bd5c03a335a1659272bda8e9c63aa4131feb28282f209",
+    "cst_mil/src/cst_mil/unified_semantic_v1_1/topics.py": "fa4e1c0bb037026b0a27759069a23f669682272f6b81a8d130cdc898a851f190",
+    "cst_mil/src/cst_mil/unified_semantic_v1_1/training.py": "47d34f5e04e2d7fc49ed7b46421623e07f5ff9efe4b16006a3791683cd138f26",
+    "计算机项目综合开发创新实践/app/config/deployment.mjs": "4125ad9d91ca08ac15b5bd8265d1efe501c44109b887f064a03a83247e2b6784",
+    "计算机项目综合开发创新实践/app/python/worker.py": "06309c904096372a06e735dea4e7e9a22ac310a9a2136f6a71949793d4d0786c",
+    "计算机项目综合开发创新实践/app/server/prediction.ts": "664f5fa41a536fa521de4aea54473e2b8daa180f4fb749318fe10fe19f6351e4"
+  },
+  "encoder": {
+    "model_id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "fingerprint": "84508dc5c543fddd28e637cf0786ce79dd0fd3e67cce8614ef11c608ec01da1e",
+    "directory": "paraphrase-multilingual-MiniLM-L12-v2",
+    "base_url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "manifest": {
+      "device": "cpu",
+      "files": {
+        "1_Pooling/config.json": {
+          "bytes": 190,
+          "sha256": "4be450dde3b0273bb9787637cfbd28fe04a7ba6ab9d36ac48e92b11e350ffc23"
+        },
+        "README.md": {
+          "bytes": 3888,
+          "sha256": "1e98ea05b0de579fcaad3d625b62ea55647142ed674d5f5ebf1440e4bbbb6f23"
+        },
+        "config.json": {
+          "bytes": 645,
+          "sha256": "6300193cb75e01cf80c96decef7187dfb33094d97cc1490b7ead6ff134476e4e"
+        },
+        "config_sentence_transformers.json": {
+          "bytes": 122,
+          "sha256": "b8c64b5cece00d8424b4896ea75b512b6008576088497609dfeb6bd63e6d36b8"
+        },
+        "model.safetensors": {
+          "bytes": 470641600,
+          "sha256": "eaa086f0ffee582aeb45b36e34cdd1fe2d6de2bef61f8a559a1bbc9bd955917b"
+        },
+        "modules.json": {
+          "bytes": 229,
+          "sha256": "8f4b264b80206c830bebbdcae377e137925650a433b689343a63bdc9b3145460"
+        },
+        "sentence_bert_config.json": {
+          "bytes": 53,
+          "sha256": "70f4448f31320443fe3557cacea5abf2dcc4915dda8c80646bec9f3bb0aa5a1f"
+        },
+        "sentencepiece.bpe.model": {
+          "bytes": 5069051,
+          "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865"
+        },
+        "special_tokens_map.json": {
+          "bytes": 239,
+          "sha256": "378eb3bf733eb16e65792d7e3fda5b8a4631387ca04d2015199c4d4f22ae554d"
+        },
+        "tokenizer.json": {
+          "bytes": 9081518,
+          "sha256": "2c3387be76557bd40970cec13153b3bbf80407865484b209e655e5e4729076b8"
+        },
+        "tokenizer_config.json": {
+          "bytes": 526,
+          "sha256": "5036ea374ffedd706e3bef33e2e0d6953cb868ef8a490e76e32ba0faa37a6b9b"
+        },
+        "unigram.json": {
+          "bytes": 14763234,
+          "sha256": "71b44701d7efd054205115acfa6ef126c5d2f84bd3affe0c59e48163674d19a6"
+        }
+      },
+      "model_fingerprint": "84508dc5c543fddd28e637cf0786ce79dd0fd3e67cce8614ef11c608ec01da1e",
+      "model_id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+      "source_url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/tree/e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+      "weights_format": "safetensors"
+    }
+  }
+}
