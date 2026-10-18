@@ -17,7 +17,7 @@
   <a href="https://github.com/Kirito14IT/CST-MIL/actions/workflows/release.yml"><img alt="Release checks" src="https://github.com/Kirito14IT/CST-MIL/actions/workflows/release.yml/badge.svg"></a>
 </p>
 
-<p align="center"><a href="README.md">简体中文</a> · <strong>English</strong></p>
+<p align="center"><strong>English</strong> · <a href="README.zh-CN.md">简体中文</a></p>
 
 <p align="center">
   <a href="https://github.com/Kirito14IT/CST-MIL/releases/tag/demo-2026.10.15">Model release</a> ·
