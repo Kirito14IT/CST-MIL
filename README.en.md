@@ -2,8 +2,8 @@
   <picture>
     <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="assets/logo-lockup-dark.svg">
     <source media="(prefers-reduced-motion: reduce)" srcset="assets/logo-lockup.svg">
-    <source media="(prefers-color-scheme: dark)" srcset="assets/logo-lockup-animated-dark.svg">
-    <img src="assets/logo-lockup-animated.svg" width="660" alt="CST-MIL — Short text, topics, traceable evidence">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logo-lockup-animated-dark.svg?v=2">
+    <img src="assets/logo-lockup-animated.svg?v=2" width="660" alt="CST-MIL — Short text, topics, traceable evidence">
   </picture>
 </p>
 

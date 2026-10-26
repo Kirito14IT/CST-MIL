@@ -1,55 +1,111 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="320" viewBox="0 0 1000 320" role="img" aria-labelledby="title desc">
   <title id="title">CST-MIL</title>
-  <desc id="desc">A gently floating message bubble and topic graph. Short text, topics and traceable evidence.</desc>
+  <desc id="desc">A message bubble and topic graph move in a continuous loop, surrounded by colorful orbiting signals. Short text, topics and traceable evidence.</desc>
   <defs>
-    <radialGradient id="teal-light">
-      <stop stop-color="#5DAFA7" stop-opacity=".2"/>
-      <stop offset="1" stop-color="#5DAFA7" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="coral-light">
-      <stop stop-color="#E78D84" stop-opacity=".15"/>
-      <stop offset="1" stop-color="#E78D84" stop-opacity="0"/>
-    </radialGradient>
+    <radialGradient id="cyan-light"><stop stop-color="#22D3EE" stop-opacity=".3"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></radialGradient>
+    <radialGradient id="violet-light"><stop stop-color="#9B78FF" stop-opacity=".26"/><stop offset="1" stop-color="#9B78FF" stop-opacity="0"/></radialGradient>
+    <radialGradient id="rose-light"><stop stop-color="#F363C2" stop-opacity=".21"/><stop offset="1" stop-color="#F6B94A" stop-opacity="0"/></radialGradient>
+    <linearGradient id="signal-spectrum"><stop stop-color="#22D3EE"/><stop offset=".35" stop-color="#4599FF"/><stop offset=".68" stop-color="#9B78FF"/><stop offset="1" stop-color="#F363C2"/></linearGradient>
     <clipPath id="card-clip"><rect x="6" y="6" width="308" height="308" rx="78"/></clipPath>
+    <path id="orbit-route" d="M135 22A122 138 0 1 1 135 298A122 138 0 1 1 135 22Z" pathLength="100"/>
   </defs>
   <style>
-    .floating-mark { animation: float 6.4s ease-in-out infinite; }
-    .ground-shadow { transform-box: fill-box; transform-origin: center; animation: shadow 6.4s ease-in-out infinite; }
-    .ambient-teal { animation: breathe 6.4s ease-in-out infinite; }
-    .ambient-coral { animation: breathe 6.4s ease-in-out -3.2s infinite; }
-    .graph-signal { animation: travel 8s linear infinite; }
-    .node-halo { transform-box: fill-box; transform-origin: center; animation: halo 4s ease-in-out infinite; }
-    .node-halo.second { animation-delay: -2s; }
-    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-    @keyframes shadow { 0%, 100% { transform: scaleX(1); opacity: .08; } 50% { transform: scaleX(.86); opacity: .045; } }
-    @keyframes breathe { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
-    @keyframes travel { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -100; } }
-    @keyframes halo { 0%, 100% { transform: scale(.94); opacity: .28; } 50% { transform: scale(1.1); opacity: .6; } }
+    .sway-x { animation: sway-x 6s ease-in-out infinite; }
+    .sway-y { animation: sway-y 6s ease-in-out -1.5s infinite; }
+    .tilt { transform-origin: 135px 160px; animation: tilt 6s ease-in-out infinite; }
+    .ground-shadow { transform-box: fill-box; transform-origin: center; animation: shadow 6s ease-in-out infinite; }
+    .ambient { animation: breathe 3s ease-in-out infinite; }
+    .ambient.second { animation-delay: -1s; }
+    .ambient.third { animation-delay: -2s; }
+    .graph-signal { animation: graph-travel 3s linear infinite; }
+    .node-halo { transform-box: fill-box; transform-origin: center; animation: halo 3s ease-in-out infinite; }
+    .node-halo.second { animation-delay: -1.5s; }
+    .orbit-trail { animation: orbit 6s linear var(--phase) infinite; }
+    .orbit-tail { animation: tail 6s linear var(--phase) infinite; }
+    .orbit-head { animation: head 6s linear var(--phase) infinite; }
+    .still-particles { display: none; }
+    @keyframes sway-x { 0%, 100% { transform: translateX(14px); } 50% { transform: translateX(-14px); } }
+    @keyframes sway-y { 0%, 100% { transform: translateY(17px); } 50% { transform: translateY(-17px); } }
+    @keyframes tilt { 0%, 100% { transform: rotate(1.2deg); } 50% { transform: rotate(-1.2deg); } }
+    @keyframes shadow { 0%, 100% { transform: translateX(8px) scaleX(.96); } 50% { transform: translateX(-8px) scaleX(.84); } }
+    @keyframes breathe { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
+    @keyframes graph-travel { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -100; } }
+    @keyframes halo { 0%, 100% { transform: scale(.9); opacity: .3; } 50% { transform: scale(1.15); opacity: .75; } }
+    @keyframes orbit { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -100; } }
+    @keyframes tail { from { stroke-dashoffset: -4; } to { stroke-dashoffset: -104; } }
+    @keyframes head { from { stroke-dashoffset: -7; } to { stroke-dashoffset: -107; } }
     @media (prefers-reduced-motion: reduce) {
-      .floating-mark, .ground-shadow, .ambient-teal, .ambient-coral, .graph-signal, .node-halo { animation: none; }
-      .graph-signal { display: none; }
+      .sway-x, .sway-y, .tilt, .ground-shadow, .ambient, .graph-signal, .node-halo, .orbit-trail, .orbit-tail, .orbit-head { animation: none; }
+      .moving-particles, .graph-signal { display: none; }
+      .still-particles { display: inline; }
     }
   </style>
-  <ellipse class="ground-shadow" cx="130" cy="296" rx="90" ry="7" fill="#203B59" opacity=".08"/>
-  <g transform="translate(5 35) scale(.78)">
-    <g class="floating-mark">
-      <rect x="6" y="6" width="308" height="308" rx="78" fill="#F5F8FA" stroke="#E3ECEE" stroke-width="1.5"/>
+  <use href="#orbit-route" fill="none" stroke="#7E94B6" stroke-width="1.2" opacity=".2"/>
+  <ellipse class="ground-shadow" cx="135" cy="307" rx="80" ry="5" fill="#203B59" opacity=".08"/>
+  <g class="sway-x"><g class="sway-y"><g class="tilt">
+    <g transform="translate(23 48) scale(.7)">
+      <rect x="6" y="6" width="308" height="308" rx="78" fill="#F5F8FA" stroke="#DCE8ED" stroke-width="1.8"/>
       <g clip-path="url(#card-clip)">
-        <circle class="ambient-teal" cx="255" cy="83" r="118" fill="url(#teal-light)"/>
-        <circle class="ambient-coral" cx="86" cy="258" r="112" fill="url(#coral-light)"/>
+        <circle class="ambient" cx="74" cy="72" r="145" fill="url(#cyan-light)"/>
+        <circle class="ambient second" cx="276" cy="105" r="130" fill="url(#violet-light)"/>
+        <circle class="ambient third" cx="183" cy="285" r="145" fill="url(#rose-light)"/>
       </g>
       <path d="M70 82h82a24 24 0 0 1 24 24v61a24 24 0 0 1-24 24h-35l-32 28v-28H70a24 24 0 0 1-24-24v-61a24 24 0 0 1 24-24Z" fill="#FFFFFF" stroke="#203B59" stroke-width="9" stroke-linejoin="round"/>
       <path d="M72 114h59M72 139h76M72 164h39" fill="none" stroke="#203B59" stroke-width="9" stroke-linecap="round"/>
-      <path d="M182 112 228 91M182 144 247 151M171 180 215 217M228 91 247 151 215 217" fill="none" stroke="#B7CFD3" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-      <path class="graph-signal" d="M228 91 247 151 215 217 247 151Z" pathLength="100" fill="none" stroke="#E78D84" stroke-width="6" stroke-linecap="round" stroke-dasharray=".1 99.9"/>
-      <circle class="node-halo" cx="228" cy="91" r="24" fill="none" stroke="#5DAFA7" stroke-width="2" opacity=".28"/>
-      <circle class="node-halo second" cx="215" cy="217" r="24" fill="none" stroke="#5DAFA7" stroke-width="2" opacity=".28"/>
+      <path d="M182 112 228 91M182 144 247 151M171 180 215 217M228 91 247 151 215 217" fill="none" stroke="#AEC9D1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path class="graph-signal" d="M228 91 247 151 215 217 247 151Z" pathLength="100" fill="none" stroke="url(#signal-spectrum)" stroke-width="7" stroke-linecap="round" stroke-dasharray="3 97"/>
+      <circle class="node-halo" cx="228" cy="91" r="25" fill="none" stroke="#22D3EE" stroke-width="2.4" opacity=".4"/>
+      <circle class="node-halo second" cx="215" cy="217" r="25" fill="none" stroke="#9B78FF" stroke-width="2.4" opacity=".4"/>
       <circle cx="228" cy="91" r="16" fill="#5DAFA7"/>
       <circle cx="247" cy="151" r="20" fill="#203B59"/>
       <circle cx="215" cy="217" r="16" fill="#5DAFA7"/>
       <path d="M225 127v-8h-10m44 0h12v12m0 38v12h-12m-44 0h-10v-10" fill="none" stroke="#E78D84" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
       <circle cx="247" cy="151" r="6" fill="#FFFFFF"/>
     </g>
+  </g></g></g>
+  <g class="moving-particles">
+    <g style="--phase: -0s" stroke="#22D3EE" fill="none" stroke-linecap="round">
+      <use href="#orbit-route" class="orbit-trail" stroke-width="3.2" stroke-dasharray="7 93" opacity=".3"/>
+      <use href="#orbit-route" class="orbit-tail" stroke-width="3.8" stroke-dasharray="3 97" opacity=".65"/>
+      <use href="#orbit-route" class="orbit-head" stroke-width="18" stroke-dasharray=".01 99.99" opacity=".16"/>
+      <use href="#orbit-route" class="orbit-head" stroke-width="7.5" stroke-dasharray=".01 99.99"/>
+      <use href="#orbit-route" class="orbit-head" stroke="#FFFFFF" stroke-width="2.2" stroke-dasharray=".01 99.99" opacity=".9"/>
+    </g>
+    <g style="--phase: -1.2s" stroke="#4599FF" fill="none" stroke-linecap="round">
+      <use href="#orbit-route" class="orbit-trail" stroke-width="3.2" stroke-dasharray="7 93" opacity=".3"/>
+      <use href="#orbit-route" class="orbit-tail" stroke-width="3.8" stroke-dasharray="3 97" opacity=".65"/>
+      <use href="#orbit-route" class="orbit-head" stroke-width="18" stroke-dasharray=".01 99.99" opacity=".16"/>
+      <use href="#orbit-route" class="orbit-head" stroke-width="7.5" stroke-dasharray=".01 99.99"/>
+      <use href="#orbit-route" class="orbit-head" stroke="#FFFFFF" stroke-width="2.2" stroke-dasharray=".01 99.99" opacity=".9"/>
+    </g>
+    <g style="--phase: -2.4s" stroke="#9B78FF" fill="none" stroke-linecap="round">
+      <use href="#orbit-route" class="orbit-trail" stroke-width="3.2" stroke-dasharray="7 93" opacity=".3"/>
+      <use href="#orbit-route" class="orbit-tail" stroke-width="3.8" stroke-dasharray="3 97" opacity=".65"/>
+      <use href="#orbit-route" class="orbit-head" stroke-width="18" stroke-dasharray=".01 99.99" opacity=".16"/>
+      <use href="#orbit-route" class="orbit-head" stroke-width="7.5" stroke-dasharray=".01 99.99"/>
+      <use href="#orbit-route" class="orbit-head" stroke="#FFFFFF" stroke-width="2.2" stroke-dasharray=".01 99.99" opacity=".9"/>
+    </g>
+    <g style="--phase: -3.6s" stroke="#F363C2" fill="none" stroke-linecap="round">
+      <use href="#orbit-route" class="orbit-trail" stroke-width="3.2" stroke-dasharray="7 93" opacity=".3"/>
+      <use href="#orbit-route" class="orbit-tail" stroke-width="3.8" stroke-dasharray="3 97" opacity=".65"/>
+      <use href="#orbit-route" class="orbit-head" stroke-width="18" stroke-dasharray=".01 99.99" opacity=".16"/>
+      <use href="#orbit-route" class="orbit-head" stroke-width="7.5" stroke-dasharray=".01 99.99"/>
+      <use href="#orbit-route" class="orbit-head" stroke="#FFFFFF" stroke-width="2.2" stroke-dasharray=".01 99.99" opacity=".9"/>
+    </g>
+    <g style="--phase: -4.8s" stroke="#F6B94A" fill="none" stroke-linecap="round">
+      <use href="#orbit-route" class="orbit-trail" stroke-width="3.2" stroke-dasharray="7 93" opacity=".3"/>
+      <use href="#orbit-route" class="orbit-tail" stroke-width="3.8" stroke-dasharray="3 97" opacity=".65"/>
+      <use href="#orbit-route" class="orbit-head" stroke-width="18" stroke-dasharray=".01 99.99" opacity=".16"/>
+      <use href="#orbit-route" class="orbit-head" stroke-width="7.5" stroke-dasharray=".01 99.99"/>
+      <use href="#orbit-route" class="orbit-head" stroke="#FFFFFF" stroke-width="2.2" stroke-dasharray=".01 99.99" opacity=".9"/>
+    </g>
+  </g>
+  <g class="still-particles">
+    <circle cx="135" cy="22" r="4" fill="#22D3EE"/>
+    <circle cx="251" cy="117" r="4" fill="#4599FF"/>
+    <circle cx="207" cy="272" r="4" fill="#9B78FF"/>
+    <circle cx="63" cy="272" r="4" fill="#F363C2"/>
+    <circle cx="19" cy="117" r="4" fill="#F6B94A"/>
   </g>
   <text x="285" y="147" font-family="Georgia,serif" font-size="82" font-weight="700" fill="#203B59">CST-MIL</text>
   <text x="290" y="199" font-family="Segoe UI,sans-serif" font-size="24" letter-spacing="1.1" fill="#65798A">SHORT TEXT · TOPICS · TRACEABLE EVIDENCE</text>
