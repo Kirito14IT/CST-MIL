@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="320" viewBox="0 0 1000 320" role="img" aria-labelledby="title desc">
+  <title id="title">CST-MIL</title>
+  <desc id="desc">Dark-mode wordmark with a gently floating message bubble and topic graph. Short text, topics and traceable evidence.</desc>
+  <defs>
+    <radialGradient id="teal-light">
+      <stop stop-color="#72C4BA" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#72C4BA" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="coral-light">
+      <stop stop-color="#F2A59B" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#F2A59B" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="card-clip"><rect x="6" y="6" width="308" height="308" rx="78"/></clipPath>
+  </defs>
+  <style>
+    .floating-mark { animation: float 6.4s ease-in-out infinite; }
+    .ground-shadow { transform-box: fill-box; transform-origin: center; animation: shadow 6.4s ease-in-out infinite; }
+    .ambient-teal { animation: breathe 6.4s ease-in-out infinite; }
+    .ambient-coral { animation: breathe 6.4s ease-in-out -3.2s infinite; }
+    .graph-signal { animation: travel 8s linear infinite; }
+    .node-halo { transform-box: fill-box; transform-origin: center; animation: halo 4s ease-in-out infinite; }
+    .node-halo.second { animation-delay: -2s; }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    @keyframes shadow { 0%, 100% { transform: scaleX(1); opacity: .22; } 50% { transform: scaleX(.86); opacity: .12; } }
+    @keyframes breathe { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
+    @keyframes travel { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -100; } }
+    @keyframes halo { 0%, 100% { transform: scale(.94); opacity: .28; } 50% { transform: scale(1.1); opacity: .6; } }
+    @media (prefers-reduced-motion: reduce) {
+      .floating-mark, .ground-shadow, .ambient-teal, .ambient-coral, .graph-signal, .node-halo { animation: none; }
+      .graph-signal { display: none; }
+    }
+  </style>
+  <ellipse class="ground-shadow" cx="130" cy="296" rx="90" ry="7" fill="#050E17" opacity=".22"/>
+  <g transform="translate(5 35) scale(.78)">
+    <g class="floating-mark">
+      <rect x="6" y="6" width="308" height="308" rx="78" fill="#152B40" stroke="#2A475B" stroke-width="1.5"/>
+      <g clip-path="url(#card-clip)">
+        <circle class="ambient-teal" cx="255" cy="83" r="118" fill="url(#teal-light)"/>
+        <circle class="ambient-coral" cx="86" cy="258" r="112" fill="url(#coral-light)"/>
+      </g>
+      <path d="M70 82h82a24 24 0 0 1 24 24v61a24 24 0 0 1-24 24h-35l-32 28v-28H70a24 24 0 0 1-24-24v-61a24 24 0 0 1 24-24Z" fill="#203A51" stroke="#E1EDF4" stroke-width="9" stroke-linejoin="round"/>
+      <path d="M72 114h59M72 139h76M72 164h39" fill="none" stroke="#E1EDF4" stroke-width="9" stroke-linecap="round"/>
+      <path d="M182 112 228 91M182 144 247 151M171 180 215 217M228 91 247 151 215 217" fill="none" stroke="#577E8B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path class="graph-signal" d="M228 91 247 151 215 217 247 151Z" pathLength="100" fill="none" stroke="#F2A59B" stroke-width="6" stroke-linecap="round" stroke-dasharray=".1 99.9"/>
+      <circle class="node-halo" cx="228" cy="91" r="24" fill="none" stroke="#72C4BA" stroke-width="2" opacity=".28"/>
+      <circle class="node-halo second" cx="215" cy="217" r="24" fill="none" stroke="#72C4BA" stroke-width="2" opacity=".28"/>
+      <circle cx="228" cy="91" r="16" fill="#72C4BA"/>
+      <circle cx="247" cy="151" r="20" fill="#D8E9F2"/>
+      <circle cx="215" cy="217" r="16" fill="#72C4BA"/>
+      <path d="M225 127v-8h-10m44 0h12v12m0 38v12h-12m-44 0h-10v-10" fill="none" stroke="#F2A59B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="247" cy="151" r="6" fill="#203A51"/>
+    </g>
+  </g>
+  <text x="285" y="147" font-family="Georgia,serif" font-size="82" font-weight="700" fill="#EAF1F6">CST-MIL</text>
+  <text x="290" y="199" font-family="Segoe UI,sans-serif" font-size="24" letter-spacing="1.1" fill="#B0C3D2">SHORT TEXT · TOPICS · TRACEABLE EVIDENCE</text>
+  <path d="M290 226h160" stroke="#72C4BA" stroke-width="5" stroke-linecap="round"/>
+  <path d="M465 226h75" stroke="#F2A59B" stroke-width="5" stroke-linecap="round"/>
+</svg>
