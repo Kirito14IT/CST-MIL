@@ -54,15 +54,42 @@ cst_mil/releases/
 cst_mil/analysis/
 cst_mil/artifacts/
 cst_mil/benchmark/**
-!cst_mil/benchmark/research_followup/
-!cst_mil/benchmark/research_followup/20260922/
-!cst_mil/benchmark/research_followup/20260922/performance.json
-!cst_mil/benchmark/research_followup/20260922/evidence.json
-!cst_mil/benchmark/research_followup/20260922/costs.json
 !cst_mil/benchmark/finalize_delivery.py
 !cst_mil/benchmark/preserve_legacy.py
 !cst_mil/benchmark/validate_functional.py
 /benchmark/
+
+# Generated experimental outputs, wherever a new run writes them.
+# Source modules and authored fixtures are reviewed by scripts/audit_publication.py.
+runs/
+results/
+predictions/
+per_case/
+per-case/
+raw_results/
+raw-results/
+experiment_results/
+experiment-results/
+benchmark_results/
+benchmark-results/
+evaluation_results/
+evaluation-results/
+experiment_outputs/
+experiment-outputs/
+predictions*.json
+predictions*.jsonl
+predictions*.csv
+*_predictions.json
+*_predictions.jsonl
+*_predictions.csv
+metrics*.json
+metrics*.csv
+*_metrics.json
+*_metrics.csv
+per_case*.jsonl
+per_case*.csv
+
+# Local project records
 任务要求*.docx
 专利交底书模板*.docx
 待办事项.md

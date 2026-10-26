@@ -186,7 +186,7 @@ def build_report(output: Path) -> Path:
         "演示系统启动：",
         "",
         "```powershell",
-        "cd D:\\github\\intern\\计算机项目综合开发创新实践\\app",
+        "cd D:\\github\\intern\\WebApp",
         "npm start",
         "```",
         "",

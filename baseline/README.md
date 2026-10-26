@@ -36,3 +36,7 @@ Install Python comparison dependencies with `uv sync --group benchmark` in
 `cst_mil/`. Datasets and prepared experimental splits are not shipped.
 See the research CLI help and main README for preparation and training stages.
 Component terms are in [`THIRD_PARTY_NOTICES.md`](../THIRD_PARTY_NOTICES.md).
+
+Experimental predictions, evaluation metrics, timing records and run logs are
+not included. Keep generated results outside version control. Synthetic test
+fixtures and algorithm configuration are part of the public source code.

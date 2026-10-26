@@ -1,0 +1,78 @@
+{
+  "title": "Campus competition discussion",
+  "source": "demo",
+  "includePost": false,
+  "postText": "",
+  "messages": [
+    {
+      "id": "m1",
+      "speaker": "Student A",
+      "text": "Our team needs more passing practice before the next match.",
+      "order": 0,
+      "parentId": null
+    },
+    {
+      "id": "m2",
+      "speaker": "Student B",
+      "text": "We need more passing practice before our next match.",
+      "order": 1,
+      "parentId": null
+    },
+    {
+      "id": "m3",
+      "speaker": "Student C",
+      "text": "More passing practice will help our team prepare for the next match.",
+      "order": 2,
+      "parentId": null
+    },
+    {
+      "id": "m4",
+      "speaker": "Student D",
+      "text": "That player is a useless idiot and should leave the team.",
+      "order": 3,
+      "parentId": null
+    },
+    {
+      "id": "m5",
+      "speaker": "Student A",
+      "text": "He is a useless idiot who should leave our team.",
+      "order": 4,
+      "parentId": null
+    },
+    {
+      "id": "m6",
+      "speaker": "Student B",
+      "text": "That useless idiot should leave the team after this match.",
+      "order": 5,
+      "parentId": null
+    },
+    {
+      "id": "m7",
+      "speaker": "Student C",
+      "text": "The match review meeting is on Friday in the library.",
+      "order": 6,
+      "parentId": null
+    },
+    {
+      "id": "m8",
+      "speaker": "Student D",
+      "text": "We will review the match on Friday in the library.",
+      "order": 7,
+      "parentId": null
+    },
+    {
+      "id": "m9",
+      "speaker": "Student A",
+      "text": "Our Friday meeting in the library will review the match.",
+      "order": 8,
+      "parentId": null
+    },
+    {
+      "id": "m10",
+      "speaker": "Student B",
+      "text": "Please discuss the actual decisions instead of attacking a teammate.",
+      "order": 9,
+      "parentId": null
+    }
+  ]
+}

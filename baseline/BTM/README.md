@@ -1,20 +1,28 @@
 # Code of Biterm Topic Model
 
-## SCCD 统一实验入口（本项目适配）
+## SCCD adapter
 
-保留本目录 C++ biterm Gibbs 算法，通过 `cst_mil/src/cst_mil/bench/native_topics.py`
-的 `NativeTopicModel("btm", config, work_dir)` 接入 SCCD。默认主题容量 32、种子 42、
-100 次 Gibbs 迭代、alpha=50/32、beta=0.005，使用 `sum_b` 冻结推理和原始 15 词
-biterm 窗口。新增种子参数和独立推理输出路径；空文本、未知词和零 biterm 不产生 NaN。
-训练日志及元数据记录实际 biterm 数量和耗时。
+The C++ biterm Gibbs implementation is connected to SCCD through
+`NativeTopicModel("btm", config, work_dir)` in
+`cst_mil/src/cst_mil/bench/native_topics.py`. Defaults are 32 topics, seed 42,
+100 Gibbs iterations, alpha=50/32 and beta=0.005. The adapter uses frozen
+`sum_b` inference and the original 15-word biterm window. Project changes add
+an explicit seed and a separate inference output path, and handle empty text,
+unknown vocabulary and zero biterms without producing NaN.
+
+From the repository root, inspect the command and prepare the required
+datasets and split manifests separately:
 
 ```powershell
-cd D:\github\intern\cst_mil
-uv run --frozen --group benchmark cst-bench run --suite full677 --method btm --limit all --resume
+cd cst_mil
+uv run --frozen --group benchmark cst-bench --help
 ```
 
-样本单位为完整会话，连续 5 条消息构成主题输入窗口，步长 2。
-断点及共同协议见 [SCCD 操作指南](../../cst_mil/benchmark/操作指南.md)。
+The adapter treats each complete conversation as a sample. Topic inputs use
+windows of five consecutive messages with stride two. New runs write their
+biterm counts and timing metadata locally. Experimental predictions, metrics
+and run artifacts are not distributed. See
+[research preparation](../../README.md#research-code-and-reproducibility).
 
 ## Original implementation
 
@@ -35,12 +43,15 @@ More detail can be referred to the following paper:
 The code has been test on linux. If you on windows, please install
 cygwin (with bc, wc, make).
 
-The code includes a runnable example, you can run it *on Linux* by:
+The upstream code includes an example runner, which can be used *on Linux*
+after supplying your own input file:
 
        $ cd script
 	   $ sh runExample.sh
 
-It trains BTM over the documents in *sample-data/doc\_info.txt* and output the topics. The doc\_info.txt contains all the training documents, where each line represents one document with words separated by space as:
+The runner expects documents in *sample-data/doc\_info.txt* and writes the topics.
+The sample corpus is not included in this distribution. Supply a UTF-8 text
+file with one document per line and words separated by spaces:
 > word1 word2 word3 ....
 
 (*Note: the sample data is only used for illustration of the usage of the code. It is not the data set used in the paper.*)

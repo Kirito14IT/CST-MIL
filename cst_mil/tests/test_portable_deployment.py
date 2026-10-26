@@ -85,6 +85,26 @@ def test_wrong_archive_hash_never_publishes_installation(installation):
     assert not (root / ".runtime/deployment.json").exists()
 
 
+def test_republished_archive_does_not_reuse_stale_named_cache(installation, monkeypatch):
+    root, archive, encoder, published = installation
+    stale = root / ".runtime/downloads" / published["archive"]["name"]
+    stale.parent.mkdir(parents=True)
+    stale.write_bytes(b"previous release bytes")
+    requests = []
+
+    def download_current(url, target, expected_asset, *, offline=False):
+        requests.append(url)
+        assert target != stale
+        target.write_bytes(archive.read_bytes())
+        assets.verify_file(target, expected_asset)
+
+    monkeypatch.setattr(assets, "download", download_current)
+    assert assets.setup(root, encoder_source=encoder)["status"] == "installed"
+    assert assets.verify_installation(root)["status"] == "verified"
+    assert requests == [published["archive"]["url"]]
+    assert stale.read_bytes() == b"previous release bytes"
+
+
 @pytest.mark.parametrize("name", ["../outside", "/absolute", "C:/outside", "folder/../../outside", "folder\\outside"])
 def test_zip_path_traversal_is_rejected(tmp_path, name):
     archive = tmp_path / "bad.zip"
@@ -202,7 +222,7 @@ def test_direct_python_worker_authenticates_before_deserialization(installation,
     else:
         manifest["portable"]["catalogSha256"] = "0" * 64
     assets.atomic_json(file, manifest)
-    worker_path = Path(__file__).resolve().parents[2] / "计算机项目综合开发创新实践/app/python/worker.py"
+    worker_path = Path(__file__).resolve().parents[2] / "WebApp/python/worker.py"
     spec = importlib.util.spec_from_file_location("cst_portable_worker_test", worker_path)
     worker = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(worker)

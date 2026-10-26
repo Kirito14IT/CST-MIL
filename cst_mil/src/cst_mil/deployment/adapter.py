@@ -22,9 +22,10 @@ def validate_package(model: FollowupPackage, manifest: dict[str, Any], repo_root
     metadata = model.encoder_metadata
     wanted = public["encoder"]
     path_fields = {"encoder_path", "asset_hashes"}
-    costs = {"encoding_seconds_by_split", "encoding_peak_tree_rss_bytes"}
+    if getattr(model, "training_summary", {}):
+        raise ValueError("Public deployment weights must not contain training run summaries")
     if (any(metadata.get(key) != value for key, value in wanted.items() if key not in path_fields)
-            or set(metadata) - set(wanted) - costs):
+            or set(metadata) - set(wanted)):
         raise ValueError("Frozen model encoder metadata disagrees with the public technical manifest")
     old_root = PureWindowsPath(metadata["encoder_path"])
     try:

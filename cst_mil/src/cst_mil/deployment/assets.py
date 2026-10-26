@@ -15,7 +15,7 @@ from urllib.request import Request, urlopen
 import zipfile
 
 CATALOG_PATH = Path(__file__).with_name("catalog.json")
-MODEL_HASH = "39e842dbffe10356c6dbef4f17bb320868ef7b007c7b1972a38c315d4af87a59"
+MODEL_HASH = "f93a8dd1698c983d649f270f1c5e19780939b91e3dc10aed4a1aa1a7e595bb32"
 ENCODER_HASH = "84508dc5c543fddd28e637cf0786ce79dd0fd3e67cce8614ef11c608ec01da1e"
 TAG = "demo-2026.10.15"
 HASH = re.compile(r"^[a-f0-9]{64}$")
@@ -182,7 +182,7 @@ def _bind_manifest(root: Path, published: dict[str, Any]) -> dict[str, Any]:
                    bundle / "model_manifest.json"]
     manifest = {
         "manifestVersion": 1, "modelVersion": "semantic-patent-followup-v1", "schemaVersion": 2,
-        "taskName": "五来源全量短文本风险线索与隐主题分析",
+        "taskName": "Five-source short-text risk and topic analysis",
         "modelPath": _relative(root, bundle / "model.joblib"), "modelSha256": MODEL_HASH,
         "predictorModule": "cst_mil.deployment.adapter", "modelClass": "FollowupPackage",
         "predictFunction": "predict_session", "codeFingerprints": published["codeFingerprints"],
@@ -206,7 +206,10 @@ def setup(root: Path | None = None, *, model_archive: Path | None = None,
     verify_code(root, published)
     runtime = safe_path(root, ".runtime")
     if model_archive is None:
-        model_archive = safe_path(root, ".runtime/downloads/" + published["archive"]["name"])
+        # A sanitized replacement may retain its release name. Keep old cached
+        # bytes separate so setup can fetch and verify the current artifact.
+        archive_key = published["archive"]["sha256"] + "-" + published["archive"]["name"]
+        model_archive = safe_path(root, ".runtime/downloads/" + archive_key)
         download(published["archive"]["url"], model_archive, published["archive"], offline=offline)
     else:
         model_archive = model_archive.resolve()

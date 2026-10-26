@@ -4,17 +4,17 @@
   "archive": {
     "name": "cst-mil-semantic-model-demo-2026.10.15.zip",
     "url": "https://github.com/Kirito14IT/CST-MIL/releases/download/demo-2026.10.15/cst-mil-semantic-model-demo-2026.10.15.zip",
-    "bytes": 1498682,
-    "sha256": "728d906e42967ca1ffb01096e41ee490374165b3d5f11e26198a5008ae790ab7"
+    "bytes": 1498158,
+    "sha256": "02e3a5fa7686e55b99c0457fb8ffeda9ee1002aa663054b3d06793c00c03e1e2"
   },
   "archive_files": {
     "model.joblib": {
-      "bytes": 1494648,
-      "sha256": "39e842dbffe10356c6dbef4f17bb320868ef7b007c7b1972a38c315d4af87a59"
+      "bytes": 1494122,
+      "sha256": "f93a8dd1698c983d649f270f1c5e19780939b91e3dc10aed4a1aa1a7e595bb32"
     },
     "model_manifest.json": {
       "bytes": 3177,
-      "sha256": "d62b4edfd0e670354f159f3b227c2d8fedeff70c1338a8943b19e41ecf25e932"
+      "sha256": "51605121009c2e467edb98071c26e442bf0e42b296e7f72e59a630fd5c315ada"
     },
     "explanation_config.json": {
       "bytes": 607,
@@ -26,8 +26,8 @@
     }
   },
   "model": {
-    "bytes": 1494648,
-    "sha256": "39e842dbffe10356c6dbef4f17bb320868ef7b007c7b1972a38c315d4af87a59"
+    "bytes": 1494122,
+    "sha256": "f93a8dd1698c983d649f270f1c5e19780939b91e3dc10aed4a1aa1a7e595bb32"
   },
   "codeFingerprints": {
     "cst_mil/src/cst_mil/__init__.py": "01a2177f5af81954fbf59aeca5feff537b13e5fbb174c7f8e1a6e63365ccf807",
@@ -38,14 +38,14 @@
     "cst_mil/src/cst_mil/demo_semantic_adapter.py": "a2ce73052dde84fc3a2a4dc2d91f33be251759a6d04a212482f0ab72cc9bda25",
     "cst_mil/src/cst_mil/deployment/__init__.py": "c44fae1c1cb5aff7e6b2e81b369740978ca1f05b9a2ceb72843071fcb3da191f",
     "cst_mil/src/cst_mil/deployment/__main__.py": "3b709e0e9b58c5ec56ccb6716b667789f75b46f1f2a187868b8c24e5a7b812ad",
-    "cst_mil/src/cst_mil/deployment/adapter.py": "870a614b85271b2775becbaedaf64bd30d4353c39ceee3a579ae31a3a6457286",
-    "cst_mil/src/cst_mil/deployment/assets.py": "d8e0d813e7393ded84476b2dd4ab150a2c59315bfdeedca21cd50ba4268cb518",
+    "cst_mil/src/cst_mil/deployment/adapter.py": "b9dd311fbd4668f285b17ce009d768728b909ebaed57a5e48b95aad0cd295067",
+    "cst_mil/src/cst_mil/deployment/assets.py": "eeda596fdf1ddbe7222f76473914131ab62e46b99bc99a64479f7353df00fb61",
     "cst_mil/src/cst_mil/metrics.py": "5d64336ea96534f80cdad4be434bbf71e043696f6e5ab413fb08ab11772bfbaa",
     "cst_mil/src/cst_mil/preprocess.py": "9bd14c72585f56edb0113e004b5cc4bada9d01d26bf7c8b613ea35727bf67169",
     "cst_mil/src/cst_mil/research_followup/full_joint_comparison/__init__.py": "2909e8edb22a054028597ae94b781ad098c7218ffec2c38e3f636e46b169d608",
     "cst_mil/src/cst_mil/research_followup/full_joint_comparison/__main__.py": "91923864339c390c2a5fef22d4ed679a93e30f572bc3f9b32e637d794174068a",
     "cst_mil/src/cst_mil/research_followup/full_joint_comparison/analysis.py": "4c316f3bd8b09d7aab1b4aebb107309e2a4816073d073df12ea6d01de6732c1c",
-    "cst_mil/src/cst_mil/research_followup/full_joint_comparison/common.py": "56815c76c6a422dd62614530455f0ae37bd06785d8b5318992163633c01820a0",
+    "cst_mil/src/cst_mil/research_followup/full_joint_comparison/common.py": "c9c4dc5f15e9423b988477e3cda75afbbe3e58bb945dd9497569a4544ff15bab",
     "cst_mil/src/cst_mil/research_followup/full_joint_comparison/cost.py": "ee8472a724ebdf3245f1ef438aabd24e1a88a58878747e905018e64e47556c29",
     "cst_mil/src/cst_mil/research_followup/full_joint_comparison/data.py": "e73bb24b9fac58d51af9faa287fdd0aba79e03655bdb5cc0696062364d024468",
     "cst_mil/src/cst_mil/research_followup/full_joint_comparison/errors.py": "2f3ee61b9090533c5bfa89d59c2ace8d3d4a3a388799e6039ec620ee19f28279",
@@ -63,7 +63,7 @@
     "cst_mil/src/cst_mil/research_followup/semantic_patent_followup/assisted_summary.py": "0798c530b26be2dae2170f7c5974e97dcbe60a4def95bd3f7cf41e4c89a14607",
     "cst_mil/src/cst_mil/research_followup/semantic_patent_followup/audit.py": "7f064a56f0552f1776ee773ae5a634d931a60abdf3ca9c17896a4753e4fab272",
     "cst_mil/src/cst_mil/research_followup/semantic_patent_followup/bundle.py": "89e214cc62318beb3b0a6a8b408314fc563f6ce171519142a61eeeb4b76ed07d",
-    "cst_mil/src/cst_mil/research_followup/semantic_patent_followup/common.py": "f41bb63119a3c41910730a745bf2f0114dd3b7e7c611ec69fe7d94015f3cf1c0",
+    "cst_mil/src/cst_mil/research_followup/semantic_patent_followup/common.py": "6ab8d494ad1dad49011b8df7cfa42d5eead913ceb9496febbc7f15913c172a2f",
     "cst_mil/src/cst_mil/research_followup/semantic_patent_followup/cost.py": "a6034dbcb37e17b40ec3c884bc44723b8ae2e4381f98d27318313f038f7f61af",
     "cst_mil/src/cst_mil/research_followup/semantic_patent_followup/cost_report.py": "dbbf93ac359a568229c7408d5cc991fa41ade14279da8c681b88ba1e01b5f6ee",
     "cst_mil/src/cst_mil/research_followup/semantic_patent_followup/data.py": "f1be9808bd69a019a24f2e22feee110bf013ecd611ef0b1b14ba8bea12fa27c5",
@@ -90,13 +90,13 @@
     "cst_mil/src/cst_mil/unified_semantic_v1_1/data.py": "bb09aee7b0e609fa181a19bc61f8b1fc8c136a741bfc54adf3e0853557542646",
     "cst_mil/src/cst_mil/unified_semantic_v1_1/encoder.py": "13f10a6df0c3b9587abec9ad7808b6a7cb9cbb8eb7fe091a6954adb6b1eed258",
     "cst_mil/src/cst_mil/unified_semantic_v1_1/model.py": "098cd10b0721eba6036f75397440dd42a4b9f9263933d662ec22f3ef22bf3cd0",
-    "cst_mil/src/cst_mil/unified_semantic_v1_1/qa.py": "ce0f813a36b8dab259c16c4bfde9bc32a580e0cd2bcecfda20644e9340b10cd3",
-    "cst_mil/src/cst_mil/unified_semantic_v1_1/report.py": "23381ce59a47e668c05bd5c03a335a1659272bda8e9c63aa4131feb28282f209",
+    "cst_mil/src/cst_mil/unified_semantic_v1_1/qa.py": "d95ef99d3823746bab11a7df60716d8ef890eaeaad7d947750e5913b34fb373d",
+    "cst_mil/src/cst_mil/unified_semantic_v1_1/report.py": "a169d9c186efbde4f775d80fd311929a036e5be9af17a495d0f4f34240f68819",
     "cst_mil/src/cst_mil/unified_semantic_v1_1/topics.py": "fa4e1c0bb037026b0a27759069a23f669682272f6b81a8d130cdc898a851f190",
     "cst_mil/src/cst_mil/unified_semantic_v1_1/training.py": "47d34f5e04e2d7fc49ed7b46421623e07f5ff9efe4b16006a3791683cd138f26",
-    "计算机项目综合开发创新实践/app/config/deployment.mjs": "4125ad9d91ca08ac15b5bd8265d1efe501c44109b887f064a03a83247e2b6784",
-    "计算机项目综合开发创新实践/app/python/worker.py": "06309c904096372a06e735dea4e7e9a22ac310a9a2136f6a71949793d4d0786c",
-    "计算机项目综合开发创新实践/app/server/prediction.ts": "664f5fa41a536fa521de4aea54473e2b8daa180f4fb749318fe10fe19f6351e4"
+    "WebApp/config/deployment.mjs": "64e06adbe40ae2f04514dae477bcce5def89403a7d375475e49c3db49644cec4",
+    "WebApp/python/worker.py": "07b38f143a7343d0d334a1344dc088a5360a67e06658a06ae9854acb90f4ad79",
+    "WebApp/server/prediction.ts": "8c22ddf6414b17b90fe56d04904e95f50affa246ba6615e42630f052e3c67553"
   },
   "encoder": {
     "model_id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",

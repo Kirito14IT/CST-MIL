@@ -27,6 +27,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - name: Audit public files and deployment fingerprints
+        run: python scripts/audit_publication.py
       - name: Install locked Python development environment
         working-directory: cst_mil
         run: |
@@ -39,12 +41,13 @@ jobs:
           tests/test_data.py tests/test_model.py tests/test_pipeline.py
           tests/test_semantic_patent_model.py tests/test_semantic_patent_topics.py
           tests/test_portable_deployment.py tests/test_baseline_setup.py
+          tests/test_public_deployment_metadata.py ../WebApp/python/test_latest_adapter.py
       - name: Install UI dependencies
-        working-directory: 计算机项目综合开发创新实践/app
+        working-directory: WebApp
         run: npm ci
       - name: Type check and build UI
-        working-directory: 计算机项目综合开发创新实践/app
+        working-directory: WebApp
         run: npm run build
       - name: Asset-free Node contracts
-        working-directory: 计算机项目综合开发创新实践/app
+        working-directory: WebApp
         run: npx tsx --test tests/ui-source.test.ts tests/portable-deployment.test.ts

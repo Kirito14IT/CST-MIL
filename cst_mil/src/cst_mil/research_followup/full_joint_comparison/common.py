@@ -172,7 +172,7 @@ def preservation(output: Path, *, verify: bool = False) -> dict:
         for p in (PROJECT / "src").rglob("*.py")
         if "full_joint_comparison" not in p.parts and "__pycache__" not in p.parts
     ]
-    paths += [PROJECT.parent / "计算机项目综合开发创新实践/app/config/deployment.json"]
+    paths += [PROJECT.parent / "WebApp/config/deployment.json"]
     mapping = source_hashes(paths)
     save(manifest, mapping)
     return {"checked_files": len(mapping), "snapshot_created": True}

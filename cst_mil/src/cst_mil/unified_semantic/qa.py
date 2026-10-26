@@ -78,7 +78,7 @@ def make_cases(output: Path) -> Path:
                         ),
                     }
                 )
-    example = ROOT / "计算机项目综合开发创新实践/app/examples/校园推荐演示-20261004.json"
+    example = ROOT / "WebApp/examples/campus-recommended-demo.json"
     examples = _json(example)
     if isinstance(examples, dict):
         examples = examples.get("examples", examples.get("sessions", []))

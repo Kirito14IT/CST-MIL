@@ -147,7 +147,7 @@ def preservation(output: Path = OUTPUT, *, verify: bool = False) -> dict:
                 and p.suffix not in (".pyc", ".lock", ".tmp", ".pending", ".log", ".sqlite-shm", ".sqlite-wal"))
     paths = [p for root in roots if root.exists() for p in root.rglob("*") if eligible(p)]
     paths += [Path(p) for p in original_code_hashes()]
-    paths += [PROJECT.parent / "计算机项目综合开发创新实践/app/config/deployment.json"]
+    paths += [PROJECT.parent / "WebApp/config/deployment.json"]
     hashes = source_hashes(paths)
     save(target, hashes)
     return {"files": len(hashes), "snapshot_created": True}
