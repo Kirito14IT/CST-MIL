@@ -153,6 +153,24 @@ cst-bench --help
 
 `full_joint_comparison` consumes SCCD partitions and short-text `candidates / source_catalog / components / exclusions` manifests. The semantic follow-up additionally consumes joint-comparison models, out-of-fold predictions and topic-development cases. `--help` lists parameters; it does not generate these prerequisites. Use a new output directory for new research runs and record data, code and encoder fingerprints. Additional baseline dependencies and pinned upstream retrieval are described in [baseline/](baseline/README.md).
 
+## Citation
+
+If you use CST-MIL in your research, please cite our paper:
+
+[CST: Lightweight Risk Triage with Source-Grounded Evidence for Web Discussions](https://arxiv.org/abs/2611.01710)
+
+```bibtex
+@misc{wang2026cstlightweightrisktriage,
+  title={CST: Lightweight Risk Triage with Source-Grounded Evidence for Web Discussions},
+  author={Zhihua Wang and Yifeng Gao and Yunhao Feng and Rui Pan and Baiheng Zhao and Zixing Chen and Nan Li},
+  year={2026},
+  eprint={2611.01710},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2611.01710},
+}
+```
+
 ## Development and tests
 
 ```powershell
