@@ -11,6 +11,16 @@
 <p align="center">One local model bundle · Two analysis branches · Verifiable message evidence</p>
 
 <p align="center">
+  <strong><a href="https://arxiv.org/abs/2611.01710">CST: Lightweight Risk Triage with Source-Grounded Evidence for Web Discussions</a></strong>
+</p>
+
+<p align="center">
+  <a href="https://arxiv.org/abs/2611.01710"><img alt="Paper on arXiv: 2611.01710" src="https://img.shields.io/badge/arXiv-2611.01710-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white"></a>
+  <a href="https://arxiv.org/pdf/2611.01710"><img alt="Read the paper PDF" src="https://img.shields.io/badge/PDF-Read_the_paper-203B59?style=for-the-badge"></a>
+  <a href="#citation"><img alt="Cite this paper with BibTeX" src="https://img.shields.io/badge/BibTeX-Cite_this_work-287D75?style=for-the-badge"></a>
+</p>
+
+<p align="center">
   <a href="https://www.python.org/downloads/"><img alt="Python 3.12" src="https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white"></a>
   <a href="https://nodejs.org/"><img alt="Node.js 24" src="https://img.shields.io/badge/Node.js-24-43853D?style=flat-square&logo=nodedotjs&logoColor=white"></a>
   <img alt="CPU inference" src="https://img.shields.io/badge/CPU-inference-5DAFA7?style=flat-square">
@@ -152,6 +162,24 @@ cst-bench --help
 ```
 
 `full_joint_comparison` consumes SCCD partitions and short-text `candidates / source_catalog / components / exclusions` manifests. The semantic follow-up additionally consumes joint-comparison models, out-of-fold predictions and topic-development cases. `--help` lists parameters; it does not generate these prerequisites. Use a new output directory for new research runs and record data, code and encoder fingerprints. Additional baseline dependencies and pinned upstream retrieval are described in [baseline/](baseline/README.md).
+
+## Citation
+
+If you use CST-MIL in your research, please cite our paper:
+
+[CST: Lightweight Risk Triage with Source-Grounded Evidence for Web Discussions](https://arxiv.org/abs/2611.01710)
+
+```bibtex
+@misc{wang2026cstlightweightrisktriage,
+  title={CST: Lightweight Risk Triage with Source-Grounded Evidence for Web Discussions},
+  author={Zhihua Wang and Yifeng Gao and Yunhao Feng and Rui Pan and Baiheng Zhao and Zixing Chen and Nan Li},
+  year={2026},
+  eprint={2611.01710},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2611.01710},
+}
+```
 
 ## Development and tests
 
